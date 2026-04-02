@@ -21,10 +21,10 @@
 
 ### === RECOMMENDED PROGRAMS		===
 
-**Tmux!**
+> Tmux!
 +	 I didn't think I needed any more terminals (since I was using Kali Linux's graphical mode), but considering that it won't always be available (and you'll be between commands 99% of the time) being able to multitask on a single terminal is a game changer… 
 
 
-**Vim!**
+> Vim!
 +	Okay, I understand, it's not the best to start with, especially when you're using Linux for the first time (for that, Nano is the real MVP)... but, most of the time you'd use notes or scripts, right? So it wouldn't hurt to gradually try editing with Vim, moving through the text with just a couple of keys... give it a chance, it's an investment that pays off in the long run. 
  
