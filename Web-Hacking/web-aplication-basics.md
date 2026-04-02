@@ -12,7 +12,7 @@
 > 6. Check out how HTTP headers work and why they matter for security.
 
 ----
-
+<br>
 
 
 
@@ -39,7 +39,7 @@
 > c) JS (JavaScript) is part of a web application front end that enables more complex activity in the web browser. Whereas HTML can be considered a simple set of instructions on what to display, JavaScript is a more advanced set of instructions that allows choices and decisions to be made on what to display.
 
 + *Let's imagine you want to get more out of your page with better logic, more interaction, in short, have more control over how your page works.*
-
+<br>
 
 \> Back End
 
@@ -62,7 +62,7 @@
 + *The first line of control, which decides what type of connections to allow and which to filter.*
 
 ----
-
+<br>
 
 
 
@@ -74,10 +74,9 @@
 + *Whether you've used a file browser (Windows) or navigated in the terminal (Linux/macOS), browsing web pages is the same.*
 
 
-	[ http://  user:password  @tryhackme.com    :80    /view-room      ?id=1       #task3 ]
-
-	   ^		 ^		^	     ^	        ^	     ^	          ^
-	 Scheme	   --   User  --   Host/Domain	--  Port  --   Path --  Query Sting -- Fragment
+			[ http://  user:password  @tryhackme.com    :80    /view-room      ?id=1       #task3 ]
+				^			 ^				^			 ^			^			 ^			  ^
+	 		 Scheme	   --   User  --   Host/Domain	--  Port  --   Path --  Query Sting -- Fragment
 
 
 \> Scheme
@@ -100,24 +99,24 @@
 
 \> Fragment
 > The fragment starts with a hash symbol (#) and helps point to a specific section of a webpage—like jumping directly to a particular heading or table.
-
+<br>
 
 
 
 + *Now that we know what makes up the URL, what measures can we take? In other words, you could easily navigate to any part of the page if you knew the directory.*
 
-	1. Clean and sanitize everything! Set rules on what the user can do/write/etc, never rely on people's goodwill.
+1. Clean and sanitize everything! Set rules on what the user can do/write/etc, never rely on people's goodwill.
 
-	2. Create security rules for the type of access a user can have. Follow the principle of least privilege.
+2. Create security rules for the type of access a user can have. Follow the principle of least privilege.
 
-	3. Just like passwords, Do not create simple structures that make it easy to move laterally (i.e., move between employee IDs by increasing a number).
+3. Just like passwords, do not create simple structures that make it easy to move laterally (i.e., move between employee IDs by increasing a number).
 
-	4. Take the time to scout your domain name; you don't want it to get lost among very common names or be so exotic that it's easy to create phishing sites (don't add 5 's's in a row).
+4. Take the time to scout your domain name; you don't want it to get lost among very common names or be so exotic that it's easy to create phishing sites (don't add 5 's's in a row).
 
-	5. Use HTTPS and valid certificates, don't try to act like you're God, or make your own certificates, please.
+5. Use HTTPS and valid certificates, don't try to act like you're God, or make your own certificates, please.
 
 ----
-
+<br>
 
 
 
