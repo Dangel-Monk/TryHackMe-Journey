@@ -1,68 +1,67 @@
 
-===	Introduction			===	Task 1		===
+###	Introduction					===	Task 1		===
 
 > Learning Objectives:
-
-	1. Understand what a web application is and how it runs in a web browser.
-	2. Break down the components of a URL and see how it helps access web resources.
-	3. Learn how HTTP requests and responses work.
-	4. Get familiar with the different types of HTTP request methods.
-	5. Understand what different HTTP response codes mean.
-	6. Check out how HTTP headers work and why they matter for security.
-
-
+>
+> 1. Understand what a web application is and how it runs in a web browser.
+> 2. Break down the components of a URL and see how it helps access web resources.
+> 3. Learn how HTTP requests and responses work.
+> 4. Get familiar with the different types of HTTP request methods.
+> 5. Understand what different HTTP response codes mean.
+> 6. Check out how HTTP headers work and why they matter for security.
 
 
-===	Web Application Overview	===	Task 2		===
-
-# The main analogy used on the site is that of a planet, but I think it's not so difficult to see it as a system.
 
 
-	= Front End
+###	Web Application Overview		===	Task 2		===
 
+> Front End
+> 
 > The Front End can be considered similar to the surface of the planet, the parts that an astronaut can see and interact with based on the laws of nature. A web application would have a user interact with it and use a number of technologies such as HTML, CSS, and JavaScript to do this.
 
-
-	1. HTML (Hypertext Markup Language) is a foundational aspect of web applications. It is a set of instructions or code that instructs a web browser on what to display and how to display it.
-
-# Basically the skeleton of any website, like a template.
+/ *The main analogy used on the site is that of a planet, but I think it's not so difficult to see it as a system.*
 
 
-	2. CSS (Cascading Style Sheets) in web applications describes a standard appearance, such as certain colours, types of text, and layouts.
+> 1. HTML (Hypertext Markup Language) is a foundational aspect of web applications. It is a set of instructions or code that instructs a web browser on what to display and how to display it.
 
-# The responsible for all the graphic design and look of the page; before you could do it with just HTML, but it was very basic.
-
-	3. JS (JavaScript) is part of a web application front end that enables more complex activity in the web browser. Whereas HTML can be considered a simple set of instructions on what to display, JavaScript is a more advanced set of instructions that allows choices and decisions to be made on what to display.
-
-# Let's imagine you want to get more out of your page with better logic, more interaction, in short, have more control over how your page works.
+/ *Basically the skeleton of any website, like a template*
 
 
-	= Back End
+> 2. CSS (Cascading Style Sheets) in web applications describes a standard appearance, such as certain colours, types of text, and layouts.
 
+/ *The responsible for all the graphic design and look of the page; before you could do it with just HTML, but it was very basic.*
+
+> 3. JS (JavaScript) is part of a web application front end that enables more complex activity in the web browser. Whereas HTML can be considered a simple set of instructions on what to display, JavaScript is a more advanced set of instructions that allows choices and decisions to be made on what to display.
+
+/ *Let's imagine you want to get more out of your page with better logic, more interaction, in short, have more control over how your page works.*
+
+
+> = Back End
+>
 > The Back End of a web application is things you don’t see within a web browser but are important for the web application to work.
 
 
-	1. A Database is where information can be stored, modified, and retrieved. A web application may want to store and retrieve information about a visitor's preferences on what to show or not; this would be stored in a database.
+> 1. A Database is where information can be stored, modified, and retrieved. A web application may want to store and retrieve information about a visitor's preferences on what to show or not; this would be stored in a database.
 
-# Like a hard drive, it gives you easy access to information within the page.
-
-
-	2. There are many other Infrastructure components underpinning Web Applications, such as web servers, application servers, storage, various networking devices, and other software that support the web application.
-
-# Would it be like the page components? I don't know what kind of things fall under this section.
-
-	3. WAF (Web Application Firewall) is an optional component for web applications. It helps filter out dangerous requests away from the Web Server and provides an element of protection.
-
-# The first line of control, which decides what type of connections to allow and which to filter.
+\# *Like a hard drive, it gives you easy access to information within the page.*
 
 
+> 2. There are many other Infrastructure components underpinning Web Applications, such as web servers, application servers, storage, various networking devices, and other software that support the web application.
+
+\# *Would it be like the page components? I don't know what kind of things fall under this section.*
+
+> 3. WAF (Web Application Firewall) is an optional component for web applications. It helps filter out dangerous requests away from the Web Server and provides an element of protection.
+
+\# *The first line of control, which decides what type of connections to allow and which to filter.*
 
 
-===	Uniform Resource Locator	===	Task 3		===
+
+
+### ===		Uniform Resource Locator		===	Task 3		===
 
 > A Uniform Resource Locator (URL) is a web address that lets you access all kinds of online content—whether it’s a webpage, a video, a photo, or other media. It guides your browser to the right place on the Internet.
 
-# Whether you've used a file browser (Windows) or navigated in the terminal (Linux/macOS), browsing web pages is the same.
+\# Whether you've used a file browser (Windows) or navigated in the terminal (Linux/macOS), browsing web pages is the same.
 
 
 	[ http://  user:password  @tryhackme.com    :80    /view-room      ?id=1       #task3 ]
