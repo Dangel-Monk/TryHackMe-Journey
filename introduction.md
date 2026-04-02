@@ -8,7 +8,7 @@
 
 
 
-#### === GENERAL TIPS			===
+### === GENERAL TIPS			===
 
 + Take good notes, make smart annotations, I don't think writing everything down is necessary. Sometimes a copy-paste helps to understand the concept.
 
@@ -19,7 +19,7 @@
 
 
 
-#### === RECOMMENDED PROGRAMS		===
+### === RECOMMENDED PROGRAMS		===
 
 **Tmux!**
 +	 I didn't think I needed any more terminals (since I was using Kali Linux's graphical mode), but considering that it won't always be available (and you'll be between commands 99% of the time) being able to multitask on a single terminal is a game changer… 
