@@ -86,17 +86,17 @@
 + *As a point of interest, this type of connection offers us the strength of information integrity and the ability to be redundant in case of failure, thanks to its adaptability...? Due to its function, it is grouped differently.*
 
 
-7. Aplication Layer
-> (Session, Presentation, Application)
+	\7. Aplication Layer
+	> (Session, Presentation, Application)
 	
-4. Transport Layer
-> (Transportation)		# This Layer!
+	\4. Transport Layer
+	> (Transportation)		# This Layer!
 
-3. Internet Layer
-> (Network)
+	\3. Internet Layer
+	> (Network)
 
-2. Link Layer
-> (Physical, Data Link)
+	\2. Link Layer
+	> (Physical, Data Link)
 
 ----
 <br>
@@ -155,7 +155,23 @@ ip [arguments]		(Linux)
 
 	-f			Specifies the protocol family (inet, inet6, link, etc.).
 ```
++ *Yes, too much useful information suddenly appears, but we will focus on just a few. (They should look something like this.)*
 
+	a) inet 				(The host IP address)
+	b) netmask 				(The subnet mask)
+	c) broadcast / brd		(The broadcast address)
 
+> If you are wondering, a subnet mask of 255.255.255.0 can also be written as /24. The /24 means that the leftmost 24 bits within the IP address do not change across the network, i.e., the subnet.
 
+		255.	255.	255.	0
+		 ^		 ^		 ^		^
+		 8	+	 8	+	 8	+	0	= 24 bits = /24
 
+> In other words, the leftmost three octets are the same across the whole subnet; therefore, we can expect to find addresses that range from 192.168.66.1 to 192.168.66.254. Similar to what was mentioned earlier, 192.168.66.0 and 192.168.66.255 are the network and broadcast addresses, respectively.
+
+		192.168.66.0		Network Address
+		192.168.66.255		Broadcast Address
+		
+		192.168.66.xxx		(We have the last octet for IP addresses)	.1 ~ .254
+
+		
