@@ -78,7 +78,7 @@
 
 
 
-| Task 3 | = TCP/IP MODEL = |
+| Task 3 | = TCP/IP Model = |
 | - | - |
 
 > One of the strengths of this model is that it allows a network to continue to function as parts of it are out of service, for instance, due to a military attack. This capability is possible in part due to the design of the routing protocols to adapt as the network topology changes.
@@ -103,7 +103,7 @@
 
 
 
-| Task 4 | = IP ADDRESSES AND SUBNETS = |
+| Task 4 | = IP Addresses and Subnets = |
 | - | - |
 
 > Every host on the network needs a unique identifier for other hosts to communicate with him. Without a unique identifier, the host cannot be found without ambiguity. When using the TCP/IP protocol suite, we need to assign an IP address for each device connected to the network.
@@ -208,6 +208,7 @@ ip [arguments]		(Linux)
 > We presented earlier an analogy stating that a public IP address is like your home postal address. A private IP address is different; the original idea is that it cannot reach or be reached from the outside world.
 
 + *It is like an isolated city or a compound, where all houses and apartments are numbered systematically and can easily exchange mail with each other, but not with the outside world.*
+<br>
 
 \> Routing
 
@@ -215,4 +216,58 @@ ip [arguments]		(Linux)
 
 + *A router is like your local post office; you hand them the mail parcel, and they would know how to deliver it. If we dig deeper, you might mail something to an address in another city or country. The post office will check the address and decide where to send it next.*
 
+----
+<br>
+
+
+
+| Task 5 | = UDP and TCP = |
+| - | - |
+
+> The IP protocol allows us to reach a destination host on the network; the host is identified by its IP address. We need protocols that would enable processes on networked hosts to communicate with each other. There are two transport protocols to achieve that: UDP and TCP.
+
++ *This is a part of the protocols that I don't quite understand.*
+<br>
+
+\> UDP
+
+> UDP (User Datagram Protocol) allows us to reach a specific process on this target host. UDP is a simple connectionless protocol that operates at the transport layer, i.e., layer 4. Being connectionless means that it does not need to establish a connection. UDP does not even provide a mechanism to know that the packet has been delivered.
+
++ *Part of this protocol is that it's only interested in sending information, so it doesn't matter whether the information arrives complete or not; it can even send it to an incorrect or non-existent IP address without verification.*
+
++ *A real-life example similar to UDP is the standard mail service, with no delivery confirmation. In other words, there is no guarantee that the UDP packet has been received successfully, similar to the case of sending a parcel using standard mail with no confirmation of delivery.*
+<br>
+
+\> TCP
+
+> TCP (Transmission Control Protocol) is a connection-oriented transport protocol. It uses various mechanisms to ensure reliable data delivery sent by the different processes on the networked hosts. Like UDP, it is a layer 4 protocol. Being connection-oriented, it requires the establishment of a TCP connection before any data can be sent.
+
+> In TCP, each data octet has a sequence number; this makes it easy for the receiver to identify lost or duplicated packets. The receiver, on the other hand, acknowledges the reception of data with an acknowledgement number specifying the last received octet.
+
++ *If I'm not mistaken, and I'm getting ahead of myself quite a bit, it would be like a hash, which is a unique number used to verify integrity.*
+
+> A TCP connection is established using what’s called a three-way handshake. Two flags are used: SYN (Synchronise) and ACK (Acknowledgment).
+> 
+> 	\1. SYN Packet: The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
+> 	\2. SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
+> 	\3. ACK Packet: The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
+
++ *It's more of a greeting between devices.*
+  
+		"Hey, I exist on the network with this number, can you see me?"
+  										-- SYN -->
+  
+  		"Yes, I can see your number, If I add my number, can you see both numbers?"
+							<--ACK--									<--SYN--
+
+		"Yes, I see them..."
+				--ACK-->
+
+----
+<br>
+
+
+
+| Task 6 | = Encapsulation = |
+| - | - |
 
