@@ -2,9 +2,9 @@
 | Task 1 | = Introduction = |
 | - | - |
 
-> Have you ever wondered why you need an IP adress to access the Internet?
+> Have you ever wondered why you need an IP adress to access the Internet? Is it true that an IP address can uniquely identify the user? Are you curious to learn what the life of a packet looks like?
 
-+ *(idk) To be honest, when they tried to explain it in 'Pre-security' it was just long walls of text…*
++ *(idk) To be honest, when they tried to explain it in 'Pre-security' it was just long walls of text… *
 
 ----
 <br>
@@ -17,16 +17,20 @@
 > Before we start, we should note that the OSI model might initially seem complicated... Don't worry... by the time you finish this module, this task will feel like a piece of cake.
 
 + *Am I really that stupid for not understanding this? I feel like I have to pray to God so I don't have to write it on the walls…*
+
+> The OSI (Open Systems Interconnection) model is a conceptual model developed by the International Organization for Standardization (ISO) that describes how communications should occur in a computer network. In other words, the OSI model defines a framework for computer network communications.
+
++ *The main idea of ​​the model is not to memorize it, but to understand and internalize it in order to know how it works.*
 <br>
 
-\> Layer 1: Physical Layer
+\> Layer 1: Physical Layer (Electrical, optical, and wireless signals)
 
 + *To put it simply, it's anything you can touch... it's not limited to just a cables like Ethernet. Is it an antenna? Is it infrared port? Is it an object that transmits signals? Make sure to rub it gently with your fingers so as not to scare away the electromagnetic radiation.*
 
 + *Better yet, I will focus on using a hypothetical city, where the physical aspect is how everything connects: roads, vehicles, airports, antennas, drones, trains, a postal service, everything that entails.*
 
 
-\> Layer 2: Data Link Layer
+\> Layer 2: Data Link Layer (Ethernet (802.3), WiFi (802.11))
 
 > This layer involves the recognition of the transmission media, where different systems reach an agreement on how to connect. I suppose the list the devices, their capabilities, brand and specifications, and which ones are available to both the deliver and receptor.
 
@@ -35,35 +39,35 @@
 + *That's why you can do MAC Spoofing, you put the license plates of another vehicle on yours... but is that the only way to break this layer?*
 
 
-\> Layer 3: Network Layer
+\> Layer 3: Network Layer (IP, ICMP, IPSec)
 
 > The main function of this layer is to send data, finding a path to transfer packets between different networks. Some examples, Internet Control Message Protocol (ICMP), Virtual Private Network (VPN). 
 
 + *In this situation, while the previous layer is responsible for a general recognition of the devices, in this one the driver has the IP address of the other city, Using this information, plan the best route by consulting routing tables (DNS?) through the various networks...*
 
 
-\> Layer 4: Transport Layer
+\> Layer 4: Transport Layer (UDP, TCP)
 
 > Once the route has been established, this layer is responsible for creating end-to-end communication with functions such as flow control, error correction, segmentation...
 
 + *From a general perspective, this is where the decision regarding shipping quality comes in. Is speed or reliability more important? Are we interested in verifying the integrity of the shipment, or do we just want to send it?*
 
 
-\> Layer 5: Session Layer
+\> Layer 5: Session Layer (NFS, RPC)
 
 > Once communication is established, this layer is responsible for monitoring, synchronizing, and maintaining the connection, taking into account the session parameters. It ensures in-order transfers and recovery methods...
 
 + *Let's imagine we have a reception center, where once the data is received it verifies the information, establishes the exchange, discerns the type of information received and ends the sessions.*
 
 
-\> Layer 6: Presentation Layer
+\> Layer 6: Presentation Layer (Unicode, MIME, JPEG, PNG, MPEG)
 
 > The presentation layer ensures the data is delivered in a form the application layer can understand, handles the data encoding, compression and encryption.
 
 + *Let's say the package is already in the city, but how can we deliver it? In this layer, we group by use, rewrite the lithograph to understand it, and encrypt it so that only the people involved can see its contents.*
 
 
-\> Layer 7: Application Layer
+\> Layer 7: Application Layer (HTTP, FTP, DNS, POP3, SMTP, IMAP)
 
 > As the final layer, you are presented with an interface (applications) that takes all these packets and makes them available to the user. Different protocols require different applications.
 
@@ -82,17 +86,17 @@
 + *As a point of interest, this type of connection offers us the strength of information integrity and the ability to be redundant in case of failure, thanks to its adaptability...? Due to its function, it is grouped differently.*
 
 
-4. Aplication Layer
+7. Aplication Layer
 > (Session, Presentation, Application)
 	
-3. Transport Layer
+4. Transport Layer
 > (Transportation)		# This Layer!
 
-2. Internet Layer
+3. Internet Layer
 > (Network)
 
-1. Link Layer
-> (Phisical, Data Link)
+2. Link Layer
+> (Physical, Data Link)
 
 ----
 <br>
@@ -101,4 +105,14 @@
 
 | Task 4 | = IP ADDRESSES AND SUBNETS = |
 | - | - |
+
+> Every host on the network needs a unique identifier for other hosts to communicate with him. Without a unique identifier, the host cannot be found without ambiguity. When using the TCP/IP protocol suite, we need to assign an IP address for each device connected to the network.
+
+> So, what makes an IP address? An IP address comprises four octets, i.e., 32 bits. Being 8 bits, an octet allows us to represent a decimal number between 0 and 255.
+
+		[ 192.		 168.	 10.	10 ]
+		   ^		  ^		 ^		^
+		Octet #1  -  #2  -  #3  -  #4
+
++ I've seen before more or less how they're structured, and if I'm not mistaken, each octet is 8 bits / 1 byte? So it doesn't go outside the range of 255; one more bit and it resets to zero.
 
