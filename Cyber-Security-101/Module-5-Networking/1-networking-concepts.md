@@ -183,8 +183,36 @@ ip [arguments]		(Linux)
 > 172.16.0.0 ~ 172.31.255.255 (172.16/12)  
 > 192.168.0.0 ~ 192.168.255.255 (192.168/16)  
 
++ *Before moving on, I want to explore what each of these CIDR (Classless Inter-Domain Routing) terms means. I think it might be more interesting.*
+
+		10/8 = 0000 1010 | ____ ____ | ____ ____ | ____ ____  
+				   ^
+				   8		The first 8 bits are fixed.
+
+  		So the remaining 24 bits can be anything [10.0.0.0 ~ 10.255.255.255]
+
+
+  		172.16/12 = 1010 1100 | 0001 ____ | ____ ____ | ____ ____
+  						^			^
+						8			4		The first 12 bits are fixed.
+  
+		So the remaining 20 bits can be anything [172.16.0.0 ~ 172.31.255.255]
+
+
+		192.168/16 = 1100 0000 | 1010 1000 | ____ ____ | ____ ____
+  						 ^			 ^
+  						 8			 8		The first 16 bits are fixed.
+
+  		So the remaining 16 bits can be anything [192.168.0.0 ~ 192.168.255.255]
+		
 > We presented earlier an analogy stating that a public IP address is like your home postal address. A private IP address is different; the original idea is that it cannot reach or be reached from the outside world.
 
 + *It is like an isolated city or a compound, where all houses and apartments are numbered systematically and can easily exchange mail with each other, but not with the outside world.*
 
-+ 
+\> Routing
+
+> In technical terms, a router forwards data packets to the proper network. Usually, a data packet passes through multiple routers before it reaches its final destination. The router functions at layer 3, inspecting the IP address and forwarding the packet to the best network (router) so the packet gets closer to its destination.
+
++ *A router is like your local post office; you hand them the mail parcel, and they would know how to deliver it. If we dig deeper, you might mail something to an address in another city or country. The post office will check the address and decide where to send it next.*
+
+
