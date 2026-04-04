@@ -179,9 +179,9 @@ ip [arguments]		(Linux)
 
 >  It is useful to mention that for most practical purposes, there are two types of IP addresses (Public IP / Private IP), and the RFC 1918 defines the following three ranges of private IP addresses:
 > 
-> 10.0.0.0 ~ 10.255.255.255 (10/8)  
-> 172.16.0.0 ~ 172.31.255.255 (172.16/12)  
-> 192.168.0.0 ~ 192.168.255.255 (192.168/16)  
+>> 10.0.0.0 ~ 10.255.255.255 (10/8)  
+>> 172.16.0.0 ~ 172.31.255.255 (172.16/12)  
+>> 192.168.0.0 ~ 192.168.255.255 (192.168/16)  
 
 + *Before moving on, I want to explore what each of these CIDR (Classless Inter-Domain Routing) terms means. I think it might be more interesting.*
 
@@ -248,9 +248,11 @@ ip [arguments]		(Linux)
 
 > A TCP connection is established using what’s called a three-way handshake. Two flags are used: SYN (Synchronise) and ACK (Acknowledgment).
 > 
-> 	\1. SYN Packet: The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
-> 	\2. SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
-> 	\3. ACK Packet: The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
+>> 	\1. SYN Packet: The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
+>> 
+>> 	\2. SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
+>> 
+>> 	\3. ACK Packet: The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
 
 + *It's more of a greeting between devices.*
   
