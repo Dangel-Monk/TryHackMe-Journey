@@ -157,9 +157,9 @@ ip [arguments]		(Linux)
 ```
 + *Yes, too much useful information suddenly appears, but we will focus on just a few. (They should look something like this.)*
 
-	a) inet 				(The host IP address)
-	b) netmask 				(The subnet mask)
-	c) broadcast / brd		(The broadcast address)
+	\a) inet 				(The host IP address)  
+	\b) netmask 			(The subnet mask)  
+	\c) broadcast / brd		(The broadcast address)  
 
 > If you are wondering, a subnet mask of 255.255.255.0 can also be written as /24. The /24 means that the leftmost 24 bits within the IP address do not change across the network, i.e., the subnet.
 
@@ -172,6 +172,19 @@ ip [arguments]		(Linux)
 		192.168.66.0		Network Address
 		192.168.66.255		Broadcast Address
 		
-		192.168.66.xxx		(We have the last octet for IP addresses)	.1 ~ .254
+		192.168.66.xxx		(We have the last octet for IP addresses)	[.1 ~ .254]
+<br>
 
-		
+\> Private Address
+
+>  It is useful to mention that for most practical purposes, there are two types of IP addresses (Public IP / Private IP), and the RFC 1918 defines the following three ranges of private IP addresses:
+> 
+> 10.0.0.0 ~ 10.255.255.255 (10/8)  
+> 172.16.0.0 ~ 172.31.255.255 (172.16/12)  
+> 192.168.0.0 ~ 192.168.255.255 (192.168/16)  
+
+> We presented earlier an analogy stating that a public IP address is like your home postal address. A private IP address is different; the original idea is that it cannot reach or be reached from the outside world.
+
++ *It is like an isolated city or a compound, where all houses and apartments are numbered systematically and can easily exchange mail with each other, but not with the outside world.*
+
++ 
