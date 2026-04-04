@@ -116,3 +116,28 @@
 
 + I've seen before more or less how they're structured, and if I'm not mistaken, each octet is 8 bits / 1 byte? So it doesn't go outside the range of 255; one more bit and it resets to zero.
 
+> At the risk of oversimplifying things, the 0 and 255 are reserved for the network and broadcast addresses, respectively. In other words, 192.168.1.0 is the network address, while 192.168.1.255 is the broadcast address. Sending to the broadcast address targets all the hosts on the network.
+<br>
+
+\> Looking Up Network Configuration
+```
+ipconfig	(Windows)
+
+	/all			Shows complete network info for all adapters (MAC address, DHCP server, DNS server, etc.)
+
+	/release		Releases the current IPv4 address from a DHCP server.
+	/release6		Releases the current IPv6 address from a DHCP server.
+
+	/renew			Requests a new IPv4 address from a DHCP server.
+	/renew			Requests a new IPv6 address from a DHCP server.
+
+	/displaydns		Shows the contents of the DNS resolver cache.
+	/flushdns		Clears the DNS cache, helpful for fixing outdated DNS entries.
+	/registerdns	Refreshes DHCP leases and re-registers DNS names.
+
+	/showclassid	Displays or modifies the DHCP class ID for an adapter.
+	/setclassid
+
+
+ifconfig		(Linux)
+```
