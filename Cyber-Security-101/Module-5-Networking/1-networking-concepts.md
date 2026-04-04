@@ -121,7 +121,7 @@
 
 \> Looking Up Network Configuration
 ```
-ipconfig	(Windows)
+ipconfig [arguments]		(Windows)
 
 	/all			Shows complete network info for all adapters (MAC address, DHCP server, DNS server, etc.)
 
@@ -139,5 +139,23 @@ ipconfig	(Windows)
 	/setclassid
 
 
-ifconfig		(Linux)
+ip [arguments]		(Linux)
+
+	-a			Executes the command for all objects (e.g., shows all addresses for all interfaces.).
+	-br			Provides a cleaner, more compact output for quick scanning.
+
+	-s			Shows additional statistics (e.g., packet counts, error rates) for more detailed output.
+	-d			Displays more detailed information for the specified object.
+
+	-h			Formats statistics for easier readability (e.g., 1.5K instead of 1500.).
+	-c			Add color to output for better readability.
+
+	-4			Restricts the information/operation to IPv4.
+	-6			Restricts the information/operation to IPv6.
+
+	-f			Specifies the protocol family (inet, inet6, link, etc.).
 ```
+
+
+
+
