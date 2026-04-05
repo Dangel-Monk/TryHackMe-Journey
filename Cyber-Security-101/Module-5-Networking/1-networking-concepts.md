@@ -315,3 +315,24 @@ ip [arguments]		(Linux)
 <br>
 
 
+
+| Task 7 | = Telnet = |
+| - | - |
+
+> The TELNET (Teletype Network) protocol is a network protocol for remote terminal connection. In simpler words, `telnet`, a TELNET client, allows you to connect to and communicate with a remote system and issue text commands. Although initially it was used for remote administration, we can use `telnet` to connect to any server listening on a TCP port number.
+>
+>>	\a) Echo server <br>
+>>	This server echoes everything you send it. By default, it listens on port 7.
+>>
+>>	\b) Daytime server <br>
+>> 	This server listens on port 13 by default and replies with the current day and time.
+>>
+>>	\c) Web (HTTP) server <br>
+>> 	This server listens on TCP port 80 by default and serves web pages.
+
++ *As part of the demonstration, they don't provide 3 main ports to test connecting; if you look at it, the IP address doesn't change.*
+
+----
+<br>
+
+
