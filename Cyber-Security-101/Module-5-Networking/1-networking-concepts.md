@@ -157,9 +157,9 @@ ip [arguments]		(Linux)
 ```
 + *Yes, too much useful information suddenly appears, but we will focus on just a few. (They should look something like this.)*
 
-		\a) inet -- - - - - - - (The host IP address)  
-		\b) netmask - - - - - - (The subnet mask)  
-		\c) broadcast / brd - - (The broadcast address)  
+		\a) inet				(The host IP address)  
+		\b) netmask				(The subnet mask)  
+		\c) broadcast / brd		(The broadcast address)  
 
 > If you are wondering, a subnet mask of 255.255.255.0 can also be written as /24. The /24 means that the leftmost 24 bits within the IP address do not change across the network, i.e., the subnet.
 
@@ -281,3 +281,37 @@ ip [arguments]		(Linux)
 | Task 6 | = Encapsulation = |
 | - | - |
 
+> Encapsulation refers to the process of every layer adding a header (and sometimes a trailer) to the received unit of data and sending the “encapsulated” unit to the layer below.
+
++ *When you send data (like an email or a web request), it starts as raw information. As it moves down the layers of the network model (like TCP/IP), each layer wraps that data with its own special "header" (like an address label or instructions).*
+
++ *Imagine you are the CEO of one building, and you want to send a greeting to another CEO in another building.*
+
+	1. Application Layer (Your data) <br>
+	The actual message, e.g., "Hello".
+
+	2. Transport Layer (TCP/UDP) <br>
+	Adds a header with a port number (like 80 for web traffic). This creates a "segment."
+
+	3. Network Layer (IP) <br>
+	Adds a header with the source & destination IP addresses. This creates a "packet."
+
+	4. Data Link Layer (Ethernet) <br>
+ 	Adds a header with MAC addresses and a trailer for error checking. This creates a "frame."
+
+	5. Physical Layer <br>
+	The frame is converted into bits (1s and 0s) and sent over the wire.
+
+
+
+
+Why is this useful?
+
+· Modularity: Each layer works independently. The IP layer doesn't care if it's carrying an email or a video.
+· Interoperability: Your home router can read the IP and Ethernet headers without needing to understand your actual "Hello" message.
+
+On the receiving end, the process reverses: each layer unwraps its own header and passes the remaining data up to the next layer. That’s called decapsulation.
+
+Simple analogy: A Russian nesting doll. The smallest doll (your data) gets a bigger doll placed around it (the header), then another bigger doll around that, and so on.
+
+Does that help clarify the concept?
