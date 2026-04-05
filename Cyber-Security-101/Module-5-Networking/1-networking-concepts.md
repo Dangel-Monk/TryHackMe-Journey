@@ -4,7 +4,7 @@
 
 > Have you ever wondered why you need an IP adress to access the Internet? Is it true that an IP address can uniquely identify the user? Are you curious to learn what the life of a packet looks like?
 
-+ *(idk) To be honest, when they tried to explain it in 'Pre-security' it was just long walls of text… *
++ *To be honest, when they tried to explain it in 'Pre-security' it was just long walls of text…*
 
 ----
 <br>
