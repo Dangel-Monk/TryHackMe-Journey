@@ -302,17 +302,16 @@ ip [arguments]		(Linux)
 	\5. Physical Layer <br>
 	The frame is converted into bits (1s and 0s) and sent over the wire.
 
-		|^
-  		|	(1) 							|	(1)
-		|	(1) + 2							|	(1) - 2 
-  		|	(1, 2) + 3 						|	(1, 2) - 3
-  		|	(1, 2, 3) + 4					|	(1, 2, 3) -4
-  		v									|
+		|										^
+  		|	(1) 								|	(1)
+		|	(1) + 2								|	(1) - 2 
+  		|	(1, 2) + 3 							|	(1, 2) - 3
+  		|	(1, 2, 3) + 4						|	(1, 2, 3) - 4
+  		v										|
 
   		Ether/WIFI | IP | TCP/UDP | Application Data | Ether/WIFI
 
-Why is this useful?
+----
+<br>
 
-· Modularity: Each layer works independently. The IP layer doesn't care if it's carrying an email or a video.
-· Interoperability: Your home router can read the IP and Ethernet headers without needing to understand your actual "Hello" message.
 
