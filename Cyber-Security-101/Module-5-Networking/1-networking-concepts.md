@@ -86,17 +86,17 @@
 + *As a point of interest, this type of connection offers us the strength of information integrity and the ability to be redundant in case of failure, thanks to its adaptability...? Due to its function, it is grouped differently.*
 
 
-	\7. Aplication Layer
-	> (Session, Presentation, Application)
+	\7. Aplication Layer <br>
+	(Session, Presentation, Application)
 	
-	\4. Transport Layer
-	> (Transportation)		# This Layer!
+	\4. Transport Layer <br>
+	(Transportation)
 
-	\3. Internet Layer
-	> (Network)
+	\3. Internet Layer <br>
+	(Network)
 
-	\2. Link Layer
-	> (Physical, Data Link)
+	\2. Link Layer <br>
+	(Physical, Data Link)
 
 ----
 <br>
@@ -157,9 +157,9 @@ ip [arguments]		(Linux)
 ```
 + *Yes, too much useful information suddenly appears, but we will focus on just a few. (They should look something like this.)*
 
-	\a) inet 				(The host IP address)  
-	\b) netmask 			(The subnet mask)  
-	\c) broadcast / brd		(The broadcast address)  
+		\a) inet -- - - - - - - (The host IP address)  
+		\b) netmask - - - - - - (The subnet mask)  
+		\c) broadcast / brd - - (The broadcast address)  
 
 > If you are wondering, a subnet mask of 255.255.255.0 can also be written as /24. The /24 means that the leftmost 24 bits within the IP address do not change across the network, i.e., the subnet.
 
@@ -179,9 +179,14 @@ ip [arguments]		(Linux)
 
 >  It is useful to mention that for most practical purposes, there are two types of IP addresses (Public IP / Private IP), and the RFC 1918 defines the following three ranges of private IP addresses:
 > 
->> 10.0.0.0 ~ 10.255.255.255 (10/8)  
->> 172.16.0.0 ~ 172.31.255.255 (172.16/12)  
->> 192.168.0.0 ~ 192.168.255.255 (192.168/16)  
+>> (10/8) <br>
+>> 10.0.0.0 ~ 10.255.255.255
+>> 
+>> (172.16/12) <br>
+>> 172.16.0.0 ~ 172.31.255.255
+>> 
+>> (192.168/16) <br>
+>> 192.168.0.0 ~ 192.168.255.255 
 
 + *Before moving on, I want to explore what each of these CIDR (Classless Inter-Domain Routing) terms means. I think it might be more interesting.*
 
@@ -248,11 +253,14 @@ ip [arguments]		(Linux)
 
 > A TCP connection is established using what’s called a three-way handshake. Two flags are used: SYN (Synchronise) and ACK (Acknowledgment).
 > 
->> 	\1. SYN Packet: The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
+>> 	\1. SYN Packet <br>
+>>	The client initiates the connection by sending a SYN packet to the server. This packet contains the client’s randomly chosen initial sequence number.
 >> 
->> 	\2. SYN-ACK Packet: The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
+>> 	\2. SYN-ACK Packet <br>
+>>	The server responds to the SYN packet with a SYN-ACK packet, which adds the initial sequence number randomly chosen by the server.
 >> 
->> 	\3. ACK Packet: The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
+>> 	\3. ACK Packet <br>
+>>	The three-way handshake is completed as the client sends an ACK packet to acknowledge the reception of the SYN-ACK packet.
 
 + *It's more of a greeting between devices.*
   
@@ -260,10 +268,10 @@ ip [arguments]		(Linux)
   										-- SYN -->
   
   		"Yes, I can see your number, If I add my number, can you see both numbers?"
-							<--ACK--									<--SYN--
+						<-- ACK --								<-- SYN --
 
 		"Yes, I see them..."
-				--ACK-->
+				-- ACK -->
 
 ----
 <br>
