@@ -31,3 +31,48 @@
 >
 > Having an automated way to configure connected devices has many advantages. First, it would save us from manually configuring the network; this is extremely important, especially for mobile devices. Secondly, it saves us from address conflicts, i.e., when two devices are configured with the same IP address. An IP address conflict would prevent the involved hosts from using the network resources; this applies to local resources and the Internet.
 
++ *While you could manually configure your devices' adapters/networks by hand (which has its advantages), doing so automatically in multi-device/varied environments would be complicated. I wonder if it can be modified manually after it's automated?*
+
+> The solution lies in using Dynamic Host Configuration Protocol (DHCP). DHCP is an application-level protocol that relies on UDP; the server listens on UDP port `67`, and the client sends from UDP port `68`. Your smartphone and laptop are configured to use DHCP by default. DHCP follows four steps: Discover, Offer, Request, and Acknowledge...
+>
+> >  \1) DHCP Discover <br>
+> >  The client broadcasts a DHCPDISCOVER message seeking the local DHCP server if one exists.
+> > 
+> >  \2) DHCP Offer <br>
+> >  The server responds with a DHCPOFFER message with an IP address available for the client to accept.
+> > 
+> >  \3) DHCP Request <br>
+> >  The client responds with a DHCPREQUEST message to indicate that it has accepted the offered IP.
+> > 
+> >  \4) DHCP Acknowledge <br>
+> >  The server responds with a DHCPACK message to confirm that the offered IP address is now assigned to this client.
+
++ *If I understand correctly, since it's automating IPs not only within the local network but also external networks, it operates at layer 4? Because it also involves ports... oooh nevermind, DHCP uses ports and assigns ip, but its an application that interacts from point to point, so its layer 7...*
+
+      The first step would be to send a signal to find out if Is there a protocol for dynamically configuring hosts? It's a way of relating DHCP.
+
+      -- (Discover) -->    0.0.0.0 > 255.255.255.255 (The broadcast IP)
+      "Hey, I'm a new device, who manages it?"
+
+      <-- (Offer) --    0.0.0.0 < 192.168.66.1
+      "Oh, how are you? We have this space available." (192.168.66.133)
+
+      -- (Request) -->    0.0.0.0 > 255.255.255.255
+      "Sure, I'd like to use that space..."
+
+      <-- (Acknowledge) --    (192.168.66.133) < 192.168.66.1
+      "No problem, others can see that you're using it."
+
+>  \a) The client starts without any IP network configuration. It only has a MAC address. In the first and third packets, DHCP Discover and DHCP Request, the client searching for a DHCP server still has no IP network configuration and has not yet used the DHCP server’s offered IP address. Therefore, it sends packets from the IP address `0.0.0.0` to the broadcast IP address `255.255.255.255`. <br>
+>  \b) As for the data link layer, in the first and third packets, the client sends to the broadcast MAC address, `ff:ff:ff:ff:ff:ff` (not shown in the output above). The DHCP server offers an available IP address along with the network configuration in the DHCP offer. It uses the client’s destination MAC address. (It used the proposed IP address in this example system.)
+
++ *I understand using the broadcast IP address in the Network Layer, but why would I also do it with the Data Link Layer using MAC addresses?*
+
+----
+<br>
+
+
+
+| Task 3 | = ARP Bridging Layer 3 Addressing to Layer 2 Addressing = |
+| - | - |
+
