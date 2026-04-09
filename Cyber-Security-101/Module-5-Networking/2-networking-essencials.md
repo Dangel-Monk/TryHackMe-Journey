@@ -205,7 +205,25 @@ traceroute [arguments]      (Linux)
 
 
 
-| Task 5 | = Routing = |
+| Task 6 | = NAT = |
 | - | - |
 
-> 
+> With the increase in the number of devices connected to the Internet, from computers and smartphones to security cameras and washing machines, it was clear that the IPv4 address space would be depleted quickly. One solution to address depletion is Network Address Translation (NAT).
+>
+> The idea behind NAT lies in using one public IP address to provide Internet access to many private IP addresses. In other words, if you are connecting a company with twenty computers, you can provide Internet access to all twenty computers by using a single public IP address instead of twenty public IP addresses.
+
++ *There's a really cool story behind NAT as a 'solution' to a big fuck up of IP distribution, But as a result, I'm scared by the idea that if someone can find out your public IP address, they could access your specific network where all your devices are connected. Even worse, could they track you?*
+
+> Unlike routing, which is the natural way to route packets to the destination host, routers that support NAT must find a way to track ongoing connections. Consequently, NAT-supporting routers maintain a table translating network addresses between internal and external networks. Generally, the internal network would use a private IP address range, while the external network would use a public IP address.
+
+      > Internal Network (192.168.0/24)          |      > External Network (212.3.4.5)
+
+      Cameras (xxx.xxx.xxx.129)      :15401      <      (xxx.xxx.xxx.xxx)      :23123
+      Computer (xxx.xxx.xxx.125)     :27912      <      (xxx.xxx.xxx.xxx)      :34532  
+      Laptop (xxx.xxx.xxx.112)       :38192      <      (xxx.xxx.xxx.xxx)      :87321
+      Mobile (xxx.xxx.xxx.137)       :45691      <      (xxx.xxx.xxx.xxx)      :98632
+
++ *So when you connect a device to the internet (let's say a website), it communicates with your device through a public port, but upon entering your network, it redirects to the port that your device uses?*
+
+----
+<br>
