@@ -5,6 +5,7 @@
 > Have you ever wondered how your computer can dynamically configure its network settings when you turn it on or connect it to a new network? Have you ever wanted to know how many devices and countries your packets passed through before reaching their destination?
 
 + *Wait a minute, I've seen this before? Besides, yes, I don't know how the internet works, that's why I'm here.*
+<br>
 
 \> Learning Objectives
 >
@@ -120,6 +121,7 @@
 > >
 > > `traceroute` <br>
 > > This command is called `traceroute` on Linux and UNIX-like systems and `tracert` on MS Windows systems. It uses ICMP to discover the route from your host to the target.
+<br>
 
 \> Ping
 
@@ -143,6 +145,7 @@ ping [arguments]		   (Linux)
 
       -f                       Flood ping. Sends packets as fast as possible. Use with caution as it can overwhelm the network.
 ```
+<br>
 
 \> Traceroute
 
@@ -178,3 +181,31 @@ traceroute [arguments]      (Linux)
 | Task 5 | = Routing = |
 | - | - |
 
+> The Internet is made up of millions of routers and billions of devices. The mobile user can reach the web server; however, for this to happen, each router across the path needs to send the packets via the appropriate link. Obviously, there is more than one path, i.e., route, connecting the mobile user and the web server. We need a routing algorithm for the router to figure out which link to use.
+
+> Just to name a few, there are variations in how to find the best route:
+>
+> > \a) OSPF (Open Shortest Path First) <br>
+> > OSPF is a routing protocol that allows routers to share information about the network topology and calculate the most efficient paths for data transmission. It does this by having routers exchange updates about the state of their connected links and networks. This way, each router has a complete map of the network and can determine the best routes to reach any destination.
+> >
+> > \b) EIGRP (Enhanced Interior Gateway Routing Protocol) <br>
+> > EIGRP is a Cisco proprietary routing protocol that combines aspects of different routing algorithms. It allows routers to share information about the networks they can reach and the cost (like bandwidth or delay) associated with those routes. Routers then use this information to choose the most efficient paths for data transmission.
+> >
+> > \c) BGP (Border Gateway Protocol) <br>
+> > BGP is the primary routing protocol used on the Internet. It allows different networks (like those of Internet Service Providers) to exchange routing information and establish paths for data to travel between these networks. BGP helps ensure data can be routed efficiently across the Internet, even when traversing multiple networks.
+> >
+> > \d) RIP (Routing Information Protocol) <br>
+> > RIP is a simple routing protocol often used in small networks. Routers running RIP share information about the networks they can reach and the number of hops (routers) required to get there. As a result, each router builds a routing table based on this information, choosing the routes with the fewest hops to reach each destination.
+
++ *As you can see, it may seem like the most complicated thing in the world, with 'impossible algorithms' but stop for a moment and think... what do they have in common?.*
++ *In most cases, routers provide information about the network and its connections. From this, you can determine the number of routers involved and the distance between them. Finally, you choose the most efficient option...*
+
+----
+<br>
+
+
+
+| Task 5 | = Routing = |
+| - | - |
+
+> 
