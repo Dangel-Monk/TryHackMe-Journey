@@ -51,16 +51,16 @@
 
       The first step would be to send a signal to find out if Is there a protocol for dynamically configuring hosts? It's a way of relating DHCP.
 
-      -- (Discover) -->    0.0.0.0 > 255.255.255.255 (The broadcast IP)
+      -- (Discover) ->    0.0.0.0 > 255.255.255.255 (The broadcast IP)
       "Hey, I'm a new device, who manages it?"
 
-      <-- (Offer) --    0.0.0.0 < 192.168.66.1
+      <- (Offer) --    0.0.0.0 < 192.168.66.1
       "Oh, how are you? We have this space available." (192.168.66.133)
 
-      -- (Request) -->    0.0.0.0 > 255.255.255.255
+      -- (Request) ->    0.0.0.0 > 255.255.255.255
       "Sure, I'd like to use that space..."
 
-      <-- (Acknowledge) --    (192.168.66.133) < 192.168.66.1
+      <- (Acknowledge) --    (192.168.66.133) < 192.168.66.1
       "No problem, others can see that you're using it."
 
 > The client starts without any IP network configuration. It only has a MAC address. In the first and third packets, DHCP Discover and DHCP Request, the client searching for a DHCP server still has no IP network configuration and has not yet used the DHCP server’s offered IP address. Therefore, it sends packets from the IP address `0.0.0.0` to the broadcast IP address `255.255.255.255`. <br>
@@ -94,9 +94,30 @@
 >
 > > \3. The ARP Reply arrived shortly afterwards, and the host with the IP address `192.168.66.1` responded with its MAC address. From this point, the two hosts can exchange data link layer frames.
 
-      cc:5e:f8:02:21:a7 
+      -- (ARP Request) ->      cc:5e:f8:02:21:a7 > ff:ff:ff:ff:ff:ff (The broadcast MAC)
+      "Hey, is anyone using the IP address 192.168.66.1?
+            Let me know at my IP address 192.168.66.89... "
 
+      <- (ARP Reply) --      cc:5e:f8:02:21:a7 < 44:df:65:d8:fe:6c
+      "Oh, I'm using it, let me introduce myself... "
+
+> An ARP Request or ARP Reply is not encapsulated within a UDP or even IP packet; it is encapsulated directly within an Ethernet frame. The following ARP Reply shows this.
+
++ *ARP is considered layer 2 because it deals with MAC addresses. Others would argue that it is part of layer 3 because it supports IP operations. What is essential to know is that ARP allows the translation from layer 3 addressing to layer 2 addressing.*
+  
 ----
 <br>
 
+
+
+| Task 4 | = ICMP Troubleshooting Networks = |
+| - | - |
+
+> Internet Control Message Protocol (ICMP) is mainly used for network diagnostics and error reporting. Two popular commands rely on ICMP, and they are instrumental in network troubleshooting and network security.
+>
+> > `ping` <br>
+> > This command uses ICMP to test connectivity to a target system and measures the round-trip time (RTT). In other words, it can be used to learn that the target is alive and that its reply can reach our system.
+> >
+> > `traceroute` <br>
+> > This command is called `traceroute` on Linux and UNIX-like systems and `tracert` on MS Windows systems. It uses ICMP to discover the route from your host to the target.
 
