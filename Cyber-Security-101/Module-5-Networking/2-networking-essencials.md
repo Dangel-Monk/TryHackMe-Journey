@@ -31,9 +31,9 @@
 >
 > Having an automated way to configure connected devices has many advantages. First, it would save us from manually configuring the network; this is extremely important, especially for mobile devices. Secondly, it saves us from address conflicts, i.e., when two devices are configured with the same IP address. An IP address conflict would prevent the involved hosts from using the network resources; this applies to local resources and the Internet.
 
-+ *While you could manually configure your devices' adapters/networks by hand (which has its advantages), doing so automatically in multi-device/varied environments would be complicated. I wonder if it can be modified manually after it's automated?*
++ *While you could manually configure your devices' adapters/networks by hand (which has its advantages), doing so automatically in multi-device/varied environments would be complicated. I wonder if it can be modified manually after it's automated...*
 
-> The solution lies in using Dynamic Host Configuration Protocol (DHCP). DHCP is an application-level protocol that relies on UDP; the server listens on UDP port `67`, and the client sends from UDP port `68`. Your smartphone and laptop are configured to use DHCP by default. DHCP follows four steps: Discover, Offer, Request, and Acknowledge...
+> The solution lies in using Dynamic Host Configuration Protocol (DHCP). DHCP is an application-level protocol that relies on UDP; the server listens on UDP port `67`, and the client sends from UDP port `68`. Your smartphone and laptop are configured to use DHCP by default. DHCP follows four steps: Discover, Offer, Request, and Acknowledge.
 >
 > >  \1) DHCP Discover <br>
 > >  The client broadcasts a DHCPDISCOVER message seeking the local DHCP server if one exists.
@@ -49,7 +49,7 @@
 
 + *If I understand correctly, since it's automating IPs not only within the local network but also external networks, it operates at layer 4? Because it also involves ports... oooh nevermind, DHCP uses ports and assigns ip, but its an application that interacts from point to point, so its layer 7...*
 
-      The first step would be to send a signal to find out if Is there a protocol for dynamically configuring hosts? It's a way of relating DHCP.
+      The first step would be to send a signal to find out if there's a protocol for dynamically configuring hosts? It's a way of relating DHCP.
 
       -- (Discover) ->    0.0.0.0 > 255.255.255.255 (The broadcast IP)
       "Hey, I'm a new device, who manages it?"
@@ -120,4 +120,61 @@
 > >
 > > `traceroute` <br>
 > > This command is called `traceroute` on Linux and UNIX-like systems and `tracert` on MS Windows systems. It uses ICMP to discover the route from your host to the target.
+
+\> Ping
+
+> The ping command sends an ICMP Echo Request (ICMP Type 8).
+```
+ping [arguments]		   (Linux)
+
+      -I [interface]           Specify source interface/IP. Crucial when a machine has multiple network interfaces.
+
+      -n                       Numeric output only. Prevents reverse DNS lookups, speeds up output.
+      -4 / -6                  Force IPv4 or IPv6. Useful for testing a specific IP version.
+      -q                       Quiet output. Only shows the final summary statistics.
+
+      -c [count]               Limit the number of pings. Stops after sending the specified number of packets.
+      -t [ttl]                 Set Time to Live (TTL). Limits the packet's maximum number of hops.
+      -w [deadline]            Set a total deadline. Exits after the specified number of seconds, regardless of packets sent/received.
+      -W [timeout]             Set per-packet timeout. Time to wait for a response for each individual packet.
+
+      -i [interval]            Change the ping interval. Waits the specified number of seconds between pings (default is 1 second).
+      -s [packet size]         Change packet size. Specifies the number of data bytes to send (default is 56).
+
+      -f                       Flood ping. Sends packets as fast as possible. Use with caution as it can overwhelm the network.
+```
+
+\> Traceroute
+
+> The Internet protocol has a field called Time-to-Live (TTL) that indicates the maximum number of routers a packet can travel through before it is dropped. The router decrements the packet’s TTL by one before it sends it across. When the TTL reaches zero, the router drops the packet and sends an ICMP Time Exceeded message (ICMP Type 11). (In this context, “time” is measured in the number of routers, not seconds.)
+```
+traceroute [arguments]      (Linux)
+
+      -s [src_addr]             Specify source address. Forces the probe to originate from a particular interface's IP.
+
+      -I                        Use ICMP Echo Requests. Often gets through firewalls better than the default UDP.
+      -T                        Use TCP SYN packets. Great for testing specific services or bypassing ICMP/UDP filtering.
+      -U                        Use UDP...?
+      -p [port]                 Specify destination port. Required for TCP (-T) or UDP (-U) to target a service.
+
+      -4 / -6                   Force IPv4 or IPv6. Explicitly traces the route using a specific IP version.
+      -n                        Skip DNS resolution. Displays only IP addresses, making the trace much faster.
+
+      -f [first_ttl]            Set initial TTL. Skips the first few hops to start tracing further along the path.
+      -m [max_ttl]              Set max number of hops. Stops tracing after the specified number of hops (default is 30).
+      -q [n-queries]            Number of probes per hop. Sets how many packets are sent to each hop (default is 3).
+      -w [timeout]              Set per-hop timeout. How long to wait for a response from each hop.
+
+      -A                        Perform AS path lookups. Looks up the Autonomous System (AS) number for each hop.
+      -F                        Set "Don't Fragment" bit. Useful for discovering issues with packet sizes.
+```
+> Routers that belong to our ISP might respond, revealing their private IP address. Moreover, some routers respond and show their public IP address, and this would let us look up their domain name and discover their geographic location. Finally, there is always a possibility that an ICMP Time Exceeded message gets blocked and never reaches us.
+
+----
+<br>
+
+
+
+| Task 5 | = Routing = |
+| - | - |
 
