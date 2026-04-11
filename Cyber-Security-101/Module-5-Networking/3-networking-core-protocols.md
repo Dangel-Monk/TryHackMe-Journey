@@ -66,4 +66,92 @@ nslookup [arguments]        (Linux)
 | Task 3 | = WHOIS = |
 | - | - |
 
+> You can register any available domain name for one or more years. You need to pay the annual fee, and you are required to provide accurate contact information(opens in new tab) as the registrant. This information is part of the data available via WHOIS records and is available publicly.
 > 
+> However, don’t worry if you want to register a domain without revealing your contact information publicly; you can use one of the privacy services that hide all your information from the WHOIS records.
+
++ *Hmm... I don't really know why this command is used? Maybe for reconnaissance, but who is obligated to register the pages? Because anyone could do it without having to provide information.*
+
+> You can look up the WHOIS records of any registered domain name using one of the online services or via the command-line tool `whois`, available on Linux systems, among others. As expected, a WHOIS record provides information about the entity that registered a domain name, including name, phone number, email, and address.
+
++ *I also can't find a list of appealing options for the command...*
+
+----
+<br>
+
+
+| Task 4 | = HTTP(S) Accessing the Web = |
+| - | - |
+
+> When you fire up your browser, you mainly use HTTP and HTTPS protocols. HTTP stands for Hypertext Transfer Protocol; the S in HTTPS stands for Secure. This protocol relies on TCP and defines how your web browser communicates with the web servers. HTTP and HTTPS commonly use TCP ports 80 and 443, respectively, and less commonly other ports such as 8080 and 8443.
+>
+> > \a) GET <br>
+> > Retrieves data from a server, such as an HTML file or an image.
+> >
+> > \b) POST <br>
+> > Allows us to submit new data to the server, such as submitting a form or uploading a file.
+> > 
+> > \c) PUT <br>
+> > Is used to create a new resource on the server and to update and overwrite existing information.
+> > 
+> > \d) DELETE <br>
+> > Is used to delete a specified file or resource on the server.
+
++ *Now for something interesting: get used to these magic words, as they'll be useful for anything related to HTTP. The only confusing ones are POST and PUT.*
+
+> Using Wireshark, we can examine the exchange between the Firefox browser and the web server more closely. As you can tell, a lot of information is exchanged between the client and the server that does not get rendered to the user. Examples include the web server version and when the page was last modified.
+
++ *Since I'm not going to use material from the site (that's what the site is for), let's look at the general aspects. Every time we interact with a page, we make a request, right? And that's why the page responds with the result.*
+
+        GET / HTTP/1.1
+        Host: 10.10.41.192 (How you identify yourself)
+        [...]
+        "Hello, I want to see [GET] the main page [/], you can see that I am [Host]..."
+
+
+        HTTP/1.1 200 OK
+        Server: ngixn/1.18.0 (Ubuntu)
+        [...]
+        "Let me check... yes, everything seems fine [200 OK], here's what it contains..."
+
++ *So in order to solve the exercise we have to think about what they are asking us to do (this is a good time to start rationalizing...)*
+  
+    \a) We want to access a website through the terminal. <br>
+    \b) We want to see if we can get a specific address.
+<br>
+
+    \1) We opened the terminal, and started with `telnet`... 
+  
+        # telnet [machine_ip] [port]
+
+            [machine_ip]      Here you enter the IP address of your test machine, it can be [10.64.131.12]?
+            [port]            The common port number of HTTP, like [80]...
+
+
+        # telnet 10.64.131.12 80
+
+  + *Now that we're inside, We will begin by creating our form line by line, starting with our request type and our identification (Remember to press <ENTER> after each line, and twice to finish...)*
+<br>
+
+    \2) We want to obtain a specific page with 'GET'...
+
+        [...]
+        # GET /[address] HTTP/1.1
+        # Host: [machine name] 
+
+            [address]           The page address, in this case the [flag.html] addres
+            [machine name]      Since your machine is set up this way, you can put whatever you want on it.
+
+
+        [...]
+        # GET /flag.html HTTP/1.1
+        # Host: hand_over_the_flag
+
+----
+<br>
+
+
+
+| Task 5 | = FTP Transfering Files = |
+| - | - |
+
