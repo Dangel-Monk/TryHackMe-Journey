@@ -42,8 +42,28 @@
 
 \> NSLookUp
 ```
-nslookup         (Linux)
+nslookup [arguments]        (Linux)
 
+    [name]                The hostname or IP address you want to look up (the query target).
+    [server]              Specifies the DNS server to use for the query, overriding your system's default.
 
+    -type=[value]         Sets the DNS record type to query for (e.g., A, MX, NS). Default is A (IPv4 address).
+    -class=[value]        Specifies the protocol class for the query (e.g., IN for Internet, CH for Chaos).
+    -domain=[value]       Sets the default domain name for lookups.
+    -port=[value]         Changes the default DNS server port from 53 to a specified value.
 
+    -timeout=[value]      Sets the initial timeout for the query response in seconds.
+    -retry=[value]        Specifies the number of times to retry the query if it fails.
+
+    -version              Prints the version of nslook and immediately exits.
 ```
+
+----
+<br>
+
+
+
+| Task 3 | = WHOIS = |
+| - | - |
+
+> 
