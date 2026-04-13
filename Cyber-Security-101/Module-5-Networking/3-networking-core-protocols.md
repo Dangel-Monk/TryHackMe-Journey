@@ -126,8 +126,6 @@ nslookup [arguments]        (Linux)
             [port]            The common port number of HTTP, like [80]...
 
 
-        # telnet 10.64.131.12 80
-
   + *Now that we're inside, We will begin by creating our form line by line, starting with our request type and our identification (Remember to press <ENTER> after each line, and twice to finish...)*
 <br>
 
@@ -138,12 +136,8 @@ nslookup [arguments]        (Linux)
         # Host: [machine name] 
 
             [address]           The page address, in this case the [flag.html] addres
-            [machine name]      Since your machine is set up this way, you can put whatever you want on it.
+            [machine name]      Since your machine is set up this way, you can put whatever you want on it, like [hand_over_the_flag].
 
-
-        [...]
-        # GET /flag.html HTTP/1.1
-        # Host: hand_over_the_flag
 
 ----
 <br>
@@ -153,8 +147,88 @@ nslookup [arguments]        (Linux)
 | Task 5 | = FTP Transfering Files = |
 | - | - |
 
-> Unlike HTTP, which is designed to retrieve web pages, File Transfer Protocol (FTP) is designed to transfer files. As a result, FTP is very efficient for file transfer, and when all conditions are equal, it can achieve higher speeds than HTTP.
+> Unlike HTTP, which is designed to retrieve web pages, File Transfer Protocol (FTP) is designed to transfer files. As a result, FTP is very efficient for file transfer, and when all conditions are equal, it can achieve higher speeds than HTTP. FTP server listens on TCP port `21` by default; data transfer is conducted via another connection from the client to the server.
 >
 > > \a) USER <br>
-
+> > Used to input the username
 > >
+> > \b) PASS <br>
+> > Used to enter the password
+> > 
+> > \c) RETR <br>
+> > Used to download a file from the FTP server to the client. (Retrive)
+> > 
+> > \d) STOR <br>
+> > Used to upload a file from the client to the FTP server. (Store)
+<br>
+
+> FTP
+```
+telnet [commands]        (Linux)
+
+    [ip_address]               The IP address of the machine. 
+    [port]                     Specify if the port is not the common one.
+
+    ls                         Displays the contents of the directory on the screen.
+    dir                        List the directories on the remote server.
+
+    cd [directory]             Change the directory of the remote machine.
+    cdup                       To move up one level in the directory (like cd ..)
+
+    lcd                        Change the local directory of your machine.
+
+    get [filename]             Download a single file.
+    mget [filenames]           Allows you to download multiple files (mget [file] [*.txt] [etc...])
+
+    put [local file]           Choose a single file to upload.
+    mput [local files]         Choose multiple files to upload.
+
+    delete [file]              .
+    mdelete [files]            .
+
+    rename [old name] [new]    .
+
+    help                       Perhaps you're interested in learning more FTP commands.
+```
+
++ *For various reasons, we can use other types of services to connect to the machines; we just need to consider their structure. I could copy the example to text, but we still need the flag...*
+
+    \a) We want to access FTP through the terminal. <br>
+    \b) We want to get the flag.
+<br>
+
+    \1) Let's start the terminal as usual and use `ftp`...
+
+        # ftp [machine_ip]
+
+            [machine_ip]        Since we're still using the same machine [10.66.168.66]
+
+
+        [...]
+        # Name (10.66.168.66:root): [username]
+
+             [username]         Could we try logging in with an account? But let's try entering as [anonymous]
+
+
+        [...]
+        # Password: [passwd]
+
+              [passwd]          Since Anonymous doesn't have an account, we just press <ENTER>
+<br>
+
+    \2) Congratulations! You're in. Now that you're connected, we can use different commands to navigate this machine.
+
+        # ftp> ls
+        [...]
+
+    \a) There appears to be more than one text, but we are only interested in one; if we wanted, we could download them all.
+
+        # ftp> get [filename]
+
+               [filename]        The [flag.txt] of course!
+
+
+        # ftp> exit
+
++ *If you did nothing more than log in and log out, simply listing your current directory should show [flag.txt]*
+
