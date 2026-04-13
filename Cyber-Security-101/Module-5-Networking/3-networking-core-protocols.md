@@ -36,8 +36,6 @@
 > >
 > > \d) MX Record <br>
 > > The MX (Mail Exchange) record specifies the mail server responsible for handling emails for a domain.
-
-> If you want to look up the IP address of a domain from the command line, you can use a tool such as `nslookup`.
 <br>
 
 \> NSLookUp
@@ -155,3 +153,8 @@ nslookup [arguments]        (Linux)
 | Task 5 | = FTP Transfering Files = |
 | - | - |
 
+> Unlike HTTP, which is designed to retrieve web pages, File Transfer Protocol (FTP) is designed to transfer files. As a result, FTP is very efficient for file transfer, and when all conditions are equal, it can achieve higher speeds than HTTP.
+>
+> > \a) USER <br>
+
+> >
