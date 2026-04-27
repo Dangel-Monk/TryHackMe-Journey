@@ -54,7 +54,7 @@
 </summary><br>
 
 - Start by learning the basics of web application security and practice exploiting a vulnerability in an online website. Investigate operating system security and break into a target computer. Finally, you will explore network security and hack into an online server.
-</details>
+</details><br>
 
 
 >> - [ ] [Introduction to Defensive Security](https://tryhackme.com/module/introduction-to-defensive-security)
@@ -64,6 +64,8 @@
 
 - This module will introduce you to defensive security topics. Get started with digital forensics to solve a case by analyzing digital evidence. You will also learn about end-to-end security operations used in the cyber industry and apply your knowledge to protect a system under attack in a web-based security simulation.
 </details>
+
+
 </details>
 
 ----
@@ -173,10 +175,63 @@
 - Linux is one of the major operating systems and is heavily used in organisations all around the world. Learning how to use Linux is a core competency and will help you in your hacking journey not to just use Linux-based security tools, but how to use and exploit the operating system. This module will focus on getting you comfortable using Linux.
 </details><br>
 
+
 <details><summary>
      - -
 </summary><br>
 
+>> - [ ] [Network Exploitation Basics](https://tryhackme.com/module/intro-to-networking)
+<details><summary>
+     Understand, enumerate and attack various networking services in real-world environments.
+</summary><br>
+
+- Networking describes how computers interact and communicate with each other. Since computers can be used for a wide variety of purposes, the way they communicate is varied. This module will introduce the core concepts of computer networking followed by the methodology and tooling required to attack various network services.
+</details><br>
+
+
+>> - [ ] [Web Hacking Fundamentals](https://tryhackme.com/module/web-hacking-1)
+<details><summary>
+     Understand the core security issues with web applications, and learn how to exploit them using industry tools and techniques.
+</summary><br>
+
+- In this module, we'll be exploring the basic components of the modern web including both the basic protocols used, as well as various server components that make up the world wide web. You'll be diving into how to use BurpSuite, a tool which is widely regarded to be at the heart of web hacking. Additionally, you'll learn how to perform basic enumeration of websites and exploit the ten most common web application vulnerabilities by hacking various real-world applications.
+</details><br>
+
+
+>> - [ ] [Cryptography](https://tryhackme.com/module/cryptography)
+<details><summary>
+     Cryptography is essential in security. Learn how it's used to preserve integrity and confidentiality of sensitive information.
+</summary><br>
+
+- The internet is used by virtually everyone today for very trivial purposes such as playing games to more important tasks such as online banking. Users have started using the internet to access and utilise important services. A large part of ensuring that this communication is secure is done using Cryptographic primitives. This module will explore core cryptographic topics that are used to secure communication over the internet and in machines/servers.
+</details><br>
+
+
+>> - [ ] [Windows Exploitation Basics](https://tryhackme.com/module/hacking-windows-1)
+<details><summary>
+     Hacking Windows is often daunting. Grasp the fundamentals of core Windows concepts and Active Directory vulnerabilities.
+</summary><br>
+
+- Windows is the most popular operating system, used by both individuals and within corporate environments. Windows systems are often linked together to create networks, which are used in most enterprises around the world. This module will explore everything from getting started with using Windows, to attacking common flaws that are found in common Windows systems.
+</details><br>
+
+
+>> - [ ] [Shells and Privilege Escalation](https://tryhackme.com/module/privilege-escalation-and-shells)
+<details><summary>
+     Once you have initial access on a machine, learn how to escalate your account privileges to root.
+</summary><br>
+
+- Having limited user access on a system won't give you the necessary privileges you need to fully exploit it. Privilege escalation is an essential part of any security engagement. This module will give you the necessary skills to enumerate and identify how a system can be made vulnerable. You'll get hands on by fully exploiting a variety of machines, through various vulnerabilities and misconfigurations; kernel exploits, vulnerable services and permission issues are a few of the techniques you'll use to gain system level access.
+</details><br>
+
+
+>> - [ ] [Basic Computer Exploitation](https://tryhackme.com/module/basic-computer-exploitation)
+<details><summary>
+     Strengthen your skills by exploiting a range of different applications and services, from networking to web to privilege escalation.
+</summary><br>
+
+- Time to put your newly minted skills to the test! In this module, you'll exploit some beginner level vulnerable machines by enumerating and gaining user level access, and then escalate your privileges to the highest user. From zero to root, we'll do it all here in preparation for moving onto the Offensive Pathway!
+</details>
 
 
 </details>
