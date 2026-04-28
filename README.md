@@ -8,34 +8,41 @@
 
 
 
-| === GENERAL TIPS	=== |
-| - |
+<br><h2 align="center"> = GENERAL TIPS = </h2><br>
+
 
 + *Take good notes, make smart annotations, I don't think writing everything down is necessary. Sometimes a copy-paste helps to understand the concept.*
 
 + *NEVER, EVER, RUN A SCRIPT WITHOUT INSPECTING IT. IM SERIOUS, take the time to curate your scripts.*
 
 + *As you learn, focus on the general, knowing how to solve problems and explore solutions... is a thousand times more valuable than just mastering the tools.*
-<br>
-
-
-
-| === RECOMMENDED PROGRAMS === |
-| - |
 
 + *There are thousands of programs out there to use, but one thing you can't miss is trying them out and getting to know them. Whether you're on team red, blue, or purple, all knowledge benefits you.*
-
-> Tmux!
-+	*I didn't think I needed any more terminals (since I was using Kali Linux's graphical mode), but considering that it won't always be available (and you'll be between commands 90% of the time) being able to multitask on a single terminal is a game changer…*
-
-
-> Vim!
-+	*Okay, I understand, it's not the best to start with, especially when you're using Linux for the first time (for that, Nano is the real MVP)... but, most of the time you'd use notes or scripts, right? So it wouldn't hurt to gradually try editing with Vim, moving through the text with just a couple of keys... give it a chance, it's an investment that pays off in the long run.*
 <br>
 
 
 
-<h2 align="right"> = Introduction Path = </h2>
+
+
+
+
+<br><h2 align="center"> = PROGRAMS FOUND ON THE SITE = </h2><br>
+
+
+| :---: | **General Purpose** |
+| :---: | :---: |
+|   **Vim**   | Vim (Vi IMproved) is a free, open-source, and highly efficient command-line text editor designed for speed, allowing users to edit text entirely via keyboard shortcuts without a mouse. It is commonly used for coding and server management in Unix, macOS, and Windows environments, operating in distinct "modes" (normal, insert, command-line). |
+|   **Tmux**   | Tmux is a powerful terminal multiplexer that allows you to manage multiple terminal sessions, windows, and panes within a single screen, all running independently. It enables detaching sessions—keeping programs running in the background even when disconnecting via SSH—and reattaching them later, making it essential for remote development and workflow organization. |
+
+
+
+
+
+
+
+
+<br><h2 align="right"> > Introduction Path </h2><br>
+
 
 ## Pre-Security
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
@@ -158,10 +165,6 @@
 
 ----
 </details><br>
-
-
-
-
 
 
 
@@ -423,11 +426,16 @@
 </details>
 
 ----
-</details><br>
+</details>
 
 
 
-<h2 align="right"> = Security Engineer = </h2>
+
+
+
+
+<br><h2 align="right"> > Security Engineer </h2><br>
+
 
 ## Security Engineer
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
@@ -576,11 +584,16 @@
 </details>
 
 ----
-</details><br>
+</details>
 
 
 
-<h2 align="right"> = Security Analyst = </h2>
+
+
+
+
+<br><h2 align="right"> > Security Analyst </h2><br>
+
 
 ## SOC Level 1
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
@@ -980,11 +993,16 @@
 </details>
 
 ----
-</details><br>
+</details>
 
 
 
-<h2 align="right"> = Penetration Tester = </h2>
+
+
+
+
+<br><h2 align="right"> > Penetration Tester </h2><br>
+
 
 ## Jr Penetration Tester
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
@@ -1379,11 +1397,81 @@
 </details>
 
 ----
+</details>
+
+
+
+
+
+
+
+<br><h2 align="right"> > AI </h2><br>
+
+
+## AI Security
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [AI Fundamentals](https://tryhackme.com/module/ai-fundamentals)
+<details><summary>
+     Learn the core concepts of AI and ML, and how they apply to the cybersecurity landscape.
+</summary><br>
+
+> This module introduces learners to the foundational concepts of artificial intelligence and machine learning, establishing the mental models needed before diving into security topics. Rooms cover AI/ML threat categories, how models consume and process data, prompt engineering basics, and how AI can be used to augment existing roles using digital forensics as an example with a companion challenge to close off.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Secure AI Systems](https://tryhackme.com/module/secure-ai-systems)
+<details><summary>
+     Understand how AI systems are architected and how to assess their security posture.
+</summary><br>
+
+> This module explores AI systems as an attack surface, covering secure architectural design principles and how to identify weaknesses at the system integration layer. Learners examine LLM-specific security concerns, apply threat modelling frameworks like STRIDE and OWASP in AI contexts, and practice attack surface discovery when AI components are present. The module concludes with a static site exercise where learners put their AI threat modelling skills to the test.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Prompt Security](https://tryhackme.com/module/prompt-security)
+<details><summary>
+     Learn how attackers manipulate AI models through malicious inputs, and how to stop them.
+</summary><br>
+
+> This module covers one of the most prevalent AI attack classes: prompt injection. Learners begin with direct injection techniques before moving on to jailbreaking and instruction smuggling via external content. The module then shifts to the defensive side, covering hardening techniques including filters, guards, and template isolation. Two challenge rooms provide hands-on red experience, reinforcing both attack recognition and mitigation strategies.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [AI Supply Chain Security](https://tryhackme.com/module/ai-supply-chain-security)
+<details><summary>
+     Explore how AI model artefacts and supply chains can be compromised and how to defend them.
+</summary><br>
+
+> This module focuses on the security of AI models from procurement through deployment. Learners investigate how supply chains are targeted (OWASP LLM03), how to detect tampered or untrusted artefacts at ingestion, and how embedded triggers, poisoned checkpoints, and compromised fine-tunes manifest in real-world scenarios. Two hands-on challenge rooms reinforce defensive skills in identifying and responding to malicious models.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Data Poisoning](https://tryhackme.com/module/data-poisoning)
+<details><summary>
+     Discover how attackers corrupt the data AI systems rely on, from RAG pipelines to training sets.
+</summary><br>
+
+> This module descends into the deepest layer of AI security: the data. Learners explore risks specific to Retrieval-Augmented Generation (RAG) systems, attacks targeting ingestion pipelines and embeddings, and how private data can be exposed through retrieval or embedding leakage. Mapped to OWASP LLM02, LLM04, and LLM08, the module closes with two scenario-based challenges centred on RAG poisoning detection and defence.
+</details>
+
+----
 </details><br>
 
-
-
-<h2 align="right"> = Penetration Tester = </h2>
-
-## Jr Penetration Tester
-<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
