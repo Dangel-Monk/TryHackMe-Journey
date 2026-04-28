@@ -35,7 +35,9 @@
 
 
 
-## = Pre Security
+<h2 align="right"> = Introduction Path = </h2>
+
+## Pre-Security
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -163,7 +165,7 @@
 
 
 
-## = Cyber Security 101
+## Cyber-Security 101
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -425,7 +427,9 @@
 
 
 
-## = Security Engineer
+<h2 align="right"> = Security Engineer = </h2>
+
+## Security Engineer
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -507,7 +511,7 @@
 
 
 
-## = DevSecOps
+## DevSecOps
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -576,7 +580,9 @@
 
 
 
-## = SOC Level 1
+<h2 align="right"> = Security Analyst = </h2>
+
+## SOC Level 1
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -762,7 +768,7 @@
 
 
 
-## = SOC Level 2
+## SOC Level 2
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -870,7 +876,7 @@
 
 
 
-## = Advanced Endpoint Investigations
+## Advanced Endpoint Investigations
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
@@ -978,5 +984,406 @@
 
 
 
-## = RED RED RED
+<h2 align="right"> = Penetration Tester = </h2>
+
+## Jr Penetration Tester
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [Introduction to Cyber Security](https://tryhackme.com/module/introduction-to-cyber-security)
+<details><summary>
+     Understand what is offensive and defensive security, and learn about careers available in cyber.
+</summary><br>
+
+> Explore both offensive and defensive security. Start by learning basic offensive security concepts, where you will hack a vulnerable online-banking application. Get exposure to defensive security and protect a system by blocking an ongoing cyber attack. In this module, you will also learn about the different careers within cyber security.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Introduction to Pentesting](https://tryhackme.com/module/introduction-to-offensive-pentesting)
+<details><summary>
+     Understand what a penetration test involves, including testing techniques and methodologies every pentester should know.
+</summary><br>
+
+> This module will teach you the various methodologies and testing techniques that every penetration tester should know. By the end of the module, you will be able to identify what framework best suits your pentest engagement and know what security policies are used to protect data from cyber threats; involving keeping data confidential, integral, and available.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Introduction to Web Hacking](https://tryhackme.com/module/intro-to-web-hacking)
+<details><summary>
+     Get hands-on, learn about and exploit some of the most popular web application vulnerabilities seen in the industry today.
+</summary><br>
+
+> In this module you will learn about the most common web application vulnerabilities, understanding what makes it vulnerable and putting theory into practice by hacking website simulations. You will also be taught how to identify, exploit and prevent each vulnerability.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Burp Suite](https://tryhackme.com/module/learn-burp-suite)
+<details><summary>
+     Burp Suite is the industry standard tool for web application hacking, and is essential in any web penetration test.
+</summary><br>
+
+> This module will cover the basic functionality of the core tools in the Burp Suite framework: Proxy, Target, Repeater, Intruder, Sequencer, Decoder, Comparer, and Extender. You will learn how to apply Burp Suite when enumerating and attacking realistic web applications, as well as how to approach some of the common scenarios you may encounter when attacking a web app.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Network Security](https://tryhackme.com/module/network-security)
+<details><summary>
+     Learn the basics of passive and active network reconnaissance. Understand how common protocols work and their attack vectors.
+</summary><br>
+
+> In this module, we will learn about the different tools and online services for passive reconnaissance and how to leverage various basic programs for active reconnaissance. We will cover Nmap (a network scanning tool) in detail, including discovering live hosts, advanced port-scanning, OS and service version detection, running Nmap scripts and saving scan results. Finally, we will dive into the commonly found protocols to better understand their inner workings and the potential attacks and mitigations.
+</details>
+
+----
+<br>
+
+
+
+> 6. - [ ] [Vulnerability Research](https://tryhackme.com/module/vulnerability-research)
+<details><summary>
+     Familiarise yourself with the skills, research methods, and resources used to exploit vulnerable applications and systems.
+</summary><br>
+
+> In this module, you will learn about various categories of vulnerabilities, how they can be scored by severity, and how to effectively research them to find publicly written exploits. Each room in this module will require you to find and exploit different vulnerabilities, both manually and through automation.
+</details>
+
+----
+<br>
+
+
+
+> 7. - [ ] [Metasploit](https://tryhackme.com/module/metasploit)
+<details><summary>
+     Metasploit is the most widely used exploitation framework. Learn how to use it and unlock its full potential.
+</summary><br>
+
+> The Metasploit framework is a set of open-source tools used for network enumeration, identifying vulnerabilities, developing payloads and executing exploit code against remote target machines. Get hands-on with the various tool and features Metasploit provides, from exploit development to post-exploitation techniques, this module covers it all.
+</details>
+
+----
+<br>
+
+
+
+> 8. - [ ] [Privilege Escalation](https://tryhackme.com/module/privilege-escalation)
+<details><summary>
+     Learn the fundamental techniques that will allow you to elevate account privileges in Linux and windows systems.
+</summary><br>
+
+> Privilege escalation allows you to increase your rights on the target system. Privilege escalation is the path that will take you from a limited user account to complete system dominance. This module covers effective techniques you can use to increase the privilege level of the user you have on the target system. Techniques used in Linux and Windows are covered separately with examples you can face in CTFs, certification exams, or penetration testing engagements.
+</details>
+
+----
+</details><br>
+
+
+
+## Web Fundamentals
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [How The Web Works](https://tryhackme.com/module/how-the-web-works)
+<details><summary>
+     To become a better hacker it's vital to understand the underlying functions of the world wide web and what makes it work.
+</summary><br>
+
+> In this module, we'll take you through the building blocks of the world wide web and explain in detail exactly what happens when you enter a website address into your browser. From DNS to HTTP protocol this module will give you all the information you need to understand the world wide web.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Introduction to Web Hacking](https://tryhackme.com/module/intro-to-web-hacking)
+<details><summary>
+     Get hands-on, learn about and exploit some of the most popular web application vulnerabilities seen in the industry today.
+</summary><br>
+
+> In this module you will learn about the most common web application vulnerabilities, understanding what makes it vulnerable and putting theory into practice by hacking website simulations. You will also be taught how to identify, exploit and prevent each vulnerability.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Burp Suite](https://tryhackme.com/module/learn-burp-suite)
+<details><summary>
+     Burp Suite is the industry standard tool for web application hacking, and is essential in any web penetration test.
+</summary><br>
+
+> This module will cover the basic functionality of the core tools in the Burp Suite framework: Proxy, Target, Repeater, Intruder, Sequencer, Decoder, Comparer, and Extender. You will learn how to apply Burp Suite when enumerating and attacking realistic web applications, as well as how to approach some of the common scenarios you may encounter when attacking a web app.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Web Hacking Fundamentals](https://tryhackme.com/module/web-hacking-1)
+<details><summary>
+     Understand the core security issues with web applications, and learn how to exploit them using industry tools and techniques.
+</summary><br>
+
+> In this module, we'll be exploring the basic components of the modern web including both the basic protocols used, as well as various server components that make up the world wide web. You'll be diving into how to use BurpSuite, a tool which is widely regarded to be at the heart of web hacking. Additionally, you'll learn how to perform basic enumeration of websites and exploit the ten most common web application vulnerabilities by hacking various real-world applications.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [OWASP Top 10 (2025)](https://tryhackme.com/module/owasp-top-10-2025)
+<details><summary>
+     Explore, exploit, and learn how to remediate the most critical web application security risks listed in the OWASP Top 10 (2025) list through interactive labs and practical recommendations.
+</summary><br>
+
+> The OWASP Top 10 list summarises the most common and impactful vulnerabilities found within web applications. This module, divided into three rooms, offers a practical demonstration of how each vulnerability appears; from learning, exploiting, to remediating. The OWASP Top 10 is a cornerstone for cybersecurity professionals and software developers.
+</details>
+
+----
+</details><br>
+
+
+
+## Web Application Pentesting
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [Authentication](https://tryhackme.com/module/authentication)
+<details><summary>
+     Master exploiting authentication mechanisms through real-world scenarios, covering enumeration and brute force, session management, OAuth, MFA/2FA and JWT vulnerabilities.
+</summary><br>
+
+> This module will focus on understanding and mitigating critical vulnerabilities in authentication systems. We will first learn enumeration and brute forcing authentication mechanisms, followed by exploring session management and various attacks that can be performed against insecure implementations. We will cover a range of topics, including JSON Web Tokens (JWT), OAuth vulnerabilities covering missing state parameters, token stealing and many more. Finally, we will explore the significance of MFA/2FA in adding layers of security and exploiting them. All the rooms are equipped with realistic scenarios to practically allow you to explore and address various vulnerabilities.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Injection Attacks](https://tryhackme.com/module/injection-attacks)
+<details><summary>
+     Master the skills of injection attacks, covering Advanced SQL Injection, Server-Side Template Injection, XXE Injection, LDAP Injection, and NoSQL Injection.
+</summary><br>
+
+> In this module, we'll guide you through the complex landscape of injection attacks, focusing on vulnerabilities like SQL Injection, SSTI, LDAP Injection, and XXE Injection. We’ll start with Advanced SQL Injection, where you’ll learn how injection-based attacks can be used for relational databases, leading to data pilferage and RCE. We'll then pivot to NoSQL Injection where you’ll learn the impact of injection attacks on non-relational databases like MongoDB. As we start into XXE injection, you'll learn about how these attacks can lead to data leakage and data exfiltration. Further, you’ll learn about Server-Side Template Injection and how template engines can be exploited leading to RCE. Each section of this module is strengthened with real-world scenarios designed to understand, effectively mitigate, and protect against these client-side vulnerabilities.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Advanced Server-Side Attacks](https://tryhackme.com/module/advanced-server-side-attacks)
+<details><summary>
+     Master the skills of advanced server-side attacks, covering SSRF, File Inclusions, Deserialization, Race Conditions, and Prototype Pollution.
+</summary><br>
+
+> This module will focus on advanced server-side attack techniques an attacker uses to compromise a web app. We will learn to detect and mitigate SSRF vulnerabilities, followed by threats posed by prototype pollution and how attackers can exploit them. We will cover a range of topics, including file inclusion vulnerabilities through PHP wrappers, session files, and log poisoning. We will also learn about particular attack vectors like race conditions where simultaneous access to shared resources can lead to unpredictable behaviour. Finally, we will understand attack techniques during the deserialisation process that may allow attackers to execute malicious code on servers. Upon completing the module, you will have the skills to understand advanced server-side attack techniques attackers utilise to weaken web app security. All the rooms are equipped with realistic scenarios and real-world application examples that provide practical insights into the exploitation and mitigation of server-side vulnerabilities.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Advanced Client-Side Attacks](https://tryhackme.com/module/advanced-client-side-attacks)
+<details><summary>
+     Through real-world scenarios, you will gain a detailed understanding of client-side attacks, including XSS, CSRF, DOM-based vectors, SOP, and CORS vulnerabilities.
+</summary><br>
+
+> In this module, we'll guide you through the complex landscape of client-side attacks, focusing on vulnerabilities introduced by XSS, CSRF, DOM-based attacks, and the complexities of SOP & CORS. Our journey will begin with an in-depth exploration of XSS attacks. We'll dissect various types, from reflected to stored and DOM-based, demonstrating how attackers inject malicious scripts into web pages. We'll then pivot to CSRF vulnerabilities, revealing how attackers trick users into executing unintended actions on a web application in which they're authenticated. As we start into DOM-based attacks, you'll learn about manipulating the DOM to execute malicious scripts, highlighting the importance of client-side security in web apps. Further on, we'll understand the idea of SOP and CORS, essential security mechanisms designed to control how resources on a web page can be requested from another domain. Each section of this module is strengthened with real-world scenarios designed to understand, effectively mitigate, and protect against these client-side vulnerabilities.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [HTTP Request Smuggling](https://tryhackme.com/module/http-request-smuggling)
+<details><summary>
+     Learn to identify and exploit HTTP request smuggling, covering CL.TE, TE.CL, transfer-encoding obfuscation, browser desync, and HTTP2 smuggling.
+</summary><br>
+
+> In this module, we'll explore an attack that takes advantage of how different web servers interpret HTTP requests. We'll examine the basic techniques of HTTP request smuggling, such as Content-Length/Transfer-Encoding (CL.TE), Transfer-Encoding/Content-Length (TE.CL), and Transfer-Encoding obfuscation. We’ll also cover Browser desync attacks, where attackers disrupt the alignment between the user's browser and the server. Additionally, we'll also look into HTTP2 smuggling, which utilizes the complexity of the HTTP2 protocol to bypass security measures.
+</details>
+
+----
+</details><br>
+
+
+
+## Web Application Red Teaming
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [Cryptographic Failures](https://tryhackme.com/module/cryptofailures)
+<details><summary>
+     Learn to exploit cryptographic vulnerabilities, including ECB Oracles, Padding Oracles, Insecure Randomness, and Length Extension Attacks.
+</summary><br>
+
+> This module will focus on cryptographic attack techniques and their exploitation using real-world applications. You will understand the mechanics of Breaking the Crypto through simpler way, where you'll learn how attackers bypass cryptographic protections with minimal effort. You will also explore Attacking ECB Oracles and Padding Oracles, understanding how these vulnerabilities can be exploited to recover plaintext from encrypted data. The module will also cover Insecure Randomness, illustrating how weak or predictable random number generators can be manipulated to break encryption schemes. Additionally, you'll learn about Length Extension Attacks, a critical technique for exploiting certain hashing algorithms. Throughout the module, you will practice the attacks through practical examples to reinforce your understanding of these cryptographic weaknesses and how to mitigate them. Upon completion, you will have the expertise to identify and exploit cryptographic vulnerabilities, amplifying your skills as a pentester.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Custom Tooling](https://tryhackme.com/module/custom-tooling)
+<details><summary>
+     Build and automate custom tools using Python, Burp Suite, and browser automation to exploit and test web applications efficiently.
+</summary><br>
+
+> In real-world engagements, off-the-shelf tools can fall short. This module focuses on developing custom tooling to extend your offensive capabilities. You’ll start with Python to automate requests, manage sessions, and script around protections. Then, you’ll write custom Burp Suite extensions to inspect and manipulate encrypted or obfuscated traffic. Finally, you’ll use browser automation to simulate user actions, bypass client-side controls, and exploit dynamic applications. By the end of this module, you’ll know how to build targeted, reusable tools tailored for complex web application scenarios.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Chaining Vulnerabilities](https://tryhackme.com/module/chaining-vulnerabilities)
+<details><summary>
+     Learn how to chain multiple vulnerabilities to compromise a system and test your chaining skills through advanced real-world challenges.
+</summary><br>
+
+> In real-world engagements, a single flaw rarely leads straight to full compromise, but chaining them can. This module focuses on how to think like an attacker, viewing applications holistically and spotting vulnerabilities to link them together. You will go through the methodology of building attack chains by identifying and mapping small impact vulnerabilities, then exploring how each can act as a stepping stone toward a bigger objective. Finally, you’ll test your skills in advanced, realistic challenges that require building full attack chains from discovery to exploitation. By the end, you’ll move past finding single bugs and learn to create full attack paths like a real attacker.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Bypassing WAF](https://tryhackme.com/module/bypassingwaf)
+<details><summary>
+     Master techniques to understand, exploit, and bypass WAFs, covering signature and pattern bypasses, parsing and normalisation evasion, protocol manipulation, and exploiting weak/outdated configurations.
+</summary><br>
+
+> This module will focus on the exploitation of Web Application Firewalls (WAFs), a crucial component of modern web security. We will first cover WAF fundamentals, including architecture, detection methods, rule creation, and limitations. We will examine how WAFs detect malicious traffic, distinguish between signature and behavioural analysis, and enforce filtering rules. We will also cover hands-on exploitation, targeting outdated OWASP CRS versions, weak configurations, and various evasion techniques like signature manipulation, parsing and normalisation bypasses, and protocol-level exploits to evade detection. The module concludes with two real-world challenges where you can apply these techniques to analyse, bypass, and exploit WAF protections in realistic environments.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Attacking LLMs](https://tryhackme.com/module/attackingllm)
+<details><summary>
+     Learn to identify and exploit LLM vulnerabilities, covering prompt injection, insecure output handling, and model poisoning.
+</summary><br>
+
+> In this module, we cover practical attacks against systems that use large language models, including prompt injection, unsafe output handling, and model poisoning . You will learn how crafted inputs and careless handling of model output can expose secrets or trigger unauthorised actions, and how poisoned training data can cause persistent failures. Each topic includes hands-on exercises and realistic scenarios that show how small issues can be linked into larger attack paths. By the end, participants can build concise proof of concept attacks and suggest clear, practical mitigations.
+</details>
+
+----
+</details><br>
+
+
+
+## Red Teaming
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [Red Team Fundamentals](https://tryhackme.com/module/red-team-fundamentals)
+<details><summary>
+     Learn the core components of a red team engagement, from threat intelligence to OPSEC and C2s.
+</summary><br>
+
+> This module will introduce the core components and structure of a red team engagement. You will learn how to apply threat intelligence to red team engagements, utilize operations security processes, and set up your own command and control server. By the end of the module, you will be able to plan a red team engagement and understand the methodologies used to emulate a real threat actor.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Initial Access](https://tryhackme.com/module/red-team-initial-access)
+<details><summary>
+     Explore the different techniques to gain initial access to a target system and network from a Red Teamer’s perspective.
+</summary><br>
+
+> In this module, we will cover the different strategies to gain access to a system in a simulated target network. Explore a variety of popular passive reconnaissance tools, learn about techniques to weaponize files, attack passwords and logins, and practice sending a phishing campaign to exploit a system in our simulated labs.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Post Compromise](https://tryhackme.com/module/post-compromise)
+<details><summary>
+     Learn about the steps taken by an attacker right after gaining an initial foothold on a network.
+</summary><br>
+
+> After gaining access to your target network, get ready to learn how to establish your first point of persistence, elevate privileges locally, gain awareness of your surroundings and gather enough information to plan your future moves carefully. By the end of the module, you will gain the skills required to secure your initial foothold and identify key points on the network that you can later use to define your attack strategy.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Host Evasions](https://tryhackme.com/module/host-evasions)
+<details><summary>
+     Understand the techniques behind host-based security and bypass the most common security products in Windows operating systems.
+</summary><br>
+
+> This module provides the essential knowledge and fundamental techniques to bypass various host-based security solutions, including AV products, UAC and AppLocker, Logging, Runtime Detection, and AMSI. You will also learn the Living-Off-the-Land technique and how to leverage the Windows Sysinternals tool to perform various Red Team purposes.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Network Security Evasion](https://tryhackme.com/module/network-security-evasion)
+<details><summary>
+     Learn how to bypass and evade different security solutions used in the industry, such as firewalls and IDS/IPS.
+</summary><br>
+
+> Learn how different security solutions work and get hands-on experience bypassing intrusion detection systems (IDS), intrusion prevention systems (IPS), and firewalls. By the end of the module, you will acquire the skills to use different techniques to evade IDS, IPS, firewalls, and sandboxes, in addition to logging and monitoring systems.
+</details>
+
+----
+<br>
+
+
+
+> 6. - [ ] [Compromising Active Directory](https://tryhackme.com/module/hacking-active-directory)
+<details><summary>
+     Learn and exploit Active Directory networks through core security issues stemming from misconfigurations.
+</summary><br>
+
+> Approximately 90% of the Global Fortune 1000 companies use Active Directory (AD). If an organisation's estate uses Microsoft Windows, you are almost guaranteed to find AD. Since AD is used for Identity and Access Management of the entire estate, it holds the keys to the kingdom, making it a very likely target for attackers. This module will teach you the basics of AD and take you on the typical journey of compromising AD during a red team. You will learn to breach AD, enumerate AD, exploit AD, and finally deploy persistence through AD.
+</details>
+
+----
+</details><br>
+
+
+
+<h2 align="right"> = Penetration Tester = </h2>
+
+## Jr Penetration Tester
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
