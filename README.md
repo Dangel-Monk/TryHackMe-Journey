@@ -761,3 +761,222 @@
 </details><br>
 
 
+
+## = SOC Level 2
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [Log Analysis](https://tryhackme.com/module/log-analysis)
+<details><summary>
+     Log analysis is collecting, parsing and processing log files and turning data into actionable knowledge to detect security threats and anomalies and identify system performance issues.
+</summary><br>
+
+> This module covers the must-to-know concepts of logs for security analysts and investigators. You will learn and understand log file structure, parsing and processing, correlating and analysis. By the end of the module, you will master log file analysis and be ready to use different techniques and solutions to conduct advanced-level analysis for Detection Engineering, Incident Response and Threat Hunting.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Advanced Splunk](https://tryhackme.com/module/advanced-splunk)
+<details><summary>
+     Understand advanced Splunk capabilities to search data for anomalies by creating complex search queries, applying regex, and creating presentable reports and dashboards.
+</summary><br>
+
+> In this module, we will install a Splunk instance and set up a forwarder to ingest logs from different log sources. We will learn how to create complex search queries and use regex to parse logs to improve incident investigation and threat hunting capabilities. Additionally, we will learn how to create presentable reports and dashboards to assist with the analysis.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Advanced ELK](https://tryhackme.com/module/advanced-elk)
+<details><summary>
+     Learn about the main components of the ELK stack by going through the installation and configuring process and linking them together to form an effective log analysis utility.
+</summary><br>
+
+> In this module, we will go through installing, configuring, and integrating different components of the ELK stack to form a complete log analysis utility. This module also covers creating alerts in ELK (Wazuh) and creating advanced KQL search queries to create complex search queries to improve the log investigation.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [Detection Engineering](https://tryhackme.com/module/detection-engineering)
+<details><summary>
+     Understand various threat detection methodologies, rule syntax and tools, and learn how to apply them in a SOC environment.
+</summary><br>
+
+> In this module, we shall be looking at the concepts of detection engineering, including a usable lifecycle, rule writing and testing, orchestration and automation. We’ll dive deeper into how to write detection rules using Sigma and how Windows Event alerts can be triggered using an EDR called Aurora. Additionally, we shall cover the basic concepts of Security Orchestration, Automation and Response (SOAR) and look at how you can implement playbooks and workflows in different scenarios.
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Threat Hunting](https://tryhackme.com/module/threat-hunting)
+<details><summary>
+     Understand the fundamentals of threat hunting, and learn how to build your own methodology for effective hunting across your infrastructure.
+</summary><br>
+
+> In this module, we’ll tackle ways to hunt known Tactics, Techniques and Procedures (TTPs) using different methodologies of threat hunting. You will learn to effectively differentiate benign and malicious activity from a large dataset of logs ingested in a SIEM. Additionally, you will be tasked to hunt and investigate scenarios that typically occur in real life.
+</details>
+
+----
+<br>
+
+
+
+> 6. - [ ] [Threat Emulation](https://tryhackme.com/module/threat-emulation)
+<details><summary>
+     Understand the core concepts of threat emulation and learn how to execute adversarial activity through different threat emulation frameworks.
+</summary><br>
+
+> In this module, we’ll showcase the benefits of understanding different threat actors' Tactics, Techniques, and Procedures through adversary emulation and learn to defend against them by seeing them in action. You will learn how to plan threat emulation activities through different Threat Modeling frameworks and execute them through Atomic Red Team and Caldera. Additionally, you’ll be observing these emulation activities from a defender's perspective.
+</details>
+
+----
+<br>
+
+
+
+> 7. - [ ] [Incident Response](https://tryhackme.com/module/incident-response)
+<details><summary>
+     Understand the mindset behind effective response on security incidents, and apply them through real-world tactics and techniques.
+</summary><br>
+
+> The goal of this module is to develop in you the mindset that an effective incident responder has. We’ll be diving through a tactical dissection of proven response processes, from preparing your environment to be a fertile ground for response, to the containment and removal of malicious software. We’ll also be discussing how to recover and consequently learn from everything to prime yourself for the next response.
+</details>
+
+----
+<br>
+
+
+
+> 8. - [ ] [Malware Analysis](https://tryhackme.com/module/malware-analysis)
+<details><summary>
+     Explore the world of malware and analyse how malware can infect systems and cause damage.
+</summary><br>
+
+> Malware analysis is like a cat-and-mouse game. Malware authors keep devising new techniques to evade the pruning eye of a malware analyst, while malware analysts keep finding ways to identify and neutralize these techniques. In this module, we will embark on a journey to learn malware analysis from the basics to understanding the common techniques malware authors use. Finally, we will learn about the tools that enable a malware analyst to gain a foothold in identifying what the malware authors are up to and defeat them.
+</details>
+
+----
+</details><br>
+
+
+
+## = Advanced Endpoint Investigations
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
+
+
+> 1. - [ ] [File System Analysis](https://tryhackme.com/module/file-system-analysis)
+<details><summary>
+     Learn file system analysis and forensics with hands-on labs covering MBR, GPT, FAT32, NTFS, EXT and file carving.
+</summary><br>
+
+> From dissecting boot sectors and analysing key file system artefacts to carving files and solving a real-world challenge, this module will take your file system analysis skills to the next level.
+</details>
+
+----
+<br>
+
+
+
+> 2. - [ ] [Linux Endpoint Investigation](https://tryhackme.com/module/linux-endpoint-investigation)
+<details><summary>
+     Unravel the mysteries of Linux forensics with a deep dive into live analysis, process scrutiny, and log investigations.
+</summary><br>
+
+> Linux, the backbone of countless servers and supercomputers, is a prime target for malicious actors. To effectively counter threats, understanding the intricacies of Linux forensics is vital. This module equips you with the skills to perform live analysis, dissect processes and applications for persistence methods, and explore system logs for incident response. By mastering these techniques, you'll become a formidable defender of Linux systems.
+</details>
+
+----
+<br>
+
+
+
+> 3. - [ ] [Windows Endpoint Investigation](https://tryhackme.com/module/windows-endpoint-investigation)
+<details><summary>
+     Understand various aspects of Windows forensics and learn how to investigate the footprints of an attack on the Windows Endpoint.
+</summary><br>
+
+> In this module, we will explore various aspects of Windows Forensics and how different components within Windows store information about the user activity and system configuration that could help us during a digital investigation. You will learn about file systems, registry changes, and network activity generated from user activity. At the end of this module, you will be comfortable performing digital forensics on Windows Endpoints.
+</details>
+
+----
+<br>
+
+
+
+> 4. - [ ] [macOS Forensics](https://tryhackme.com/module/macos-forensics)
+<details><summary>
+     Learn macOS forensics through artefact analysis, app investigations, and hands-on labs covering system and user activity traces.
+</summary><br>
+
+> Explore macOS file system layout, discover forensic artefacts, and retrace user activity across different types of logs and application artefacts. Top it all off with a challenge that tests your macOS forensic analysis skills in real-world-like scenario
+</details>
+
+----
+<br>
+
+
+
+> 5. - [ ] [Mobile Analysis](https://tryhackme.com/module/mobile-analysis)
+<details><summary>
+     Learn to acquire and analyse mobile data with practical tools and techniques used in Android and iOS forensic investigations.
+</summary><br>
+
+> This module introduces key concepts and practical techniques for mobile forensics, focusing on both Android and iOS platforms. You will learn how to acquire and preserve mobile evidence, understand the unique structure of these filesystems and architecture, identify valuable artefacts such as messages, location data, app activity, and more. Through realistic mobile captures and interactive scenarios, you’ll gain practical experience with forensic tools and methods used in the industry. By the end of this module, you will be equipped with the knowledge and skills to perform effective mobile analysis as part of forensic investigations or incident response processes.
+</details>
+
+----
+<br>
+
+
+
+> 6. - [ ] [Memory Analysis](https://tryhackme.com/module/memory-analysis)
+<details><summary>
+     Learn how to analyse volatile memory to detect suspicious activity, track user behaviour, and investigate network threats through hands-on labs.
+</summary><br>
+
+> In this module, we'll learn how to investigate volatile memory to uncover signs of suspicious behaviour, hidden programs, user activity, and potential security threats. We will explore how memory stores valuable information about running programs, system usage, and network interactions that often disappear after shutdown. Through guided practice and real scenarios, we'll develop the skills to identify unusual patterns, trace actions taken on a system, and connect the dots to understand what happened. Each step combines clear explanations with practical exercises using the Volatility Framework to build confidence and prepare us for real investigation work.
+</details>
+
+----
+<br>
+
+
+
+> 7. - [ ] [Disk Image Analysis](https://tryhackme.com/module/disk-image-analysis)
+<details><summary>
+     The disk holds the key to almost everything on a system. Learn disk image acquisition and analysis, then dive deep into a data exfiltration case covering Windows and Linux systems.
+</summary><br>
+
+> This module dives into the significance of cold system forensics, focusing primarily on disk-based evidence. You will learn how to acquire a disk image and explore a popular tool for disk image analysis. At the end of this module, you will use your knowledge of Windows and Linux Endpoint Investigations to solve a high-stakes data exfiltration case.
+</details>
+
+----
+<br>
+
+
+
+> 8. - [ ] [Honeynet Collapse](https://tryhackme.com/module/honeynet-collapse)
+<details><summary>
+     Dive into the story of DeceptiTech, a company that fell victim to a ransomware attack. They now desperately need your forensic skills to unwrap the incident and stop the threat from striking again.
+</summary><br>
+
+> Revisit the Honeynet Collapse CTF from summer 2025 through six hands-on challenges covering memory forensics, log analysis, and on-host triage across Windows, Linux, and MacOS. Prove yourself an expert in Advanced Endpoint Investigations by uncovering the breach and combining all artifacts into a single attack timeline.
+</details>
+
+----
+</details><br>
+
+
+
+## = RED RED RED
+<details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
