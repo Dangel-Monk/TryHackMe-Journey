@@ -2,8 +2,6 @@
 *[Remember to create a good title, thx]*
 
 + *Hey, my name is Daniel (Dangel_Monk) and rather than being a repository where you will find all the answers, it is just a reflection of the first-hand experience of someone without experience.*
-
-+ *You'll be surprised how much information you'll forget if you don't write it down, so feel free to use these as reminders. Even better, take the time to experiment! (Ignore the weekly leagues...)*
 <br>
 
 
@@ -11,11 +9,11 @@
 <br><h2 align="center"> = GENERAL TIPS = </h2><br>
 
 
-+ *Take good notes, make smart annotations, I don't think writing everything down is necessary. Sometimes a copy-paste helps to understand the concept.*
++ *You'll be surprised how much information you'll forget if you don't write it down, so take good notes or smart annotations. I don't think writing everything down is necessary, sometimes a copy-paste helps to understand the concept.
 
 + *NEVER, EVER, RUN A SCRIPT WITHOUT INSPECTING IT. IM SERIOUS, take the time to curate your scripts.*
 
-+ *As you learn, focus on the general, knowing how to solve problems and explore solutions... is a thousand times more valuable than just mastering the tools.*
++ *As you learn focus on the general, knowing how to solve problems and explore solutions... is a thousand times more valuable than just mastering the tools.*
 
 + *There are thousands of programs out there to use, but one thing you can't miss is trying them out and getting to know them. Whether you're on team red, blue, or purple, all knowledge benefits you.*
 <br>
