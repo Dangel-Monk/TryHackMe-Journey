@@ -9,13 +9,15 @@
 <br><h2 align="center"> = GENERAL TIPS = </h2><br>
 
 
-+ *You'll be surprised how much information you'll forget if you don't write it down, so take good notes or smart annotations. I don't think writing everything down is necessary, sometimes a copy-paste helps to understand the concept.
++ *You'll be surprised how much information you'll forget if you don't write it down, so take good notes or smart annotations. I don't think writing everything down is necessary, sometimes a copy-paste helps to understand the concept.*
 
 + *NEVER, EVER, RUN A SCRIPT WITHOUT INSPECTING IT. IM SERIOUS, take the time to curate your scripts.*
 
 + *As you learn focus on the general, knowing how to solve problems and explore solutions... is a thousand times more valuable than just mastering the tools.*
 
 + *There are thousands of programs out there to use, but one thing you can't miss is trying them out and getting to know them. Whether you're on team red, blue, or purple, all knowledge benefits you.*
+
++ *Please try to gamify all the material to your advantage. I won't lie, the material can be quite technical and far from glamorous like in Hollywood. That's why it's up to you to make it interesting... like a videogame.*
 <br>
 
 
