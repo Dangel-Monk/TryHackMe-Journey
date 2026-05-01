@@ -88,5 +88,27 @@ interesting_page="/bank-transfer";
 >> 2. System memory: If the attacker runs their malicious program in memory without saving it to the disk, taking a forensic image (low-level copy) of the system memory is the best way to analyze its contents and learn about the attack.
 >> 3. System logs: Each client and server computer maintains different log files about what is happening. Log files provide plenty of information about what happened on a system. Even if the attacker tries to clear their traces, some traces will remain.
 >> 4. Network logs: Logs of the network packets that have traversed a network would help answer more questions about whether an attack is occurring and what it entails.
+<br>
 
+| Incident Response |
+| - |
+
+> An incident usually refers to a data breach or cyber attack; however, in some cases, it can be something less critical, such as a misconfiguration, an intrusion attempt, or a policy violation. How would you respond to a cyber attack? Incident response specifies the methodology that should be followed to handle such a case. The aim is to reduce damage and recover in the shortest time possible. Ideally, you would develop a plan that is ready for incident response.
+>
+>> 1. Preparation: This requires a team trained and ready to handle incidents. Ideally, various measures are put in place to prevent incidents from happening in the first place.
+>> 2. Detection and Analysis: The team has the necessary resources to detect any incident; moreover, it is essential to analyze any detected incident further to learn about its severity.
+>> 3. Containment, Eradication, and Recovery: Once an incident is detected, it is crucial to stop it from affecting other systems, eliminate it, and recover the affected systems.
+>> 4. Post-Incident Activity: After a successful recovery, a report is produced, and the lesson learned is shared to prevent similar future incidents.
+<br>
+
+| Malware Analysis |
+| - |
+
+> Malware stands for malicious software. Software refers to programs, documents, and files you can save on a disk or send over the network.
+
+> Malware analysis aims to learn about such malicious programs using various means:
+>
+>> 1. Static analysis works by inspecting the malicious program without running it.
+>> 2. Dynamic analysis works by running the malware in a controlled environment and monitoring its activities.
+<br>
 
