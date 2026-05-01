@@ -29,13 +29,13 @@
 <br><h2 align="center"> = PROGRAMS FOUND ON THE SITE = </h2><br>
 
 
-| :---: | **General Purpose** |
+| >>> | **General Purpose** |
 | :---: | :---: |
 |   **Vim**   | Vim (Vi IMproved) is a free, open-source, and highly efficient command-line text editor designed for speed, allowing users to edit text entirely via keyboard shortcuts without a mouse. It is commonly used for coding and server management in Unix, macOS, and Windows environments, operating in distinct "modes" (normal, insert, command-line). |
 |   **Tmux**   | Tmux is a powerful terminal multiplexer that allows you to manage multiple terminal sessions, windows, and panes within a single screen, all running independently. It enables detaching sessions—keeping programs running in the background even when disconnecting via SSH—and reattaching them later, making it essential for remote development and workflow organization. |
-
-
-
+| ... | ... |
+| >>> | **Red Team / Offensive Purpose** |
+|   **GoBuster**   | Gobuster is an open-source, high-performance tool written in Go, designed for brute-forcing URIs (directories/files), DNS subdomains, and virtual hosts in web applications. It is a critical, fast enumeration tool used by penetration testers and bug bounty hunters to discover hidden, unlinked content and infrastructure, supporting custom wordlists and concurrent processing. |
 
 
 
