@@ -53,7 +53,9 @@
 |   **VirusTotal**   | VirusTotal is a free, crowdsourced threat intelligence service that analyzes files, URLs, domains, and IP addresses for malware using over 70 antivirus scanners and URL/domain blocklisting services. It acts as a comprehensive, web-based malware scanning platform that aggregates data to detect malicious content, identify false positives, and share insights within the security community. |
 | ... | ... |
 | >>> | **Vulnerabilities and Exploits Purpose** |
-|   ****   | 
+|   **CVE**   | Common Vulnerabilities and Exposures (CVE) is a standardized, publicly disclosed list of cybersecurity flaws, assigned to specific software, firmware, or hardware vulnerabilities. CVEs enable effective tracking and remediation, managed by the CVE Program and populated in the National Vulnerability Database (NVD). |
+|   **Exploit Database**   | The Exploit Database (Exploit-DB) is a widely recognized, public, and free archive of, exploits and proof-of-concept (PoC) code, maintained by OffSec. It serves penetration testers, security researchers, and ethical hackers by providing validated, searchable exploit code for known vulnerabilities, aimed at accelerating security assessments and improving defense strategies. |
+
 
 
 
