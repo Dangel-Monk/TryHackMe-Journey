@@ -18,11 +18,9 @@
 + *There are thousands of programs out there to use, but one thing you can't miss is trying them out and getting to know them. Whether you're on team red, blue, or purple, all knowledge benefits you.*
 
 + *Please try to gamify all the material to your advantage. I won't lie, the material can be quite technical and far from glamorous like in Hollywood. That's why it's up to you to make it interesting... like a videogame.*
+
+----
 <br>
-
-
-
-
 
 
 
@@ -37,6 +35,25 @@
 | >>> | **Red Team / Offensive Purpose** |
 |   **GoBuster**   | Gobuster is an open-source, high-performance tool written in Go, designed for brute-forcing URIs (directories/files), DNS subdomains, and virtual hosts in web applications. It is a critical, fast enumeration tool used by penetration testers and bug bounty hunters to discover hidden, unlinked content and infrastructure, supporting custom wordlists and concurrent processing. |
 
+----
+<br>
+
+
+
+<br><h2 align="center"> = WEB PAGES FOUND ON THE SITE = </h2><br>
+
+
+| >>> | **Information Gathering Purpose** |
+| :---: | :---: |
+|   **Shodan**   | Shodan is a specialized search engine that crawls the entire internet to index devices, services, and systems connected to the web. Unlike Google, which indexes websites, Shodan finds exposed IoT devices, servers, routers, and industrial control systems by collecting metadata (banners) from open ports. |
+|   **Censys**   | Censys is a prominent internet intelligence platform that continuously scans and analyzes all public IPv4/IPv6 addresses and domain names to map global infrastructure. It provides Attack Surface Management (ASM) and search capabilities, helping security teams identify, monitor, and secure exposed assets and analyze potential threats. |
+| ... | ... |
+| >>> | **Tools Purpose** |
+|   **Have I Been Pwned**   | Have I Been Pwned (HIBP) is a free, secure, and widely trusted service created by Troy Hunt in 2013 that allows individuals to check if their personal data (email, password, or phone number) has been exposed in public data breaches. It aggregates billions of records from hackers and data dumps to help users identify compromised accounts and mitigate risks. |
+|   **VirusTotal**   | VirusTotal is a free, crowdsourced threat intelligence service that analyzes files, URLs, domains, and IP addresses for malware using over 70 antivirus scanners and URL/domain blocklisting services. It acts as a comprehensive, web-based malware scanning platform that aggregates data to detect malicious content, identify false positives, and share insights within the security community. |
+| ... | ... |
+| >>> | **Vulnerabilities and Exploits Purpose** |
+|   ****   | 
 
 
 
