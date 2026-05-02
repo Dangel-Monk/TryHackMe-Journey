@@ -137,16 +137,16 @@ interesting_page="/bank-transfer";
 subject = "cyber security"
 
 # Perhaps we'd be interested in a literal search...
-Google Search: cyber security"
+Google Search: "cyber security"
 
 # Or not to search for a particular result...
-Google Search: "cyber security -bootcamp"
+Google Search: "cyber security [-bootcamp]"
 
 # We probably want to let him fill in the rest...
-Google Search: "jobs in cyber security as *..."
+Google Search: "jobs in cyber security as [*]"
 
 # We can even use logic gates to define what we're looking for...
-Google Search: "cyber security AND jobs AND red team OR blue team"
+Google Search: "cyber security [AND] jobs [AND] red team [OR] blue team"
 
 
 main_site = "tryhackme.com"
@@ -154,20 +154,67 @@ types = "pdf"
 
 # Hey, there are certain tags that allow us to fill in data that interests us...
 
-Google Search: "cyber security source:nytimes"
-Google Search: "cyber security site:tryhackme.com"
+Google Search: "cyber security [source:nytimes]"
+Google Search: "cyber security [site:tryhackme.com]"
 
-Google Search: "cyber security filetype:pdf"
+Google Search: "cyber security [filetype:pdf]"
 
 
 # Theres a couple more, I can't think of any examples, but maybe these will help...
 
-# Helps to find pages covering a certain topic
-"site:[domain] topic" 
+# Helps to find pages covering a certain topic.
+"[site:domain] topic" 
 
-# Enables you to locate websites using specific keywords in their URLs
-"inurl:[keyword]"
+# Enables you to locate websites using specific keywords in their URLs.
+"[inurl:keyword]"
 
-# Lets you locate websites using a combination of specific terms in their URLs
-"allinurl:[keywords]"
+# Lets you locate websites using a combination of specific terms in their URLs.
+"[allinurl:keywords]"
 ```
+
++ *There are many more useful websites, and I'll put many of them on the project's homepage. It's also a good idea not only to save these but to search for many more on your own.*
+
+| Linux Manual Pages |
+| - |
+
+> Long before the Internet was everywhere, how would you get help using a command in a Linux or Unix-like system? The answer would be checking the manual page, man page for short. On Linux and every Unix-like system, each command is expected to have a man page. In fact, man pages also exist for system calls, library functions, and even configuration files.
+
+```bash
+# As you will realize, the manual will also be something you use constantly for your learning.
+
+man [command]
+
+# Some useful shortcuts that can help you not lose your mind...
+
+<q>    Quit the manual.
+<f>    Turn forward half a page.
+<b>    Go back half a page.
+<d>    Turn forward one page.
+<u>    Go back one entire page.
+
+
+# Either way, you can find help online or use help commands in the terminal...
+
+man [man]
+man [-h | --help]
+man [man] <h>        It offers a more extensive list of shortcuts for getting around.
+```
+
+| Social Media |
+| - |
+
+> There are billions of users registered on social media platforms such as Facebook(opens in new tab), Twitter(opens in new tab), and LinkedIn(opens in new tab). We expect you to be familiar with popular platforms. However, if you are aware of any platform you are not familiar with, we recommend that you check it out and learn about it. Ideally, one would want to explore a platform without creating an account; however, this severely limits your experience. Instead, one recommendation is to use a temporary email address to discover these platforms without linking them to your real email addresses; once done, you can terminate the accounts and associated email addresses. One reason for not using your primary account is that you don’t want your contacts to start connecting with you there when you are only temporarily exploring a platform.
+
+> The power of social media is that it allows you to connect with companies and people you are interested in. Furthermore, social media offers a wealth of information for cyber security professionals, whether they are searching for people or technical information. Why is searching for people important, you ask?
+
+> When protecting a company, you should ensure that the people you protect are not oversharing on social media. For instance, their social media might give away the answer to their secret questions, such as, “Which school did you go to as a child?”. Such information might allow adversaries to reset their passwords and take over their accounts effortlessly.
+
+> Furthermore, as a cyber security professional, you want to stay updated with new cyber security trends, technologies, and products. Following the proper channels and groups can provide a suitable environment for growing your technical expertise.
+
++ *Any reason for adding so much text to this? Yes, I think the main point is public access. We constantly take the internet as a necessity, as the norm, something without much risk...*
+
+1. *People's lives are more public than ever, and you can learn many things from them without them knowing who is watching.*
+2. *You have access to thousands of interconnected devices / servers / computers from the comfort of your home.*
+3. *And not only that, you also have in the palm of your hand how thousands of services work, their flaws, their costs, their vulnerabilities...*
+  
++ *And that's not even considering that thousands of people out there have the same interests and the same potential as you, groups with the same motivations, groups that have their own rules... The internet is more than just a thing; it's a parallel world. Call me paranoid, but information / data is the most important thing these days, something that thousands of people don't understand.*
