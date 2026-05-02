@@ -110,5 +110,37 @@ interesting_page="/bank-transfer";
 >
 >> 1. Static analysis works by inspecting the malicious program without running it.
 >> 2. Dynamic analysis works by running the malware in a controlled environment and monitoring its activities.
+
+----
+
 <br>
 
+
+
+## Search Skills
+
+> On the Internet, everyone can publish their writings. It can be in the form of blog posts, articles, or social media posts. It can be even in more subtle ways, such as by editing a public wiki page. This ability makes it possible for anyone to voice their unfounded claims.
+
+> It is our job, as readers, to evaluate the information. We will mention a few things to consider when evaluating information:
+>
+>> 1. Source: Identify the author or organization publishing the information. Consider whether they are reputable and authoritative on the subject matter.
+>> 2. Evidence and reasoning: Check whether the claims are backed by credible evidence and logical reasoning. We are seeking hard facts and solid arguments.
+>> 3. Objectivity and bias: Evaluate whether the information is presented impartially and rationally, reflecting multiple perspectives. We are not interested in authors pushing shady agendas, whether to promote a product or attack a rival.
+>> 4. Corroboration and consistency: Validate the presented information by corroboration from multiple independent sources. Check whether multiple reliable and reputable sources agree on the central claims.
+
+> Every one of us has used an Internet search engine; however, not everyone has tried to harness the full power of an Internet search engine. Almost every Internet search engine allows you to carry out advanced searches.
+
++ *Take the time to learn how to search the internet using advanced search functions. It's not that different from using commands and arguments in the terminal.*
+
+```python
+# Let's say we use Google as our default browser... what other options might exist?
+
+subject = "cyber security"
+main_site = "tryhackme.com"
+types = "pdf"
+
+# Perhaps we'd be interested in a literal search...
+Google Search: "subject"
+
+# 
+```
