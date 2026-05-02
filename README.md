@@ -191,7 +191,7 @@
 <details><summary align="center"> [ - MAIN MODULES - ] </summary><br>
 
 
-> 1. - [ ] [Start Your Cyber Security Journey](https://tryhackme.com/module/start-your-cyber-security-journey)
+> 1. - [X] [Start Your Cyber Security Journey](https://tryhackme.com/module/start-your-cyber-security-journey)
 <details><summary>
      Explore offensive and defensive cyber security via interactive exercises and acquire the essential search skills to find information.
 </summary><br>
