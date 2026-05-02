@@ -134,13 +134,40 @@ interesting_page="/bank-transfer";
 
 ```python
 # Let's say we use Google as our default browser... what other options might exist?
-
 subject = "cyber security"
+
+# Perhaps we'd be interested in a literal search...
+Google Search: cyber security"
+
+# Or not to search for a particular result...
+Google Search: "cyber security -bootcamp"
+
+# We probably want to let him fill in the rest...
+Google Search: "jobs in cyber security as *..."
+
+# We can even use logic gates to define what we're looking for...
+Google Search: "cyber security AND jobs AND red team OR blue team"
+
+
 main_site = "tryhackme.com"
 types = "pdf"
 
-# Perhaps we'd be interested in a literal search...
-Google Search: "subject"
+# Hey, there are certain tags that allow us to fill in data that interests us...
 
-# 
+Google Search: "cyber security source:nytimes"
+Google Search: "cyber security site:tryhackme.com"
+
+Google Search: "cyber security filetype:pdf"
+
+
+# Theres a couple more, I can't think of any examples, but maybe these will help...
+
+# Helps to find pages covering a certain topic
+"site:[domain] topic" 
+
+# Enables you to locate websites using specific keywords in their URLs
+"inurl:[keyword]"
+
+# Lets you locate websites using a combination of specific terms in their URLs
+"allinurl:[keywords]"
 ```
