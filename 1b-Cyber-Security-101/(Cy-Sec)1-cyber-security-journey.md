@@ -112,7 +112,6 @@ interesting_page="/bank-transfer";
 >> 2. Dynamic analysis works by running the malware in a controlled environment and monitoring its activities.
 
 ----
-
 <br>
 
 
@@ -173,6 +172,7 @@ Google Search: "cyber security [filetype:pdf]"
 ```
 
 + *There are many more useful websites, and I'll put many of them on the project's homepage. It's also a good idea not only to save these but to search for many more on your own.*
+<br>
 
 | Linux Manual Pages |
 | - |
@@ -199,6 +199,7 @@ man [man]
 man [-h | --help]
 man [man] <h>        It offers a more extensive list of shortcuts for getting around.
 ```
+<br>
 
 | Social Media |
 | - |
