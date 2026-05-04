@@ -52,6 +52,7 @@ echo "Welcome back! $current_user, lets do our best today.";
 
 > As I previously stated, being able to navigate the machine that you are logged into without relying on a desktop environment is pretty important. After all, what's the point of logging in if we can't go anywhere?
 
+
 ```bash
 # Every time we start a terminal, it would be good to know where we are.
 
@@ -85,7 +86,8 @@ cd ~/Desktop/;      # If you enter `~`, you'll be accessing your personal folder
 > Whilst knowing about the existence of files is great — it's not all that useful unless we're able to view the contents of them.
 > "Cat" is short for concatenating & is a fantastic way for us to output the contents of files (not just text files!).
 
-```bash
+
+``` bash
 # I usually prefer to open text files with an editor, but in some cases `cat` works.
 # Let's say we want to make quick annotations to a text using echo.
 
@@ -100,4 +102,26 @@ ls -l;
 
 cat todo.txt
 ```
+<br>
 
+| Searching for Files | 
+| - |
+
+> Although it doesn't seem like it so far, one of the redeeming features of Linux is truly how efficient you can be with it. With that said, you can only be as efficient as you are familiar with it of course. As you interact with OSs such as Ubuntu over time, essential commands like those we've already covered will start to become muscle-memory.
+
+> The find command is fantastic in the sense that it can be used both very simply or rather complex depending upon what it is you want to do exactly. However, let's stick to the fundamentals first.
+
+
+```bash
+# Let's consider a situation where we created thousands of folders throughout the system...
+
+temporal_dir=$(mkdir Imagine-All The-Different Problems-Right)
+
+$temporal_dirs; echo "This is a test" >> ./The-Different/bango.txt; ls -l *;
+
+# Now, we have a couple of folders and in one of them there is some text...
+
+wheres_text=$(find -name *.txt)
+
+echo "Theres a text at: $wheres_text"; cat $wheres_text;
+```
