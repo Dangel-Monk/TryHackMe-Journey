@@ -1,5 +1,5 @@
 
-## Linux Fundamentals
+## Linux Fundamentals Part 1
 
 > Many servers and security tools use Linux. Learn how to use the Linux operating system, a critical skill in cyber security.
 
@@ -125,3 +125,67 @@ wheres_text=$(find -name *.txt)
 
 echo "Theres a text at: $wheres_text"; cat $wheres_text;
 ```
+<br>
+
+| Using Grep | 
+| - |
+
+> Using a command like cat isn't going to cut it too well here. Let's say for example if we wanted to search this log file to see the things that a certain user/IP address visited? Looking through 244 entries isn't all that efficient considering we want to find a specific value.
+
+> We can use grep to search the entire contents of this file for any entries of the value that we are searching for. Going with the example of a web server's access log, we want to see everything that the IP address "81.143.211.90" has visited (note that this is fictional)
+
+```bash
+# After obtaining a network scan, or looking at the logs, you become interested in an IP address...
+
+logs_container="/home/$(whoami)/Desktop/"
+sus_ip="164.60.83.21"
+
+grep "$sus_ip" "$logs_container/access-log.txt" > ~/Desktop/investigate.txt;
+cat ~/Desktop/investigate.txt
+
+
+# What if there are multiple access points, but in different folders?
+
+grep -R "$sus_ip" "$logs_container/"
+```
+<br>
+
+| Shell Operators | 
+| - |
+
+> Operator "`&`"
+>> This operator allows us to execute commands in the background. For example, let's say we want to copy a large file. This will obviously take quite a long time and will leave us unable to do anything else until the file successfully copies.
+
+> Operator "`&&`"
+>> This shell operator is a bit misleading in the sense of how familiar is to its partner "&". Unlike the "&" operator, we can use "&&" to make a list of commands to run for example `command1 && command2`. However, it's worth noting that `command2` will only run if `command1` was successful.
+
+> Operator "`>`"
+>> This operator is what's known as an output redirector. What this essentially means is that we take the output from a command we run and send that output to somewhere else.
+
+> Operator "`>>`"
+>> The `>>` operator allows to append the output to the bottom of the file — rather than replacing the contents of the file.
+
+----
+<br>
+
+
+
+## Linux Fundamentals Part 2
+
+| Access using SSH | 
+| - |
+
+> Secure Shell or SSH simply is a protocol between devices in an encrypted form. Using cryptography, any input we send in a human-readable format is encrypted for travelling over a network -- where it is then unencrypted once it reaches the remote machine.
+
+```bash
+# There is an exercise on the page where you can connect to the machines. 
+
+user_name='tryhackme'
+exercise_machine='191.102.248.140'
+password_if=""
+
+ssh "$user_name@$exercise_machine" | 'yes' | "$password_if"
+```
+
+
+
