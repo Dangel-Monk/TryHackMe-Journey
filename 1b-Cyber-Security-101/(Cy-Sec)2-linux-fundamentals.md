@@ -220,3 +220,31 @@ man [-h | --help]
 man [man] <h>        It offers a more extensive list of shortcuts for getting around.
 ```
 <br>
+
+| Filesystem Interaction Continued | 
+| - |
+
+> In this task, we're going to learn some more commands for interacting with the filesystem to allow us to:
+>
+>> Create files and folders
+>> Move files and folders
+>> Delete files and folders
+
+```bash
+# It wouldn't make much sense to learn these commands without making sense of them...
+# Therefore, we will focus more on knowing, what is it that we want to do?
+
+# 1. Create 3 folders on the desktop: personal notes, logs, and whitelist.
+# 2. Create several empty files in each folder but with corresponding names.
+# 3. In your personal notes, create a file with your goals and a proverb.
+# 4. In the logs, create a list with 5 randomly generated IPs.
+# 5. Copy the text to the whitelist folder, and rename it.
+
+# This is just one way to do it, try different ways...
+
+cd ~/Desktop; mkdir 
+```
+
+
+
+
