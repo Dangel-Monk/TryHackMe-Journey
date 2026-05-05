@@ -1,5 +1,5 @@
 
-## Linux Fundamentals Part 1
+## Linux Fundamentals Part
 
 > Many servers and security tools use Linux. Learn how to use the Linux operating system, a critical skill in cyber security.
 
@@ -178,7 +178,7 @@ grep -R "$sus_ip" "$logs_container/"
 > Secure Shell or SSH simply is a protocol between devices in an encrypted form. Using cryptography, any input we send in a human-readable format is encrypted for travelling over a network -- where it is then unencrypted once it reaches the remote machine.
 
 ```bash
-# There is an exercise on the page where you can connect to the machines. 
+# There is an exercise on the page where you can connect to a machine. 
 
 user_name='tryhackme'
 exercise_machine='191.102.248.140'
@@ -186,6 +186,37 @@ password_if=""
 
 ssh "$user_name@$exercise_machine" | 'yes' | "$password_if"
 ```
+<br>
+
+| Access using SSH | 
+| - |
+
+> A majority of commands allow for arguments to be provided. These arguments are identified by a hyphen and a certain keyword known as flags or switches.
+
+> Commands that accept these will also have a --help option. This option will list the possible options that the command accepts, provide a brief description and example of how to use it.
+
+```bash
+# As you will realize, the manual will also be something you use constantly for your learning.
+
+ls -l        # Displays the contents of the folder in a list.
+ls --help    # Displays the command manual `ls`
 
 
+# Some useful shortcuts that can help you not lose your mind...
 
+<q>    Quit the manual.
+<f>    Turn forward half a page.
+<b>    Go back half a page.
+<d>    Turn forward one page.
+<u>    Go back one entire page.
+
+
+# Either way, you can find help online or use help commands in the terminal...
+
+help_command='ls'
+
+man [man]
+man [-h | --help]
+man [man] <h>        It offers a more extensive list of shortcuts for getting around.
+```
+<br>
