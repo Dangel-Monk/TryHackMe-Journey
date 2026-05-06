@@ -334,7 +334,7 @@ rm -r ~/Desktop/Small-Project;
 >  We're going to cover the use of wget .  This command allows us to download files from the web via HTTP -- as if you were accessing the file in your browser. We simply need to provide the address of the resource that we wish to download. For example, if I wanted to download a file named "myfile.txt" onto my machine, assuming I knew the web address it -- it would look something like this:
 
 ```bash
-wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
+wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt;
 ```
 <br>
 
@@ -348,9 +348,62 @@ wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 >> - Copy files & directories from a remote system to your current system
 
 ```bash
-# 
+# This works like a two-way route, where you specify whether you want to send or receive.
+# Let's send the text by `scp` using the SOURCE and DESTINATION format:
+
+ip_address_remote="192.168.1.30"
+user_remote_system="ubuntu"
+local_file="important.txt"
+store_file_as="transferred.txt"
+
+scp "$local_file" "$user_remote_system@$ip_address_remote":"$HOME/Downloads/$store_file_as";
+
+
+# In another sense, what happens if we now want to send it?
+
+remote_local_file="documents.txt"
+save_file_as="notes.txt"
+
+scp "$user_remote_system@$ip_address_remote":"$HOME/Desktop/$remote_local_file" "$save_file_as";
+
+
+# It's like you normally connect to a machine via SSH; you just add the parameters to send / receive
+
+ssh [Your things...] + "$user_remote_system@ip_address_remote" OR [Your things...];
 ```
+<br>
+
+> - Serving Files From Your Host - WEB
+>
+> Ubuntu machines come pre-packaged with python3. Python helpfully provides a lightweight and easy-to-use module called "HTTPServer". This module turns your computer into a quick and easy web server that you can use to serve your own files, where they can then be downloaded by another computing using commands such as `curl` and `wget`.
+>
+> Python3's "HTTPServer" will serve the files in the directory where you run the command, but this can be changed by providing options that can be found within the manual pages. Simply, all we need to do is run `python3 -m  http.server` in the terminal to start the module!
+
+```bash
+# Let's experiment a bit with creating the service...
+
+public_folder="$HOME/Webserver-Files"
+machine_ip="192.168.6.92"
+
+# First, we need to be in the folder we want to share; this is important for several tools.
+
+cd "$public_folder"; python3 -m http.server;
 
 
+# It wasn't that difficult, you just have to leave that terminal open (since it's now a server).
+# <ctrl> + <c>        if you want to stop it...
 
+# Now we can connect to our computer with a link and download the content.
+
+wget "http://$machine_ip:8000/$public_folder/secret_sauce.txt";
+
+
+# Which makes you wonder, you're accessing a hard drive path with the added http... hmmm...
+```
+<br>
+
+| Processes 101 |
+| - |
+
+> Processes are the programs that are running on your machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID. The PID increments for the order In which the process starts. I.e. the 60th process will have a PID of 60.
 
