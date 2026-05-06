@@ -464,14 +464,88 @@ echo "Hi THM";
 # But what if we did it in the background? Nothing, silence... 
 echo "Hi THM" &
 ```
+<br>
 
 > This is great for commands such as copying files because it means that we can run the command in the background and continue on with whatever further commands we wish to execute (without having to wait for the file copy to finish first)
 >
-> We can do the exact same when executing things like scripts -- rather than relying on the & operator, we can use <Ctrl> + <Z> on our keyboard to background a process. It is also an effective way of "pausing" the execution of a script or command.
+> We can do the exact same when executing things like scripts -- rather than relying on the & operator, we can use [Ctrl + Z] on our keyboard to background a process. It is also an effective way of "pausing" the execution of a script or command.
 
 + *Now, this might just be me, but if I understand correctly, there are certain commands that depend on being in the foreground (like `echo`), but other more practical operations like copying, moving, etc., have no problem running in the background.*
 
-+ *So part of the usefulness of using <ctrl> + <Z> is that it not only helps us send certain commands to the background (or using `&`) but when they are scripts that print to the screen, by sending them to the background "paused" them*
++ *So part of the usefulness of using [Ctrl + Z] is that it not only helps us send certain commands to the background (or using `&`) but when they are scripts that print to the screen, by sending them to the background "paused" them*
 
-> With our process backgrounded using either <Ctrl> + <Z> or the `&` operator, we can use `fg` to bring this back to focus like below, where we can see the `fg` command is being used to bring the background process back into use on the terminal, where the output of the script is now returned to us.
+> With our process backgrounded using either [Ctrl + Z] or the `&` operator, we can use `fg` to bring this back to focus like below, where we can see the `fg` command is being used to bring the background process back into use on the terminal, where the output of the script is now returned to us.
+<br>
+
+| Maintaining your System: Automation |
+| - |
+
+> Users may want to schedule a certain action or task to take place after the system has booted. Take, for example, running commands, backing up files, or launching your favourite programs on, such as Spotify or Google Chrome.
+
+> We're going to be talking about the cron process, but more specifically, how we can interact with it via the use of crontabs . Crontab is one of the processes that is started during boot, which is responsible for facilitating and managing cron jobs.
+>
+>> - MIN
+>> What minute to execute at.
+>>
+>> - HOUR
+>> What hour to execute at.
+>>
+>> - DAY
+>> What day of the month to execute at.
+>>
+>> - MONTH
+>> What month of the year to execute at.
+>>
+>> - DAY WEEK
+>> What day of the week to execute at.
+>>
+>> - CMD
+>> The actual command that will be executed.
+<br>
+
+```bash
+# [number?] [MIN] [HOUR] [DAY] [MONTH] [DAY WEEK] [CMD]
+
+# Example, create a backup of "Documents" in "var/backups"
+
+0 */12 * * * cp -R /home/cmnatic/Documents /var/backups/;
+```
+<br>
+
++ *There are a couple of pages which will greatly help in understanding how they work*
+
++ *[Crontab Generator](crontab-generator.org/)*
++ *[Cronitor](crontab.guru/)*
+<br>
+
+| Maintaining your System: Automation |
+| - |
+
+> When developers wish to submit software to the community, they will submit it to an  "apt" repository. If approved, their programs and tools will be released into the wild. Two of the most redeeming features of Linux shine to light here: User accessibility and the merit of open source tools.
+
+> Whilst Operating System vendors will maintain their own repositories, you can also add community repositories to your list! This allows you to extend the capabilities of your OS. Additional repositories can be added by using the `add-apt-repository` command or by listing another provider! For example, some vendors will have a repository that is closer to their geographical location.
+
++ *[.....] This is still beyond my radar :P*
+
+> - Managing Your Repositories (Adding and Removing)
+>
+> Normally we use the apt command to install software onto our Ubuntu system. The apt command is a part of the package management software also named apt. Apt contains a whole suite of tools that allows us to manage the packages and sources of our software, and to install or remove software at the same time.
+>
+> Whilst you can install software through the use of package installers such as `dpkg`, the benefits of apt means that whenever we update our system -- the repository that contains the pieces of software that we add also gets checked for updates.
+
+```bash
+# There are a couple of steps in 
+```
+
+
+<br>
+
+| Maintaining your System: Logs |
+| - |
+
+> Located in the /var/log directory, these files and folders contain logging information for applications and services running on your system. The Operating System  (OS) has become pretty good at automatically managing these logs in a process that is known as "rotating".
+
+> These services and logs are a great way in monitoring the health of your system and protecting it. Not only that, but the logs for services such as a web server contain information about every single request - allowing developers or administrators to diagnose performance issues or investigate an intruder's activity.
+
+
 
