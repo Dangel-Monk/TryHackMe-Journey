@@ -51,6 +51,7 @@
 | >>> | **Tools Purpose** |
 |   **Have I Been Pwned**   | Have I Been Pwned (HIBP) is a free, secure, and widely trusted service created by Troy Hunt in 2013 that allows individuals to check if their personal data (email, password, or phone number) has been exposed in public data breaches. It aggregates billions of records from hackers and data dumps to help users identify compromised accounts and mitigate risks. |
 |   **VirusTotal**   | VirusTotal is a free, crowdsourced threat intelligence service that analyzes files, URLs, domains, and IP addresses for malware using over 70 antivirus scanners and URL/domain blocklisting services. It acts as a comprehensive, web-based malware scanning platform that aggregates data to detect malicious content, identify false positives, and share insights within the security community. |
+|   **Crontab Generator**   | A Crontab Generator is a web-based tool that creates Linux/Unix cron job schedules, allowing users to define tasks (e.g., script execution, backups) without manual, complex syntax. It offers dropdowns for minutes, hours, days, and months, generating precise schedules and providing human-readable explanations of the commands. |
 | ... | ... |
 | >>> | **Vulnerabilities and Exploits Purpose** |
 |   **CVE**   | Common Vulnerabilities and Exposures (CVE) is a standardized, publicly disclosed list of cybersecurity flaws, assigned to specific software, firmware, or hardware vulnerabilities. CVEs enable effective tracking and remediation, managed by the CVE Program and populated in the National Vulnerability Database (NVD). |
@@ -204,7 +205,7 @@
 
 
 
-> 2. - [ ] [Linux Fundamentals](https://tryhackme.com/module/linux-fundamentals)
+> 2. - [X] [Linux Fundamentals](https://tryhackme.com/module/linux-fundamentals)
 <details><summary>
      Many servers and security tools use Linux. Learn how to use the Linux operating system, a critical skill in cyber security.
 </summary><br>
