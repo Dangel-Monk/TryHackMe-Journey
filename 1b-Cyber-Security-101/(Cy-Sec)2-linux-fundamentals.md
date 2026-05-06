@@ -307,7 +307,7 @@ rm -r ~/Desktop/Small-Project;
 > Throughout the series so far, we have only stored text in files using a combination of the `echo` command and the pipe operators (`>` and `>>`). This isn't an efficient way to handle data when you're working with files with multiple lines and the sorts!
 <br>
 
-> - Nano
+> \> Nano
 > 
 > It is easy to get started with Nano! To create or edit a file using nano, we simply use `nano filename` -- replacing "filename" with the name of the file you wish to edit.
 >
@@ -319,7 +319,7 @@ rm -r ~/Desktop/Small-Project;
 >> 4. Finding out what line number you are on
 <br>
 
-> - Vim
+> \> Vim
 > 
 > VIM is a much more advanced text editor. Whilst you're not expected to know all advanced features, it's helpful to mention it for powering up your Linux skills.
 <br>
@@ -327,10 +327,10 @@ rm -r ~/Desktop/Small-Project;
 | General / Useful Utilities |
 | - |
 
-> - Downloading Files (Wget)
+> \> Downloading Files (Wget)
 > 
 > A pretty fundamental feature of computing is the ability to transfer files. For example, you may want to download a program, a script, or even a picture. Thankfully for us, there are multiple ways in which we can retrieve these files.
->
+
 >  We're going to cover the use of wget .  This command allows us to download files from the web via HTTP -- as if you were accessing the file in your browser. We simply need to provide the address of the resource that we wish to download. For example, if I wanted to download a file named "myfile.txt" onto my machine, assuming I knew the web address it -- it would look something like this:
 
 ```bash
@@ -338,14 +338,15 @@ wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 ```
 <br>
 
-> - Transferring Files From Your Host - SCP (SSH)
+> \> Transferring Files From Your Host - SCP (SSH)
 > 
 > Secure copy, or SCP, is just that -- a means of securely copying files. Unlike the regular cp command, this command allows you to transfer files between two computers using the SSH protocol to provide both authentication and encryption.
->
+
 > Working on a model of SOURCE and DESTINATION, SCP allows you to:
 > 
 >> - Copy files & directories from your current system to a remote system
 >> - Copy files & directories from a remote system to your current system
+<br>
 
 ```bash
 # This works like a two-way route, where you specify whether you want to send or receive.
@@ -359,7 +360,7 @@ store_file_as="transferred.txt"
 scp "$local_file" "$user_remote_system@$ip_address_remote":"$HOME/Downloads/$store_file_as";
 
 
-# In another sense, what happens if we now want to send it?
+# In another sense, what happens if we now want to save it?
 
 remote_local_file="documents.txt"
 save_file_as="notes.txt"
@@ -373,11 +374,12 @@ ssh [Your things...] + "$user_remote_system@ip_address_remote" OR [Your things..
 ```
 <br>
 
-> - Serving Files From Your Host - WEB
+> \> Serving Files From Your Host - WEB
 >
 > Ubuntu machines come pre-packaged with python3. Python helpfully provides a lightweight and easy-to-use module called "HTTPServer". This module turns your computer into a quick and easy web server that you can use to serve your own files, where they can then be downloaded by another computing using commands such as `curl` and `wget`.
->
+
 > Python3's "HTTPServer" will serve the files in the directory where you run the command, but this can be changed by providing options that can be found within the manual pages. Simply, all we need to do is run `python3 -m  http.server` in the terminal to start the module!
+<br>
 
 ```bash
 # Let's experiment a bit with creating the service...
@@ -395,7 +397,7 @@ cd "$public_folder"; python3 -m http.server;
 
 # Now we can connect to our computer with a link and download the content.
 
-wget "http://$machine_ip:8000/$public_folder/secret_sauce.txt";
+wget "http://$machine_ip:8000/secret_sauce.txt";
 
 
 # Which makes you wonder, you're accessing a hard drive path with the added http... hmmm...
@@ -406,4 +408,70 @@ wget "http://$machine_ip:8000/$public_folder/secret_sauce.txt";
 | - |
 
 > Processes are the programs that are running on your machine. They are managed by the kernel, where each process will have an ID associated with it, also known as its PID. The PID increments for the order In which the process starts. I.e. the 60th process will have a PID of 60.
+<br>
+
+> \> Viewing Processes
+>
+> We can use the friendly `ps` command to provide a list of the running processes as our user's session and some additional information such as its status code, the session that is running it, how much usage time of the CPU it is using, and the name of the actual program or command that is being executed
+
+> To see the processes run by other users and those that don't run from a session (i.e. system processes), we need to provide aux to the ps command like so: `ps aux`
+>
+> Another very useful command is the `top` command; top gives you real-time statistics about the processes running on your system instead of a one-time view. These statistics will refresh every 10 seconds, but will also refresh when you use the arrow keys to browse the various rows.
+<br>
+
+> \> Managing Processes
+>
+> You can send signals that terminate processes; there are a variety of types of signals that correlate to exactly how "cleanly" the process is dealt with by the kernel. To kill a command, we can use the appropriately named `kill` command and the associated PID that we wish to kill.
+
+> Below are some of the signals that we can send to a process when it is killed:
+>
+>> - SIGTERM - Kill the process, but allow it to do some cleanup tasks beforehand.
+>> - SIGKILL - Kill the process - doesn't do any cleanup after the fact.
+>> - SIGSTOP - Stop/suspend a process.
+<br>
+
+> \> How do Processes Start?
+>
+> Let's start off by talking about namespaces. The Operating System (OS) uses namespaces to ultimately split up the resources available on the computer to (such as CPU, RAM and priority) processes. Think of it as splitting your computer up into slices -- similar to a cake. Processes within that slice will have access to a certain amount of computing power, however, it will be a small portion of what is actually available to every process overall.
+
+> Namespaces are great for security as it is a way of isolating processes from another -- only those that are in the same namespace will be able to see each other.
+<br>
+
+> \> Getting Processes/Services to Start on Boot
+>
+> Some applications can be started on the boot of the system that we own. For example, web servers, database servers or file transfer servers. This software is often critical and is often told to start during the boot-up of the system by administrators.
+
+> Enter the use of `systemctl` -- this command allows us to interact with the systemd process/daemon. Continuing on with our example, systemctl is an easy to use command that takes the following formatting: `systemctl [option] [service]`
+
+> We can do five options with `systemctl`:
+>
+>> - Start
+>> - Stop
+>> - Enable
+>> - Disable
+>> - Status
+<br>
+
+> \> An Introduction to Backgrounding and Foregrounding in Linux
+>
+> Processes can run in two states: In the background and in the foreground. For example, commands that you run in your terminal such as `echo` or things of that sort will run in the foreground of your terminal as it is the only command provided that hasn't been told to run in the background. "Echo" is a great example as the output of echo will return to you in the foreground, but wouldn't in the background
+<br>
+
+```bash
+# Running this command prints the message to the screen...
+echo "Hi THM";
+
+# But what if we did it in the background? Nothing, silence... 
+echo "Hi THM" &
+```
+
+> This is great for commands such as copying files because it means that we can run the command in the background and continue on with whatever further commands we wish to execute (without having to wait for the file copy to finish first)
+>
+> We can do the exact same when executing things like scripts -- rather than relying on the & operator, we can use <Ctrl> + <Z> on our keyboard to background a process. It is also an effective way of "pausing" the execution of a script or command.
+
++ *Now, this might just be me, but if I understand correctly, there are certain commands that depend on being in the foreground (like `echo`), but other more practical operations like copying, moving, etc., have no problem running in the background.*
+
++ *So part of the usefulness of using <ctrl> + <Z> is that it not only helps us send certain commands to the background (or using `&`) but when they are scripts that print to the screen, by sending them to the background "paused" them*
+
+> With our process backgrounded using either <Ctrl> + <Z> or the `&` operator, we can use `fg` to bring this back to focus like below, where we can see the `fg` command is being used to bring the background process back into use on the terminal, where the output of the script is now returned to us.
 
