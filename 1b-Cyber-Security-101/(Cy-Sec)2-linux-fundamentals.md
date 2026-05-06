@@ -27,8 +27,8 @@
 
 + *Personally, I don't see much point in writing down thousands of commands that you'll forget if you only use this module. Instead, I propose the following: In every possible lesson, step outside your comfort zone and integrate commands...*
 
-+ *[freeCodeCamp / Linux Handbook](www.freecodecamp.org/news/the-linux-commands-handbook/)*
-+ *[Geeks for Geeks / Linux Tutorial](www.geeksforgeeks.org/linux-unix/linux-tutorial/)*
++ *[freeCodeCamp / Linux Handbook](https://www.freecodecamp.org/news/the-linux-commands-handbook/)*
++ *[Geeks for Geeks / Linux Tutorial](https://www.geeksforgeeks.org/linux-unix/linux-tutorial/)*
 
 + *As a bonus, you'll thank me later, but also learn some terminal shortcuts! They're not that different from what you already use, and they're related to text editors...*
 
@@ -76,8 +76,8 @@ cd ~/Desktop/;      # If you enter `~`, you'll be accessing your personal folder
 
 + *There are many folders that are very different from those in Windows, so you can also learn more about each one...*
 
-+ *[Linux Foundation / Linux File-System](www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained)*
-+ *[Geeks for Geeks / Linux Directory Structure](www.geeksforgeeks.org/linux-unix/linux-directory-structure/)*
++ *[Linux Foundation / Linux File-System](https://www.linuxfoundation.org/blog/blog/classic-sysadmin-the-linux-filesystem-explained)*
++ *[Geeks for Geeks / Linux Directory Structure](https://www.geeksforgeeks.org/linux-unix/linux-directory-structure/)*
 <br>
 
 | Outputting the Contents of a File (cat) |
@@ -283,8 +283,8 @@ rm -r ~/Desktop/Small-Project;
 
 + *If it wasn't very clear, you can look at more resources on the subject.*
 
-+ *[Marc Nuri Blog / File Permissions](blog.marcnuri.com/linux-file-permissions-complete-guide)*
-+ *[Geeks for Geeks / File Permissions](www.geeksforgeeks.org/linux-unix/set-file-permissions-linux/)*
++ *[Marc Nuri Blog / File Permissions](https://blog.marcnuri.com/linux-file-permissions-complete-guide)*
++ *[Geeks for Geeks / File Permissions](https://www.geeksforgeeks.org/linux-unix/set-file-permissions-linux/)*
 
 > The great thing about Linux is that permissions can be so granular, that whilst a user technically owns a file, if the permissions have been set, then a group of users can also have either the same or a different set of permissions to the exact same file without affecting the file owner itself.
 > 
@@ -514,8 +514,8 @@ echo "Hi THM" &;
 
 + *There are a couple of pages which will greatly help in understanding how they work*
 
-+ *[Crontab Generator](crontab-generator.org/)*
-+ *[Cronitor](crontab.guru/)*
++ *[Crontab Generator](https://crontab-generator.org/)*
++ *[Cronitor](https://crontab.guru/)*
 <br>
 
 | Maintaining your System: Automation |
