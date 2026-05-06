@@ -352,20 +352,20 @@ wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
 # This works like a two-way route, where you specify whether you want to send or receive.
 # Let's send the text by `scp` using the SOURCE and DESTINATION format:
 
-ip_address_remote="192.168.1.30"
-user_remote_system="ubuntu"
-local_file="important.txt"
-store_file_as="transferred.txt"
+ip_address_remote='192.168.1.30'
+user_remote_system='ubuntu'
+local_file='important.txt'
+store_file_as='transferred.txt'
 
-scp "$local_file" "$user_remote_system@$ip_address_remote":"$HOME/Downloads/$store_file_as";
+scp "$local_file" "$user_remote_system@$ip_address_remote":"~/Downloads/$store_file_as"
 
 
 # In another sense, what happens if we now want to save it?
 
-remote_local_file="documents.txt"
-save_file_as="notes.txt"
+remote_local_file='documents.txt'
+save_file_as='notes.txt'
 
-scp "$user_remote_system@$ip_address_remote":"$HOME/Desktop/$remote_local_file" "$save_file_as";
+scp "$user_remote_system@$ip_address_remote":"~/Downloads/$remote_local_file" "$save_file_as";
 
 
 # It's like you normally connect to a machine via SSH; you just add the parameters to send / receive
@@ -384,8 +384,8 @@ ssh [Your things...] + "$user_remote_system@ip_address_remote" OR [Your things..
 ```bash
 # Let's experiment a bit with creating the service...
 
-public_folder="$HOME/Webserver-Files"
-machine_ip="192.168.6.92"
+public_folder='~/Documents/Webserver-Files'
+machine_ip='192.168.6.92'
 
 # First, we need to be in the folder we want to share; this is important for several tools.
 
