@@ -30,7 +30,7 @@
 + *[freeCodeCamp / Linux Handbook](www.freecodecamp.org/news/the-linux-commands-handbook/)*
 + *[Geeks for Geeks / Linux Tutorial](www.geeksforgeeks.org/linux-unix/linux-tutorial/)*
 
-+ *As a bonus, you'll thank me later, but also learn some terminal shortcuts! They're not that different from what you already use, and they're related to text editors... *
++ *As a bonus, you'll thank me later, but also learn some terminal shortcuts! They're not that different from what you already use, and they're related to text editors...*
 
 
 ```bash
@@ -226,9 +226,9 @@ man [man] <h>        It offers a more extensive list of shortcuts for getting ar
 
 > In this task, we're going to learn some more commands for interacting with the filesystem to allow us to:
 >
->> Create files and folders
->> Move files and folders
->> Delete files and folders
+>> - Create files and folders
+>> - Move files and folders
+>> - Delete files and folders
 
 ```bash
 # It wouldn't make much sense to learn these commands without making sense of them...
@@ -240,10 +240,52 @@ man [man] <h>        It offers a more extensive list of shortcuts for getting ar
 # 4. In the logs, create a list with 5 randomly generated IPs.
 # 5. Copy the text to the whitelist folder, and rename it.
 
+
 # This is just one way to do it, try different ways...
 
-cd ~/Desktop; mkdir 
+cd ~/Desktop;
+mkdir -p Small-Project/Personal-Notes Small-Project/Logs-Reg Small-Project/White-List;
+cd Small-Project;
+
+# Create mathc{a..e}na.txt in each of the three directories
+touch {Personal-Notes,Logs-Reg,White-List}/mathc{a..e}na.txt;
+
+# Append a quote to Personal-Notes/text-quill.txt
+quoting="The way to get started is to quit talking and begin doing. -Walt Disney"
+echo "$quoting" >> Personal-Notes/text-quill.txt;
+
+# Proper IP array
+ip_list=("238.137.208.223" "70.131.83.191" "91.40.214.1" "33.96.32.138" "38.15.28.75")
+
+for me_ip in "${ip_list[@]}"; do
+    echo "$me_ip" >> Logs-Reg/ip-record.txt;
+done;
+
+# Copy the log to the White-List directory and rename
+cp Logs-Reg/ip-record.txt White-List/ip-record.txt;
+mv White-List/ip-record.txt White-List/allow-list.txt;
+
+
+# Cool! Everything should be in order. You can delete it like this (Always be careful with `rm`, please! or use -i / -I as a safenet):
+rm -r ~/Desktop/Small-Project
 ```
+<br>
+
+| Permissions 101 |
+| - |
+
+> As you would have already found out by now, certain users cannot access certain files or folders. We've previously explored some commands that can be used to determine what access we have and where it leads us.
+> 
+> Although intimidating, these three columns are very important in determining certain characteristics of a file or folder and whether or not we have access to it. A file or folder can have a couple of characteristics that determine both what actions are allowed and what user or group has the ability to perform the given action.
+
++ *If it wasn't very clear, you can look at more resources on the subject.*
+
++ *[Marc Nuri Blog / File Permissions](blog.marcnuri.com/linux-file-permissions-complete-guide)*
++ *[Geeks for Geeks / File Permissions](www.geeksforgeeks.org/linux-unix/set-file-permissions-linux/)*
+
+> The great thing about Linux is that permissions can be so granular, that whilst a user technically owns a file, if the permissions have been set, then a group of users can also have either the same or a different set of permissions to the exact same file without affecting the file owner itself.
+> 
+> Let's put this into a real-world context; the system user that runs a web server must have permissions to read and write files for an effective web application. However, companies such as web hosting companies will have to want to allow their customers to upload their own files for their website without being the webserver system user -- compromising the security of every other customer. 
 
 
 
