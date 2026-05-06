@@ -290,6 +290,67 @@ rm -r ~/Desktop/Small-Project;
 > 
 > Let's put this into a real-world context; the system user that runs a web server must have permissions to read and write files for an effective web application. However, companies such as web hosting companies will have to want to allow their customers to upload their own files for their website without being the webserver system user -- compromising the security of every other customer. 
 
++ *I won't lie, while knowing file permissions isn't the complicated part, it's more about the users themselves: how to create them, modify them, switch between them, create groups, manage them, etc. It's something I'm still learning.*
+
++ *But something I do want to emphasize is permissions... Your research, operations, or even your own systems depend on having permissions correctly defined.  You'll notice that while there are actions a user can't perform, there are other ways they can. It won't make much sense right now, but stay alert for this type of details.*
+
+----
+<br>
+
+
+
+## Linux Fundamentals Part 3
+
+| Terminal Text Editors |
+| - |
+
+> Throughout the series so far, we have only stored text in files using a combination of the `echo` command and the pipe operators (`>` and `>>`). This isn't an efficient way to handle data when you're working with files with multiple lines and the sorts!
+<br>
+
+> - Nano
+> 
+> It is easy to get started with Nano! To create or edit a file using nano, we simply use `nano filename` -- replacing "filename" with the name of the file you wish to edit.
+>
+> Nano has a few features that are easy to remember & covers the most general things you would want out of a text editor, including:
+> 
+>> 1. Searching for text
+>> 2. Copying and Pasting
+>> 3. Jumping to a line number
+>> 4. Finding out what line number you are on
+<br>
+
+> - Vim
+> 
+> VIM is a much more advanced text editor. Whilst you're not expected to know all advanced features, it's helpful to mention it for powering up your Linux skills.
+<br>
+
+| General / Useful Utilities |
+| - |
+
+> - Downloading Files (Wget)
+> 
+> A pretty fundamental feature of computing is the ability to transfer files. For example, you may want to download a program, a script, or even a picture. Thankfully for us, there are multiple ways in which we can retrieve these files.
+>
+>  We're going to cover the use of wget .  This command allows us to download files from the web via HTTP -- as if you were accessing the file in your browser. We simply need to provide the address of the resource that we wish to download. For example, if I wanted to download a file named "myfile.txt" onto my machine, assuming I knew the web address it -- it would look something like this:
+
+```bash
+wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt
+```
+<br>
+
+> - Transferring Files From Your Host - SCP (SSH)
+> 
+> Secure copy, or SCP, is just that -- a means of securely copying files. Unlike the regular cp command, this command allows you to transfer files between two computers using the SSH protocol to provide both authentication and encryption.
+>
+> Working on a model of SOURCE and DESTINATION, SCP allows you to:
+> 
+>> - Copy files & directories from your current system to a remote system
+>> - Copy files & directories from a remote system to your current system
+
+```bash
+# 
+```
+
 
 
 
