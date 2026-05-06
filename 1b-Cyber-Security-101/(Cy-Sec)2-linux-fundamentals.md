@@ -94,13 +94,14 @@ cd ~/Desktop/;      # If you enter `~`, you'll be accessing your personal folder
 pretty_please="Hyperhypexia is a harmless treatise"
 porroe="I can't help them, they no longer exist."
 
-echo $pretty_please > todo.txt;
-echo $porroe >> todo.txt;
+echo "$pretty_please" > todo.txt;        # Adds the text to the text file. 
+echo "$porroe" >> todo.txt;              # Add to the end of the text. 
 ls -l;
+
 
 # And then with the help of `cat` we can show it at that moment.
 
-cat todo.txt
+cat todo.txt;
 ```
 <br>
 
@@ -115,15 +116,15 @@ cat todo.txt
 ```bash
 # Let's consider a situation where we created thousands of folders throughout the system...
 
-temporal_dir=$(mkdir Imagine-All The-Different Problems-Right)
+cd ~/Desktop; mkdir Imagine-All The-Different Problems-Right;
+echo "This is a test" >> ./The-Different/bango.txt; ls -l *;
 
-$temporal_dirs; echo "This is a test" >> ./The-Different/bango.txt; ls -l *;
 
 # Now, we have a couple of folders and in one of them there is some text...
 
-wheres_text=$(find -name *.txt)
+wheres_text=$(find . -name "*.txt")
 
-echo "Theres a text at: $wheres_text"; cat $wheres_text;
+echo "Theres a text at: "$wheres_text"";
 ```
 <br>
 
@@ -137,16 +138,18 @@ echo "Theres a text at: $wheres_text"; cat $wheres_text;
 ```bash
 # After obtaining a network scan, or looking at the logs, you become interested in an IP address...
 
-logs_container="/home/$(whoami)/Desktop/"
+logs_container="$HOME/Desktop"
 sus_ip="164.60.83.21"
+log_file="$logs_container/access-log.txt"
+out_file="$logs_container/investigate.txt"
 
-grep "$sus_ip" "$logs_container/access-log.txt" > ~/Desktop/investigate.txt;
-cat ~/Desktop/investigate.txt
+grep -wn "$sus_ip" "$log_file" > "$out_file";
+cat "$out_file";
 
 
-# What if there are multiple access points, but in different folders?
+# What if there are multiple files with access points, but in different folders?
 
-grep -R "$sus_ip" "$logs_container/"
+grep -R -w "$sus_ip" "$logs_container";
 ```
 <br>
 
@@ -182,9 +185,9 @@ grep -R "$sus_ip" "$logs_container/"
 
 user_name='tryhackme'
 exercise_machine='191.102.248.140'
-password_if=""
+password_if="" # note your password here if needed
 
-ssh "$user_name@$exercise_machine" | 'yes' | "$password_if"
+'yes' | ssh "$user_name@$exercise_machine";
 ```
 <br>
 
@@ -198,8 +201,8 @@ ssh "$user_name@$exercise_machine" | 'yes' | "$password_if"
 ```bash
 # As you will realize, the manual will also be something you use constantly for your learning.
 
-ls -l        # Displays the contents of the folder in a list.
-ls --help    # Displays the command manual `ls`
+ls -l;        # Displays the contents of the folder in a list.
+ls --help;    # Displays the command manual `ls`
 
 
 # Some useful shortcuts that can help you not lose your mind...
@@ -215,9 +218,9 @@ ls --help    # Displays the command manual `ls`
 
 help_command='ls'
 
-man [man]
-man [-h | --help]
-man [man] <h>        It offers a more extensive list of shortcuts for getting around.
+man [man];
+man [-h | --help];
+man [man]; <h>        It offers a more extensive list of shortcuts for getting around.
 ```
 <br>
 
@@ -267,7 +270,7 @@ mv White-List/ip-record.txt White-List/allow-list.txt;
 
 
 # Cool! Everything should be in order. You can delete it like this (Always be careful with `rm`, please! or use -i / -I as a safenet):
-rm -r ~/Desktop/Small-Project
+rm -r ~/Desktop/Small-Project;
 ```
 <br>
 
