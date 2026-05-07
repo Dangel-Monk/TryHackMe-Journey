@@ -18,7 +18,7 @@
 > The file system used in modern versions of  Windows  is the New Technology File System or simply  NTFS.
 > Before NTFS, there was  FAT16/FAT32 (File Allocation Table) and HPFS (High Performance File System).
 
-> NTFS is known as a journaling file system. In case of a failure, the file system can automatically repair the folders/files on disk using information stored in a log file. This function is not possible with FAT.
+> NTFS is known as a journaling file system. In case of a failure, the file system can automatically repair the folders / files on disk using information stored in a log file. This function is not possible with FAT.
 <br>
 
 > NTFS addresses many of the limitations of the previous file systems; such as:
@@ -39,6 +39,12 @@
 >> - Write
 <br>
 
++ *I couldn't say how much these pages will help in understanding how the file system works*
+
+- [Kingston / Understanding File System](https://www.kingston.com/en/blog/personal-storage/understanding-file-systems)
+- [Geeks for Geeks / File System](https://www.geeksforgeeks.org/ethical-hacking/windows-file-system-structure/)
+<br>
+
 > How can you view the permissions for a file or folder?
 >
 > 1. Right-click the file or folder you want to check for permissions.
@@ -48,10 +54,12 @@
 
 > Another feature of NTFS is Alternate Data Streams (ADS), is a file attribute specific to Windows  NTFS (New Technology File System).
 
-> Every file has at least one data stream ( $DATA ), and ADS allows files to contain more than one stream of data. Natively Window Explorer (opens in new tab)doesn't display ADS to the user. There are 3rd party executables that can be used to view this data, PowerShell(opens in new tab) also gives you the ability to view ADS for files.
+> Every file has at least one data stream ($DATA), and ADS allows files to contain more than one stream of data. Natively Window Explorer doesn't display ADS to the user. There are 3rd party executables that can be used to view this data, PowerShell also gives you the ability to view ADS for files.
 
 > From a security perspective, malware writers have used ADS to hide data.
 > Not all its uses are malicious. For example, when you download a file from the Internet, there are identifiers written to ADS to identify that the file was downloaded from the Internet.
+
++ *I didn't know that Windows also handled values for saving specific data... So, while using the equipment, can we create dynamic scripts?*
 <br>
 
 | The Windows / System32 Folders |
@@ -62,6 +70,8 @@
 > This is where environment variables, more specifically system environment variables, come into play.  Even though not discussed yet, the system  environment variable for the Windows directory is `%windir%`.
 >
 > Per Microsoft, "Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders".
+
++ *This should greatly simplify navigating or moving around the computer. What I really like is that you not only have a graphical view of all the folder contents, but also the top bar can be modified.*
 
 > The System32 folder holds the important files that are critical for the operating system. You should proceed with extreme caution when interacting with this folder. Accidentally deleting any files or folders within System32 can render the Windows OS inoperational.
 <br>
@@ -76,9 +86,11 @@
 
 > There are several ways to determine which user accounts exist on the system. One way is to click the `Start Menu` and type `Other User`. A shortcut to `System Settings` > `Other users` should appear. 
 >
-> When a user account is created, a profile is created for the user. The location for each user profile folder will fall under is C:\Users.
+> When a user account is created, a profile is created for the user. The location for each user profile folder will fall under is `C:\Users`.
 
 > Another way to access this information, and then some, is using Local User and Group Management. Right-click on the Start Menu and click Run. Type `lusrmgr.msc`.
+
+> + *Part of having an overview is knowing what types of users are in the system and how they are configured. What type of permissions do they have, what access do they have, and what groups do they belong to...*
 <br>
 
 | User Account Control |
