@@ -31,7 +31,7 @@
 + *[Geeks for Geeks / Linux Tutorial](https://www.geeksforgeeks.org/linux-unix/linux-tutorial/)*
 
 + *As a bonus, you'll thank me later, but also learn some terminal shortcuts! They're not that different from what you already use, and they're related to text editors...*
-
+<br>
 
 ```bash
 # So, if you've followed the steps on the page and you're inside the machine, it's all yours!
@@ -51,7 +51,7 @@ echo "Welcome back! $current_user, lets do our best today.";
 | - |
 
 > As I previously stated, being able to navigate the machine that you are logged into without relying on a desktop environment is pretty important. After all, what's the point of logging in if we can't go anywhere?
-
+<br>
 
 ```bash
 # Every time we start a terminal, it would be good to know where we are.
@@ -73,6 +73,7 @@ echo "We're now at the top > $(pwd)"; ls -l;
 
 cd ~/Desktop/;      # If you enter `~`, you'll be accessing your personal folder directly.
 ```
+<br>
 
 + *There are many folders that are very different from those in Windows, so you can also learn more about each one...*
 
@@ -85,7 +86,7 @@ cd ~/Desktop/;      # If you enter `~`, you'll be accessing your personal folder
 
 > Whilst knowing about the existence of files is great — it's not all that useful unless we're able to view the contents of them.
 > "Cat" is short for concatenating & is a fantastic way for us to output the contents of files (not just text files!).
-
+<br>
 
 ``` bash
 # I usually prefer to open text files with an editor, but in some cases `cat` works.
@@ -111,7 +112,7 @@ cat todo.txt;
 > Although it doesn't seem like it so far, one of the redeeming features of Linux is truly how efficient you can be with it. With that said, you can only be as efficient as you are familiar with it of course. As you interact with OSs such as Ubuntu over time, essential commands like those we've already covered will start to become muscle-memory.
 
 > The find command is fantastic in the sense that it can be used both very simply or rather complex depending upon what it is you want to do exactly. However, let's stick to the fundamentals first.
-
+<br>
 
 ```bash
 # Let's consider a situation where we created thousands of folders throughout the system...
@@ -134,6 +135,7 @@ echo "Theres a text at: "$wheres_text"";
 > Using a command like cat isn't going to cut it too well here. Let's say for example if we wanted to search this log file to see the things that a certain user/IP address visited? Looking through 244 entries isn't all that efficient considering we want to find a specific value.
 
 > We can use grep to search the entire contents of this file for any entries of the value that we are searching for. Going with the example of a web server's access log, we want to see everything that the IP address "81.143.211.90" has visited (note that this is fictional)
+<br>
 
 ```bash
 # After obtaining a network scan, or looking at the logs, you become interested in an IP address...
@@ -179,6 +181,7 @@ grep -R -w "$sus_ip" "$logs_container";
 | - |
 
 > Secure Shell or SSH simply is a protocol between devices in an encrypted form. Using cryptography, any input we send in a human-readable format is encrypted for travelling over a network -- where it is then unencrypted once it reaches the remote machine.
+<br>
 
 ```bash
 # There is an exercise on the page where you can connect to a machine. 
@@ -197,6 +200,7 @@ password_if="" # note your password here if needed
 > A majority of commands allow for arguments to be provided. These arguments are identified by a hyphen and a certain keyword known as flags or switches.
 
 > Commands that accept these will also have a --help option. This option will list the possible options that the command accepts, provide a brief description and example of how to use it.
+<br>
 
 ```bash
 # As you will realize, the manual will also be something you use constantly for your learning.
@@ -232,6 +236,7 @@ man [man]; <h>        It offers a more extensive list of shortcuts for getting a
 >> - Create files and folders
 >> - Move files and folders
 >> - Delete files and folders
+<br>
 
 ```bash
 # It wouldn't make much sense to learn these commands without making sense of them...
@@ -332,6 +337,7 @@ rm -r ~/Desktop/Small-Project;
 > A pretty fundamental feature of computing is the ability to transfer files. For example, you may want to download a program, a script, or even a picture. Thankfully for us, there are multiple ways in which we can retrieve these files.
 
 >  We're going to cover the use of wget .  This command allows us to download files from the web via HTTP -- as if you were accessing the file in your browser. We simply need to provide the address of the resource that we wish to download. For example, if I wanted to download a file named "myfile.txt" onto my machine, assuming I knew the web address it -- it would look something like this:
+<br>
 
 ```bash
 wget https://assets.tryhackme.com/additional/linux-fundamentals/part3/myfile.txt;
@@ -481,6 +487,7 @@ echo "Hi THM" &;
 | - |
 
 > Users may want to schedule a certain action or task to take place after the system has booted. Take, for example, running commands, backing up files, or launching your favourite programs on, such as Spotify or Google Chrome.
+<br>
 
 > We're going to be talking about the cron process, but more specifically, how we can interact with it via the use of crontabs . Crontab is one of the processes that is started during boot, which is responsible for facilitating and managing cron jobs.
 >
@@ -526,6 +533,7 @@ echo "Hi THM" &;
 > Whilst Operating System vendors will maintain their own repositories, you can also add community repositories to your list! This allows you to extend the capabilities of your OS. Additional repositories can be added by using the `add-apt-repository` command or by listing another provider! For example, some vendors will have a repository that is closer to their geographical location.
 
 + *[.....] This is still beyond my radar :P*
+<br>
 
 > - Managing Your Repositories (Adding and Removing)
 >
