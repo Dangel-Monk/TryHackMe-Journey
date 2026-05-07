@@ -19,6 +19,7 @@
 > We will use a command-line application called "Gobuster(opens in new tab)" to brute-force FakeBank's website to find hidden directories and pages. Gobuster will take a list of potential page or directory names and try accessing a website with each of them; if the page exists, it tells you.
 
 > Most companies have an admin portal page, giving their staff access to basic admin controls for day-to-day operations. For a bank, an employee might need to transfer money to and from client accounts. Due to human error or negligence, there may be instances when these pages are not made private, allowing attackers to find hidden pages that show or give access to admin controls or sensitive data.
+<br>
 
 ```bash
 # We have a page we would like to investigate... 
@@ -34,6 +35,7 @@ gobuster -u $web_page -w $wordlist dir;
 # Bingo, we found a couple of folders containing the page apart from the main one...
 interesting_page="/bank-transfer";
 ```
+<br>
 
 + *This seems like a very simple scenario; we just put in a couple of commands with different options, filled in the blanks, and voila, it gave us the answer... right? You're not paying attention...*
 
@@ -51,6 +53,7 @@ interesting_page="/bank-transfer";
 ## Defensive Security Intro
 
 > In the previous lesson, we learned about offensive security, which aims to identify and exploit system vulnerabilities to enhance security measures. This includes exploiting software bugs, leveraging insecure setups, and taking advantage of unenforced access control policies, among other strategies. Red teams and penetration testers specialize in these offensive techniques.
+<br>
 
 > Some of the tasks that are related to defensive security include:
 >
@@ -81,6 +84,7 @@ interesting_page="/bank-transfer";
 | - |
 
 > Forensics is the application of science to investigate crimes and establish facts. With the use and spread of digital systems, such as computers and smartphones, a new branch of forensics was born to investigate related crimes: computer forensics, which later evolved into digital forensics.
+<br>
 
 > In defensive security, the focus of digital forensics shifts to analyzing evidence of an attack and its perpetrators and other areas such as intellectual property theft, cyber espionage, and possession of unauthorized content.
 >
@@ -105,6 +109,7 @@ interesting_page="/bank-transfer";
 | - |
 
 > Malware stands for malicious software. Software refers to programs, documents, and files you can save on a disk or send over the network.
+<br>
 
 > Malware analysis aims to learn about such malicious programs using various means:
 >
@@ -119,6 +124,7 @@ interesting_page="/bank-transfer";
 ## Search Skills
 
 > On the Internet, everyone can publish their writings. It can be in the form of blog posts, articles, or social media posts. It can be even in more subtle ways, such as by editing a public wiki page. This ability makes it possible for anyone to voice their unfounded claims.
+<br>
 
 > It is our job, as readers, to evaluate the information. We will mention a few things to consider when evaluating information:
 >
@@ -130,6 +136,7 @@ interesting_page="/bank-transfer";
 > Every one of us has used an Internet search engine; however, not everyone has tried to harness the full power of an Internet search engine. Almost every Internet search engine allows you to carry out advanced searches.
 
 + *Take the time to learn how to search the internet using advanced search functions. It's not that different from using commands and arguments in the terminal.*
+<br>
 
 ```python
 # Let's say we use Google as our default browser... what other options might exist?
@@ -170,6 +177,7 @@ Google Search: "cyber security [filetype:pdf]"
 # Lets you locate websites using a combination of specific terms in their URLs.
 "[allinurl:keywords]"
 ```
+<br>
 
 + *There are many more useful websites, and I'll put many of them on the project's homepage. It's also a good idea not only to save these but to search for many more on your own.*
 <br>
@@ -178,6 +186,7 @@ Google Search: "cyber security [filetype:pdf]"
 | - |
 
 > Long before the Internet was everywhere, how would you get help using a command in a Linux or Unix-like system? The answer would be checking the manual page, man page for short. On Linux and every Unix-like system, each command is expected to have a man page. In fact, man pages also exist for system calls, library functions, and even configuration files.
+<br>
 
 ```bash
 # As you will realize, the manual will also be something you use constantly for your learning.
