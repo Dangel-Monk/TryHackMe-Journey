@@ -90,9 +90,50 @@
 
 > Another way to access this information, and then some, is using Local User and Group Management. Right-click on the Start Menu and click Run. Type `lusrmgr.msc`.
 
-> + *Part of having an overview is knowing what types of users are in the system and how they are configured. What type of permissions do they have, what access do they have, and what groups do they belong to...*
++ *Part of having an overview is knowing what types of users are in the system and how they are configured. What type of permissions do they have, what access do they have, and what groups do they belong to...*
 <br>
 
 | User Account Control |
 | - |
+
+> The large majority of home users are logged into their Windows systems as local administrators. Remember from the previous task that any user with administrator as the account type can make changes to the system.
+
+> A user doesn't need to run with high (elevated) privileges on the system to run tasks that don't require such privileges, such as surfing the Internet, working on a Word document, etc. This elevated privilege increases the risk of system compromise because it makes it easier for malware to infect the system. Consequently, since the user account can make changes to the system, the malware would run in the context of the logged-in user.
+
+> To protect the local user with such privileges, Microsoft introduced User Account Control (UAC). This concept was first introduced with the short-lived Windows Vista (opens in new tab) and continued with versions of Windows that followed.
+>
+> How does UAC work? When a user with an account type of administrator logs into a system, the current session doesn't run with elevated permissions. When an operation requiring higher-level privileges needs to execute, the user will be prompted to confirm if they permit the operation to run.
+
++ *Many of these verification systems are useful for reinforcing decision-making, to ensure that certain actions are indeed being taken. And while they are not perfect, You should take precautions and develop good habits.*
+<br>
+
+| Task Manager |
+| - |
+
+> The Task Manager provides information about the applications and processes currently running on the system. Other information is also available, such as how much CPU and RAM are being utilized, which falls under Performance.
+
++ *[How-To Geek / Windows Task Manager](https://www.howtogeek.com/405806/windows-task-manager-the-complete-guide/)*
+
+----
+<br>
+
+
+
+## Windows Fundamentals 2
+
+| System Configuration and Advance System Settings |
+| - |
+
+> The System Configuration utility (`MSConfig`) is for advanced troubleshooting, and its main purpose is to help diagnose startup issues.
+<br>
+
+> The utility has five tabs across the top. Below are the names for each tab. We will briefly cover each tab in this task.
+>
+>> - General (We can select what devices and services for Windows to load upon boot)
+>> - Boot (We can define various boot options for the Operating System)
+>> - Services (Lists all services configured for the system regardless of their state)
+>> - Startup (Manages programs that launch automatically at login)
+>> - Tools (Provides a centralized list of diagnostic and system management utilities)
+
+> As you can see, Microsoft advises using Task Manager (`taskmgr`) to manage (enable/disable) startup items. The System Configuration utility is NOT a startup management program.
 
