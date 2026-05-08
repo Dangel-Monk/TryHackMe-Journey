@@ -137,3 +137,59 @@
 
 > As you can see, Microsoft advises using Task Manager (`taskmgr`) to manage (enable/disable) startup items. The System Configuration utility is NOT a startup management program.
 
+> Unlike Windows 10 or 11, you will not see startup programs in `Task Manager` or in the Startup tab of `msconfig`. On these Windows server machines, the only reliable way to view user-level startup items is through the Startup folder itself. You can access it by pressing `Win + R`, which opens the Run Dialog, typing `shell:startup`, and then pressing Enter. This will display all startup programs as shortcuts or executables that are configured to run automatically the next time a user logs in. This is where you can verify applications that are configured to launch at startup.
+
++ *As you can see, it is very useful to understand each of the tools in the tab, main uses, file location. The benefit is being able to have them grouped together, but it also finds other ways to execute them.*
+<br>
+
+> \> Advanced System Settings
+>
+> Windows gives you some additional configuration settings as well, which you can use to control the performance behavior and system recovery. To access this option, you can search for `View advanced system settings` in your search bar and open it.
+
+> Windows uses a page file as an extra virtual memory space when the physical RAM becomes full. This helps to prevent slowdowns or application crashes when the system runs out of memory. You can view or modify the page file by navigating to the `Advanced` option at the top and clicking `Settings` under the `Performance` tab.
+<br>
+
+>  In this Performance tab, the Advanced option can also tell you about the page file size configured for the drives. In this case, it's `1048 MB`. The other settings here can give you the following information:
+> 
+>> - The drive where the page file is stored
+>> - The initial size (MB)
+>> - The maximum size
+>> - Whether Windows manages the size automatically
+
+> There is another cool configuration that you can find in the Advanced System Settings. It is known as Startup and Recovery. Windows can create a crash dump file whenever it encounters a critical error, such as a Blue Screen of Death. This crash dump helps the administrators or analysts understand what went wrong during the crash. You can view or modify the crash dump settings by navigating to the `Advanced` option at the top and then clicking `Settings` under the `Startup and Recovery` section.
+<br>
+
+> Here, you will find different settings for the startup and recovery. The Write debugging information dropdown tells you the type of crash dump configured for the system. Windows supports different dump types, such as:
+> 
+>> - Automatic memory dump
+>> - Kernel memory dump
+>> - Small memory dump (256 KB)
+>> - Complete memory dump
+>> - None
+
++ *Another thing to consider is the startup and recovery logs. I can imagine a situation where we make a mistake by modifying system settings that prevents it from working correctly. Or perhaps there is some benefit to obtaining extra information by deliberately causing problems.
+<br>
+
+| UAC Settings |
+| - |
+
+> You can find the current level by looking at the position of the slider in the `User Account Control settings` window.
+<br>
+
+> This slider has four security levels, each of which controls how Windows alerts you when apps or users try to make changes at the system level. They fall into four standard categories as explained below:
+>
+>> - Always notify: This is the highest security. Windows notifies you whenever any apps or you yourself try to make changes, and the desktop dims (Secure Desktop).
+>>
+>> - Notify for apps: Windows notifies only when apps try to make changes, but not when you change Windows settings. This option is enabled by default.
+>>
+>> - Notify without dimming: Same as above (Notify for apps), but this time the screen does not dim. 
+>>
+>> - Never notify: Notifications are turned off. Windows won’t warn you about any changes made by you or any apps. 
+<br>
+
+| Computer Management |
+| - |
+
+> The Computer Management (`compmgmt`) utility has three primary sections: System Tools, Storage, and Services and Applications.
+>
+> 
