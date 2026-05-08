@@ -191,5 +191,129 @@
 | - |
 
 > The Computer Management (`compmgmt`) utility has three primary sections: System Tools, Storage, and Services and Applications.
+<br>
+
+> \> System Tools
+
+> Let's start with `Task Scheduler`. Per Microsoft, with Task Scheduler, we can create and manage common tasks that our computer will carry out automatically at the times we specify.
 >
-> 
+> A task can run an application, a script, etc., and tasks can be configured to run at any point. A task can run at log in or at log off. Tasks can also be configured to run on a specific schedule, for example, every five mins.
+<br>
+
+> Next is `Event Viewer`, allows us to view events that have occurred on the computer. These records of events can be seen as an audit trail that can be used to understand the activity of the computer system. This information is often used to diagnose problems and investigate actions executed on the system. 
+>
+> 1. The pane on the left provides a hierarchical tree listing of the event log providers. (as shown in the image above).
+> 2. The pane in the middle will display a general overview and summary of the events specific to a selected provider.
+> 3. The pane on the right is the actions pane.
+
+> `Shared Folders` is where you will see a complete list of shares and folders shared that others can connect to. As with any object in Windows, you can right-click on a folder to view its properties, such as Permissions (who can access the shared resource).
+
+> The `Local Users and Groups` section you should be familiar with from Windows Fundamentals 1 because it's `lusrmgr.msc`.
+
+> In `Performance`, you'll see a utility called Performance Monitor (`perfmon`). Perfmon is used to view performance data either in real-time or from a log file. This utility is useful for troubleshooting performance issues on a computer system, whether local or remote.
+
+> `Device Manager` allows us to view and configure the hardware, such as disabling any hardware attached to the computer.
+<br>
+
+> \> System Tools
+<br>
+
+> Under Storage is Windows Server Backup and Disk Management. `Disk Management` is a system utility in Windows that enables you to perform advanced storage tasks.  Some tasks are:
+>
+>> - Set up a new drive
+>> - Extend a partition
+>> - Shrink a partition
+>> - Assign or change a drive letter (ex. E:) 
+
+> Recall from the previous task, a service is a special type of application that runs in the background. You can see all the services and their statuses by clicking the `Services` button given under the Services and Applications section.
+>
+> The services shown above have their display names, status, and other values. If you want to get more information about any service, right-click on the service and click `properties`. Here, you will see additional details, such as the service name (which differs from the display name), the path to its executable, its startup type, and other relevant information.
+<br>
+
+| System Information |
+| - |
+
+> What is the System Information (`msinfo32`) tool?
+>
+> Per Microsoft, "Windows includes a tool called Microsoft System Information (Msinfo32.exe).  This tool gathers information about your computer and displays a comprehensive view of your hardware, system components, and software environment, which you can use to diagnose computer issues."
+>
+> The  information in System Summary is divided into three sections:
+>
+>> - Hardware Resources
+>>
+>> The information displayed in Hardware Resources is not for the average computer user. If you want to learn more about this section, refer to the official Microsoft page(opens in new tab).
+>> 
+>> - Components
+>>   
+>> Under Components, you can see specific information about the hardware devices installed on the computer. Some sections don't show any information, but some sections do, such as Display and Input.
+>> 
+>> - Software Environment
+>>   
+>> In the Software Environment section, you can see information about software baked into the operating system and software you have installed. Other details are visible in this section as well, such as the Environment Variables and Network Connections. 
+
+> Per Microsoft, "Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders.
+>
+> The environment variables store data that is used by the operating system and other programs. For example, the WINDIR environment variable contains the location of the Windows installation directory. Programs can query the value of this variable to determine where Windows operating system files are located".
+<br>
+
+| Resource Monitor |
+| - |
+
+> What is Resource Monitor (`resmon`)?
+>
+> Per Microsoft, "Resource Monitor displays per-process and aggregate CPU, memory, disk, and network usage information, in addition to providing details about which processes are using individual file handles and modules. Advanced filtering allows users to isolate the data related to one or more processes (either applications or services), start, stop, pause, and resume services, and close unresponsive applications from the user interface. It also includes a process analysis feature that can help identify deadlocked processes and file locking conflicts so that the user can attempt to resolve the conflict instead of closing an application and potentially losing data."
+>
+> In the Overview tab, Resmon has four sections:
+>
+> - CPU
+> - Disk
+> - Network
+> - Memory
+<br>
+
+| Commands Prompt |
+| - |
+
+> The command prompt (cmd) can seem daunting at first, but it's really not that bad once you understand how to interact with it. In early operating systems, the command line was the sole way to interact with the operating system.
+>
+> When the GUI (graphical user interface) was introduced, it allowed users to perform complex tasks with a few clicks of a button instead of entering commands in the command prompt. Even though the GUI is the primary way to interact with the operating system, a computer user can still interact via the command prompt.
+
+```powershell
+# Here are a couple of Linux commands we can reuse to learn about our computer.
+
+hostname
+whoami
+
+# This command will show the network address settings for the computer.
+
+ipconfig
+ipconfig /?
+
+# This command will display protocol statistics and current TCP/IP network connections.
+
+netstat
+netstat /?
+
+# The net command is primarily used to manage network resources. This command supports sub-commands.
+
+net
+net help
+```
+<br>
+
+| Registry Editor |
+| - |
+
+> The Windows Registry (per Microsoft) is a central hierarchical database used to store information necessary to configure the system for one or more users, applications, and hardware devices.
+>
+> The registry contains information that Windows continually references during operation, such as:
+>
+>> - Profiles for each user.
+>> - Applications installed on the computer and the types of documents that each can create.
+>> - Property sheet settings for folders and application icons.
+>> - What hardware exists on the system.
+>> - The ports that are being used.
+>
+> Warning: The registry is for advanced computer users. Making changes to the registry can affect normal computer operations.
+>
+> There are various ways to view/edit the registry. One way is to use the Registry Editor (`regedit`).
