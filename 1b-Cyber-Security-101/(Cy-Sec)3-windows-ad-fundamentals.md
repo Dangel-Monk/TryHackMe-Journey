@@ -167,7 +167,7 @@
 >> - Complete memory dump
 >> - None
 
-+ *Another thing to consider is the startup and recovery logs. I can imagine a situation where we make a mistake by modifying system settings that prevents it from working correctly. Or perhaps there is some benefit to obtaining extra information by deliberately causing problems.
++ *Another thing to consider is the startup and recovery logs. I can imagine a situation where we make a mistake by modifying system settings that prevents it from working correctly. Or perhaps there is some benefit to obtaining extra information by deliberately causing problems.*
 <br>
 
 | UAC Settings |
@@ -387,8 +387,8 @@ net help
 >> - Real-time protection - Locates and stops malware from installing or running on your device.
 >> - Cloud-delivered protection - Provides increased and faster protection with access to the latest protection data in the cloud.
 >> - Automatic sample submission - Send sample files to Microsoft to help protect you and others from potential threats. 
->> - Controlled folder access - This feature, if enabled, protects files, folders, and memory areas on your device from unauthorized changes by malicious or unknown applications. If it is enabled, only approved and trusted apps would be allowed to modify the files in the protected folders. To enable this feature, click on the Manage controlled folder access button under Controlled Folder Access and turn it on. 
->> - Exclusions - Windows Defender Antivirus allows you to exclude any files or folders from the antivirus scanning. This is done to reduce the number of false positives. Administrators might not want the antivirus to scan specific files or folders. By adding them to the exclusions list, the antivirus would ignore them and scan all the other files and folders. To add any file or folder to the Windows Defender exclusion list, click on the Add or remove exclusions button under Exclusions and add as many exclusions as you want. 
+>> - Controlled folder access - This feature, if enabled, protects files, folders, and memory areas on your device from unauthorized changes by malicious or unknown applications. If it is enabled, only approved and trusted apps would be allowed to modify the files in the protected folders. To enable this feature, click on the `Manage controlled folder access` button under `Controlled Folder Access` and turn it on. 
+>> - Exclusions - Windows Defender Antivirus allows you to exclude any files or folders from the antivirus scanning. This is done to reduce the number of false positives. Administrators might not want the antivirus to scan specific files or folders. By adding them to the exclusions list, the antivirus would ignore them and scan all the other files and folders. To add any file or folder to the Windows Defender exclusion list, click on the `Add or remove exclusions` button under `Exclusions` and add as many exclusions as you want. 
 >> - Notifications - Windows Defender Antivirus will send notifications with critical information about the health and security of your device. 
 > Warning: Excluded items could contain threats that make your device vulnerable. Only use this option if you are 100% sure of what you are doing. 
 >
@@ -510,3 +510,61 @@ net help
 >
 >> - Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
 >> - Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
+
++ *For me, this is one of the sections that is furthest from what I know... And it's no longer because of the complexity, since again it's something you can create in your system today, but perhaps the sheer number of options is what's most paralyzing.*
+<br>
+
+| Active Directory |
+| - |
+
+> The core of any Windows Domain is the Active Directory Domain Service (AD DS). This service acts as a catalogue that holds the information of all of the "objects" that exist on your network. Amongst the many objects supported by AD, we have users, groups, machines, printers, shares and many others.
+
+> \> Users
+>
+> Users are one of the most common object types in Active Directory. Users are one of the objects known as security principals, meaning that they can be authenticated by the domain and can be assigned privileges over resources like files or printers. You could say that a security principal is an object that can act upon resources in the network.
+<br>
+
+> Users can be used to represent two types of entities:
+> 
+>> - People: users will generally represent persons in your organisation that need to access the network, like employees.
+>> - Services: you can also define users to be used by services like IIS or MSSQL. Every single service requires a user to run, but service users are different from regular users as they will only have the privileges needed to run their specific service.
+<br>
+
+> \> Machines
+>
+> Machines are another type of object within Active Directory; for every computer that joins the Active Directory domain, a machine object will be created. Machines are also considered "security principals" and are assigned an account just as any regular user. This account has somewhat limited rights within the domain itself.
+
+> The machine accounts themselves are local administrators on the assigned computer, they are generally not supposed to be accessed by anyone except the computer itself, but as with any other account, if you have the password, you can use it to log in.
+
+> Identifying machine accounts is relatively easy. They follow a specific naming scheme. The machine account name is the computer's name followed by a dollar sign. For example, a machine named `DC01` will have a machine account called `DC01$`.
+<br>
+
+> \> Security Groups
+> 
+> If you are familiar with Windows, you probably know that you can define user groups to assign access rights to files or other resources to entire groups instead of single users. This allows for better manageability as you can add users to an existing group, and they will automatically inherit all of the group's privileges. Security groups are also considered security principals and, therefore, can have privileges over resources on the network.
+>
+> Several groups are created by default in a domain that can be used to grant specific privileges to users. As an example, here are some of the most important groups in a domain:
+> 
+>> - Domain Admins - Users of this group have administrative privileges over the entire domain. By default, they can administer any computer on the domain, including the DCs.
+>>
+>> - Server Operators - Users in this group can administer Domain Controllers. They cannot change any administrative group memberships.
+>>
+>> - Backup Operators - Users in this group are allowed to access any file, ignoring their permissions. They are used to perform backups of data on computers.
+>>
+>> - Account Operators - Users in this group can create or modify other accounts in the domain.
+>>
+>> - Domain Users - Includes all existing user accounts in the domain.
+>>
+>> - Domain Computers - Includes all existing computers in the domain.
+>>
+>> - Domain Controllers - Includes all existing DCs on the domain.
+
++ *Wow, quite a lot of information, isn't it? So let's simplify it by groups of groups. Domain groups are the set of objects, such as users, computers, and controllers. Then there are the domain administrators, who have full permissions over the domain and all its content.*
+
++ *Then there are the operators, from the server operators who can modify the domain controllers, to the backup operators who have access to all files ignoring permissions, and finally the account operators who can modify or create users in the domain.*
+
+
+
+
+
+
