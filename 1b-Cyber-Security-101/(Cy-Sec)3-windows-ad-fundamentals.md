@@ -476,6 +476,7 @@ net help
 > Per Microsoft(opens in new tab), the Volume Shadow Copy Service (VSS) coordinates the required actions to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up. 
 > 
 > Volume Shadow Copies are stored on the System Volume Information folder on each drive that has protection enabled.
+<br>
 
 > If VSS is enabled (System Protection turned on), you can perform the following tasks from within advanced system settings. 
 > 
@@ -487,3 +488,25 @@ net help
 > From a security perspective, malware writers know of this Windows feature and write code in their malware to look for these files and delete them. Doing so makes it impossible to recover from a ransomware attack unless you have an offline/off-site backup.
 
 + *Now, this is what really surprised me; I didn't know something like this existed. Which makes me a little nervous. What other things could offer more attack vectors? How is it that they usually manage to exploit it? Since they are options, they shouldn't be available unless there's a reason; it would involve weighing the pros and cons...*
+
+----
+<br>
+
+
+
+## Active Directory Basics
+
+| Windows Domains |
+| - |
+
+> Picture yourself administering a small business network with only five computers and five employees. In such a tiny network, you will probably be able to configure each computer separately without a problem. You will manually log into each computer, create users for whoever will use them, and make specific configurations for each employee's accounts. If a user's computer stops working, you will probably go to their place and fix the computer on-site.
+
+> While this sounds like a very relaxed lifestyle, let's suppose your business suddenly grows and now has 157 computers and 320 different users located across four different offices. Would you still be able to manage each computer as a separate entity, manually configure policies for each of the users across the network and provide on-site support for everyone? The answer is most likely no.
+
+> To overcome these limitations, we can use a Windows domain. Simply put, a Windows domain is a group of users and computers under the administration of a given business. The main idea behind a domain is to centralise the administration of common components of a Windows computer network in a single repository called Active Directory (AD). The server that runs the Active Directory services is known as a Domain Controller (DC).
+<br>
+
+> The main advantages of having a configured Windows domain are:
+>
+>> - Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
+>> - Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
