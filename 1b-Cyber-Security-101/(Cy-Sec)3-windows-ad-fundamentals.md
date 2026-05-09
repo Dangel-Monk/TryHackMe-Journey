@@ -269,6 +269,8 @@
 > - Disk
 > - Network
 > - Memory
+
++ *It provides granular, per-process visibility into CPU, memory, disk, and network usage, making it useful for identifying malicious activity (malware, spyware, unauthorized connections) without needing third-party tools.*
 <br>
 
 | Commands Prompt |
@@ -317,3 +319,20 @@ net help
 > Warning: The registry is for advanced computer users. Making changes to the registry can affect normal computer operations.
 >
 > There are various ways to view/edit the registry. One way is to use the Registry Editor (`regedit`).
+
++ *The Windows Registry is a hierarchical database controlling Windows settings, acting as a critical target for attackers to establish persistence, elevate privileges, or hide malicious activity. Security teams monitor it for unauthorized changes, particularly in startup locations and services, while investigators use it to map user/attacker activity*
+
+----
+<br>
+
+
+
+## Windows Fundamentals 3
+
+| Windows Update |
+| - |
+
+> Windows Update is a service provided by Microsoft to provide security updates, feature enhancements, and patches for the Windows operating system and other Microsoft products, such as Microsoft Defender. 
+
+> Updates are typically released on the 2nd Tuesday of each month. This day is called Patch Tuesday. That doesn't necessarily mean that a critical update/patch has to wait for the next Patch Tuesday to be released. If the update is urgent, then Microsoft will push the update via the Windows Update service to the Windows devices.
+
