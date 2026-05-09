@@ -279,6 +279,7 @@
 > The command prompt (cmd) can seem daunting at first, but it's really not that bad once you understand how to interact with it. In early operating systems, the command line was the sole way to interact with the operating system.
 >
 > When the GUI (graphical user interface) was introduced, it allowed users to perform complex tasks with a few clicks of a button instead of entering commands in the command prompt. Even though the GUI is the primary way to interact with the operating system, a computer user can still interact via the command prompt.
+<br>
 
 ```powershell
 # Here are a couple of Linux commands we can reuse to learn about our computer.
@@ -301,6 +302,9 @@ netstat /?
 net
 net help
 ```
+<br>
+
++ *If at any point you'd like to start using the terminal in Windows, you can begin directly with PowerShell, as it not only offers the most control over the system, but also it has its own syntax and command logic.* 
 <br>
 
 | Registry Editor |
@@ -336,3 +340,150 @@ net help
 
 > Updates are typically released on the 2nd Tuesday of each month. This day is called Patch Tuesday. That doesn't necessarily mean that a critical update/patch has to wait for the next Patch Tuesday to be released. If the update is urgent, then Microsoft will push the update via the Windows Update service to the Windows devices.
 
+> Throughout the years, Windows users have grown accustomed to pushing Windows Updates off to a later date or not installing the updates at all. Various reasons caused this action, one being the fact that a reboot is typically required after a Windows update.  
+
+> Microsoft notably addressed this issue with Windows 10. The updates can no longer be ignored or pushed to the side until forgotten. Windows updates can only be postponed, but eventually, the update will happen, and your computer will reboot. Microsoft provides these updates to keep the device safe and secure.
+
++ *If you thought Windows updates were inconvenient, you'll have fewer and fewer options about it LOL, but while I also hate how Microsoft does things, they're becoming increasingly necessary. It is the most widely used system, by people of a certain type and level of importance.*
+<br>
+
+| Windows Security |
+| - |
+
+> Per Microsoft, "Windows Security is your home to manage the tools that protect your device and your data". In case you missed it, Windows Security is also available in Settings. 
+>
+> In the above image, focus your attention on Protection areas.
+>
+>> - Virus & threat protection
+>> - Firewall & network protection
+>> - App & browser control
+>> - Device security
+<br>
+
+| Virus & Threat Proteccion |
+| - |
+
+> \> Current threats
+>
+>> Scan options
+>>
+>> - Quick scan - Checks folders in your system where threats are commonly found.
+>> - Full scan - Checks all files and running programs on your hard disk. This scan could take longer than one hour.
+>> - Custom scan - Choose which files and locations you want to check.
+>>
+>> Threat history
+>>
+>> - Last scan - Windows Defender Antivirus automatically scans your device for viruses and other threats to help keep it safe.
+>> - Quarantined threats - Quarantined threats have been isolated and prevented from running on your device. They will be periodically removed.
+>> - Allowed threats - Allowed threats are items identified as threats, which you allowed to run on your device.
+>
+> Warning: Allow an item to run that has been identified as a threat only if you are 100% sure of what you are doing.
+<br>
+
+> \> Virus & threat protection settings
+>
+>> Manage settings 
+>>
+>> - Real-time protection - Locates and stops malware from installing or running on your device.
+>> - Cloud-delivered protection - Provides increased and faster protection with access to the latest protection data in the cloud.
+>> - Automatic sample submission - Send sample files to Microsoft to help protect you and others from potential threats. 
+>> - Controlled folder access - This feature, if enabled, protects files, folders, and memory areas on your device from unauthorized changes by malicious or unknown applications. If it is enabled, only approved and trusted apps would be allowed to modify the files in the protected folders. To enable this feature, click on the Manage controlled folder access button under Controlled Folder Access and turn it on. 
+>> - Exclusions - Windows Defender Antivirus allows you to exclude any files or folders from the antivirus scanning. This is done to reduce the number of false positives. Administrators might not want the antivirus to scan specific files or folders. By adding them to the exclusions list, the antivirus would ignore them and scan all the other files and folders. To add any file or folder to the Windows Defender exclusion list, click on the Add or remove exclusions button under Exclusions and add as many exclusions as you want. 
+>> - Notifications - Windows Defender Antivirus will send notifications with critical information about the health and security of your device. 
+> Warning: Excluded items could contain threats that make your device vulnerable. Only use this option if you are 100% sure of what you are doing. 
+>
+>> Virus & threat protection updates
+>>
+>> - Check for updates - Manually check for updates to update Windows Defender Antivirus definitions.
+>
+>> Ransomware protection
+>>
+>> - Controlled folder access - Ransomware protection requires this feature to be enabled, which in turn requires Real-time protection to be enabled.
+>
+> Warning: Excluded items could contain threats that make your device vulnerable. Only use this option if you are 100% sure of what you are doing.
+
++ *Having a system that analyzes for potential threats, and that offers tools not only to prevent major damage but also to contain the threat, is an extra layer of security for your system. But like any tool, it depends heavily on its correct use; it's not perfect, it's not the only option, and it requires constant updates to stay as close as possible to real-time attacks.*
+<br>
+
+| Firewall & Network Proteccion |
+| - |
+
+> What is a firewall?
+> 
+> Per Microsoft, "Traffic flows into and out of devices via what we call ports. A firewall is what controls what is - and more importantly isn't - allowed to pass through those ports. You can think of it like a security guard standing at the door, checking the ID of everything that tries to enter or exit".
+
+> What is the difference between the 3 (Domain, Private, and Public)?
+> 
+> Per Microsoft, "Windows Firewall offers three firewall profiles: domain, private and public".
+>
+>> - Domain - The domain profile applies to networks where the host system can authenticate to a domain controller. 
+>> - Private - The private profile is a user-assigned profile and is used to designate private or home networks.
+>> - Public - The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations.
+> Warning: Unless you are 100% confident in what you are doing, it is recommended that you leave your Windows Defender Firewall enabled.
+
++ *While we're talking about an antivirus analyzing what's on the system, the firewall manages what access is allowed and what isn't. It goes into more detail about how to configure it, but it also has other functions.*
+<br>
+
+| App & Browser Control |
+| - |
+
+> In this section, you can change the settings for the Microsoft Defender SmartScreen.
+> 
+> Per Microsoft, "Microsoft Defender SmartScreen protects against phishing or malware websites and applications, and the downloading of potentially malicious files".
+>
+>> Check apps and files
+>>
+>> - Windows Defender SmartScreen helps protect your device by checking for unrecognized apps and files from the web.
+>>
+>> Exploit protection
+>>
+>> - Exploit protection is built into Windows 10 (and, in our case, Windows Server 2019) to help protect your device against attacks.
+>
+> Warning: Unless you are 100% confident in what you are doing, it is recommended that you leave the default settings.
+<br>
+
+| Device Security |
+| - |
+
+> Even though you'll probably never change any of these settings, for completion's sake, it will be covered briefly.
+>
+>> Core isolation
+>>
+>> - Memory Integrity - Prevents attacks from inserting malicious code into high-security processes.
+>>
+>> Security processor
+>>
+>> What is the Trusted Platform Module (TPM)?
+>>
+>> - Per Microsoft, "Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper-resistant, and malicious software is unable to tamper with the security functions of the TPM".
+<br>
+
+| BitLocker |
+| - |
+
+> What is BitLocker?
+>
+> - Per Microsoft, "BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers".
+>
+> On devices with TPM installed, BitLocker offers the best protection.
+>
+> - Per Microsoft, "BitLocker provides the most protection when used with a Trusted Platform Module (TPM) version 1.2 or later. The TPM is a hardware component installed in many newer computers by the computer manufacturers. It works with BitLocker to help protect user data and to ensure that a computer has not been tampered with while the system was offline".
+<br>
+
+| Volume Shadow Copy Service |
+| - |
+
+> Per Microsoft(opens in new tab), the Volume Shadow Copy Service (VSS) coordinates the required actions to create a consistent shadow copy (also known as a snapshot or a point-in-time copy) of the data that is to be backed up. 
+> 
+> Volume Shadow Copies are stored on the System Volume Information folder on each drive that has protection enabled.
+
+> If VSS is enabled (System Protection turned on), you can perform the following tasks from within advanced system settings. 
+> 
+>> - Create a restore point
+>> - Perform system restore
+>> - Configure restore settings
+>> - Delete restore points
+>
+> From a security perspective, malware writers know of this Windows feature and write code in their malware to look for these files and delete them. Doing so makes it impossible to recover from a ransomware attack unless you have an offline/off-site backup.
+
++ *Now, this is what really surprised me; I didn't know something like this existed. Which makes me a little nervous. What other things could offer more attack vectors? How is it that they usually manage to exploit it? Since they are options, they shouldn't be available unless there's a reason; it would involve weighing the pros and cons...*
