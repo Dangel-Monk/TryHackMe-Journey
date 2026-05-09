@@ -545,14 +545,14 @@ net help
 >
 > Several groups are created by default in a domain that can be used to grant specific privileges to users. As an example, here are some of the most important groups in a domain:
 > 
->> - Domain Admins - Users of this group have administrative privileges over the entire domain. By default, they can administer any computer on the domain, including the DCs.
->>
 >> - Server Operators - Users in this group can administer Domain Controllers. They cannot change any administrative group memberships.
 >>
 >> - Backup Operators - Users in this group are allowed to access any file, ignoring their permissions. They are used to perform backups of data on computers.
 >>
 >> - Account Operators - Users in this group can create or modify other accounts in the domain.
->>
+>
+>> - Domain Admins - Users of this group have administrative privileges over the entire domain. By default, they can administer any computer on the domain, including the DCs.
+>> 
 >> - Domain Users - Includes all existing user accounts in the domain.
 >>
 >> - Domain Computers - Includes all existing computers in the domain.
@@ -562,9 +562,39 @@ net help
 + *Wow, quite a lot of information, isn't it? So let's simplify it by groups of groups. Domain groups are the set of objects, such as users, computers, and controllers. Then there are the domain administrators, who have full permissions over the domain and all its content.*
 
 + *Then there are the operators, from the server operators who can modify the domain controllers, to the backup operators who have access to all files ignoring permissions, and finally the account operators who can modify or create users in the domain.*
+<br>
 
+> \> Active Directory Users and Computers
+>
+> To configure users, groups or machines in Active Directory, we need to log in to the Domain Controller and run "Active Directory Users and Computers"
+>
+> This will open up a window where you can see the hierarchy of users, computers and groups that exist in the domain. These objects are organised in Organizational Units (OUs) which are container objects that allow you to classify users and machines. OUs are mainly used to define sets of users with similar policing requirements. The people in the Sales department of your organisation are likely to have a different set of policies applied than the people in IT, for example. Keep in mind that a user can only be a part of a single OU at a time.
+<br>
 
+> You probably noticed already that there are other default containers apart from the THM OU. These containers are created by Windows automatically and contain the following:
+>
+>> - Builtin: Contains default groups available to any Windows host.
+>> - Computers: Any machine joining the network will be put here by default. You can move them if needed.
+>> - Domain Controllers: Default OU that contains the DCs in your network.
+>> - Users: Default users and groups that apply to a domain-wide context.
+>> - Managed Service Accounts: Holds accounts used by services in your Windows domain.
+<br>
 
+> \> Security Groups vs OUs
+>
+> You are probably wondering why we have both groups and OUs. While both are used to classify users and computers, their purposes are entirely different:
+>
+>> - OUs are handy for applying policies to users and computers, which include specific configurations that pertain to sets of users depending on their particular role in the enterprise. Remember, a user can only be a member of a single OU at a time, as it wouldn't make sense to try to apply two different sets of policies to a single user.
+>> - Security Groups, on the other hand, are used to grant permissions over resources. For example, you will use groups if you want to allow some users to access a shared folder or network printer. A user can be a part of many groups, which is needed to grant access to multiple resources.
 
++ *Another somewhat complex topic, and one I'm still not entirely convinced I understand... The organizational units These are the user configurations, the actions they can perform, the rules they have, etc...*
 
++ *On the other hand, security groups are the access levels that users have to different objects within the domain, such as printers, systems, folders, etc.*
+<br>
 
+| Managing Users in AD |
+| - |
+
++ *In principle, all these sections are to demonstrate not only how to configure and modify an active directory, so feel free to go further and create more actions.*
+
++ **
