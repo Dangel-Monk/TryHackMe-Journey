@@ -573,11 +573,11 @@ net help
 
 > You probably noticed already that there are other default containers apart from the THM OU. These containers are created by Windows automatically and contain the following:
 >
->> - Builtin: Contains default groups available to any Windows host.
->> - Computers: Any machine joining the network will be put here by default. You can move them if needed.
->> - Domain Controllers: Default OU that contains the DCs in your network.
->> - Users: Default users and groups that apply to a domain-wide context.
->> - Managed Service Accounts: Holds accounts used by services in your Windows domain.
+>> - Builtin - Contains default groups available to any Windows host.
+>> - Computers - Any machine joining the network will be put here by default. You can move them if needed.
+>> - Domain Controllers - Default OU that contains the DCs in your network.
+>> - Users - Default users and groups that apply to a domain-wide context.
+>> - Managed Service Accounts - Holds accounts used by services in your Windows domain.
 <br>
 
 > \> Security Groups vs OUs
@@ -653,9 +653,9 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 
 > While there is no golden rule on how to organise your machines, an excellent starting point is segregating devices according to their use. In general, you'd expect to see devices divided into at least the three following categories:
 >
->> Workstations - Are one of the most common devices within an Active Directory domain. Each user in the domain will likely be logging into a workstation. This is the device they will use to do their work or normal browsing activities. These devices should never have a privileged user signed into them.
+>> - Workstations - Are one of the most common devices within an Active Directory domain. Each user in the domain will likely be logging into a workstation. This is the device they will use to do their work or normal browsing activities. These devices should never have a privileged user signed into them.
 >>
->> Servers - Are the second most common device within an Active Directory domain. Servers are generally used to provide services to users or other servers.
+>> - Servers - Are the second most common device within an Active Directory domain. Servers are generally used to provide services to users or other servers.
 >>
->> Domain Controllers - Are the third most common device within an Active Directory domain. Domain Controllers allow you to manage the Active Directory Domain. These devices are often deemed the most sensitive devices within the network as they contain hashed passwords for all user accounts within the environment.
+>> - Domain Controllers - Are the third most common device within an Active Directory domain. Domain Controllers allow you to manage the Active Directory Domain. These devices are often deemed the most sensitive devices within the network as they contain hashed passwords for all user accounts within the environment.
 
