@@ -587,7 +587,7 @@ net help
 >> - OUs are handy for applying policies to users and computers, which include specific configurations that pertain to sets of users depending on their particular role in the enterprise. Remember, a user can only be a member of a single OU at a time, as it wouldn't make sense to try to apply two different sets of policies to a single user.
 >> - Security Groups, on the other hand, are used to grant permissions over resources. For example, you will use groups if you want to allow some users to access a shared folder or network printer. A user can be a part of many groups, which is needed to grant access to multiple resources.
 
-+ *Another somewhat complex topic, and one I'm still not entirely convinced I understand... The organizational units These are the user configurations, the actions they can perform, the rules they have, etc...*
++ *Another somewhat complex topic, and one I'm still not entirely convinced I understand... The organizational units are the user configurations, the actions they can perform, the rules they have, etc...*
 
 + *On the other hand, security groups are the access levels that users have to different objects within the domain, such as printers, systems, folders, etc.*
 <br>
@@ -597,4 +597,65 @@ net help
 
 + *In principle, all these sections are to demonstrate not only how to configure and modify an active directory, so feel free to go further and create more actions.*
 
-+ **
++ *The first step is to take a general look at the system. How is it organized? What type of hierarchy is there, what type of objects are in the domain?*
+<br>
+
+> \> Deleting extra OUs and users
+>
+> The first thing you should notice is that there is an additional department OU in your current AD configuration that doesn't appear in the chart. We've been told it was closed due to budget cuts and should be removed from the domain. If you try to right-click and delete the OU, you will get the following error.
+>
+> By default, OUs are protected against accidental deletion. To delete the OU, we need to enable the Advanced Features in the View menu.
+>
+> This will show you some additional containers and enable you to disable the accidental deletion protection. To do so, right-click the OU and go to Properties. You will find a checkbox in the Object tab to disable the protection.
+>
+> Be sure to uncheck the box and try deleting the OU again. You will be prompted to confirm that you want to delete the OU, and as a result, any users, groups or OUs under it will also be deleted.
+<br>
+
+> \> Delegation
+>
+> One of the nice things you can do in AD is to give specific users some control over some OUs. This process is known as delegation and allows you to grant users specific privileges to perform advanced tasks on OUs without needing a Domain Administrator to step in.
+>
+> One of the most common use cases for this is granting IT support the privileges to reset other low-privilege users' passwords. According to our organisational chart, Phillip is in charge of IT support, so we'd probably want to delegate the control of resetting passwords over the Sales, Marketing and Management OUs to him.
+>
+> For this example, we will delegate control over the Sales OU to Phillip. To delegate control over an OU, you can right-click it and select Delegate Control
+>
+> This should open a new window where you will first be asked for the users to whom you want to delegate control
+
++ *With these simple steps, we see that there are several mechanisms to prevent errors / accidents. against deletion or modification of OUs, and be able to correctly assign delegations*
+
++ *Now there's an interesting detail: if Phillip wanted to perform any other action within the active directory, he couldn't, at least not with the interface. Therefore, I would have to use commands...*
+<br>
+
+```powershell
+# With this command we are resetting Sophie's password with privileges
+# We are also creating a prompt to enter the new password without saving or displaying it.
+
+Set-ADAccountPassword sophie -Reset -NewPassword (Read-Host -AsSecureString -Prompt 'New Password') -Verbose
+
+#New Password: *********
+#VERBOSE: Performing the operation "Set-ADAccountPassword" on target "CN=Sophie,OU=Sales,OU=THM,DC=thm,DC=local".
+
+
+# With this command we are enabling the requirement to enter a new password upon login.
+
+Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
+
+#VERBOSE: Performing the operation "Set" on target "CN=Sophie,OU=Sales,OU=THM,DC=thm,DC=local".
+```
+<br>
+
+| Managing Computers in AD |
+| - |
+
+> By default, all the machines that join a domain (except for the DCs) will be put in the container called "Computers".
+>
+> We can see some servers, some laptops and some PCs corresponding to the users in our network. Having all of our devices there is not the best idea since it's very likely that you want different policies for your servers and the machines that regular users use on a daily basis.
+
+> While there is no golden rule on how to organise your machines, an excellent starting point is segregating devices according to their use. In general, you'd expect to see devices divided into at least the three following categories:
+>
+>> Workstations - Are one of the most common devices within an Active Directory domain. Each user in the domain will likely be logging into a workstation. This is the device they will use to do their work or normal browsing activities. These devices should never have a privileged user signed into them.
+>>
+>> Servers - Are the second most common device within an Active Directory domain. Servers are generally used to provide services to users or other servers.
+>>
+>> Domain Controllers - Are the third most common device within an Active Directory domain. Domain Controllers allow you to manage the Active Directory Domain. These devices are often deemed the most sensitive devices within the network as they contain hashed passwords for all user accounts within the environment.
+
