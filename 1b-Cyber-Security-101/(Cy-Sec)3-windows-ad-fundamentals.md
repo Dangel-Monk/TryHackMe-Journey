@@ -239,17 +239,11 @@
 >
 > The  information in System Summary is divided into three sections:
 >
->> - Hardware Resources
->>
->> The information displayed in Hardware Resources is not for the average computer user. If you want to learn more about this section, refer to the official Microsoft page(opens in new tab).
+>> - Hardware Resources - The information displayed in Hardware Resources is not for the average computer user. If you want to learn more about this section, refer to the official Microsoft page(opens in new tab).
 >> 
->> - Components
->>   
->> Under Components, you can see specific information about the hardware devices installed on the computer. Some sections don't show any information, but some sections do, such as Display and Input.
+>> - Components - You can see specific information about the hardware devices installed on the computer. Some sections don't show any information, but some sections do, such as Display and Input.
 >> 
->> - Software Environment
->>   
->> In the Software Environment section, you can see information about software baked into the operating system and software you have installed. Other details are visible in this section as well, such as the Environment Variables and Network Connections. 
+>> - Software Environment - You can see information about software baked into the operating system and software you have installed. Other details are visible in this section as well, such as the Environment Variables and Network Connections. 
 
 > Per Microsoft, "Environment variables store information about the operating system environment. This information includes details such as the operating system path, the number of processors used by the operating system, and the location of temporary folders.
 >
@@ -365,16 +359,21 @@ net help
 
 > \> Current threats
 >
->> Scan options
+>> Scan options:
 >>
 >> - Quick scan - Checks folders in your system where threats are commonly found.
+>> 
 >> - Full scan - Checks all files and running programs on your hard disk. This scan could take longer than one hour.
+>> 
 >> - Custom scan - Choose which files and locations you want to check.
->>
->> Threat history
+<br>
+
+>> Threat history:
 >>
 >> - Last scan - Windows Defender Antivirus automatically scans your device for viruses and other threats to help keep it safe.
+>> 
 >> - Quarantined threats - Quarantined threats have been isolated and prevented from running on your device. They will be periodically removed.
+>> 
 >> - Allowed threats - Allowed threats are items identified as threats, which you allowed to run on your device.
 >
 > Warning: Allow an item to run that has been identified as a threat only if you are 100% sure of what you are doing.
@@ -382,21 +381,28 @@ net help
 
 > \> Virus & threat protection settings
 >
->> Manage settings 
+>> Manage settings:
 >>
 >> - Real-time protection - Locates and stops malware from installing or running on your device.
+>> 
 >> - Cloud-delivered protection - Provides increased and faster protection with access to the latest protection data in the cloud.
->> - Automatic sample submission - Send sample files to Microsoft to help protect you and others from potential threats. 
->> - Controlled folder access - This feature, if enabled, protects files, folders, and memory areas on your device from unauthorized changes by malicious or unknown applications. If it is enabled, only approved and trusted apps would be allowed to modify the files in the protected folders. To enable this feature, click on the `Manage controlled folder access` button under `Controlled Folder Access` and turn it on. 
->> - Exclusions - Windows Defender Antivirus allows you to exclude any files or folders from the antivirus scanning. This is done to reduce the number of false positives. Administrators might not want the antivirus to scan specific files or folders. By adding them to the exclusions list, the antivirus would ignore them and scan all the other files and folders. To add any file or folder to the Windows Defender exclusion list, click on the `Add or remove exclusions` button under `Exclusions` and add as many exclusions as you want. 
->> - Notifications - Windows Defender Antivirus will send notifications with critical information about the health and security of your device. 
+>> 
+>> - Automatic sample submission - Send sample files to Microsoft to help protect you and others from potential threats.
+>> 
+>> - Controlled folder access - This feature, if enabled, protects files, folders, and memory areas on your device from unauthorized changes by malicious or unknown applications. If it is enabled, only approved and trusted apps would be allowed to modify the files in the protected folders. To enable this feature, click on the `Manage controlled folder access` button under `Controlled Folder Access` and turn it on.
+>> 
+>> - Exclusions - Windows Defender Antivirus allows you to exclude any files or folders from the antivirus scanning. This is done to reduce the number of false positives. Administrators might not want the antivirus to scan specific files or folders. By adding them to the exclusions list, the antivirus would ignore them and scan all the other files and folders. To add any file or folder to the Windows Defender exclusion list, click on the `Add or remove exclusions` button under `Exclusions` and add as many exclusions as you want.
+>> 
+>> - Notifications - Windows Defender Antivirus will send notifications with critical information about the health and security of your device.
+>> 
 > Warning: Excluded items could contain threats that make your device vulnerable. Only use this option if you are 100% sure of what you are doing. 
->
->> Virus & threat protection updates
+<br>
+
+>> Virus & threat protection updates:
 >>
 >> - Check for updates - Manually check for updates to update Windows Defender Antivirus definitions.
 >
->> Ransomware protection
+>> Ransomware protection:
 >>
 >> - Controlled folder access - Ransomware protection requires this feature to be enabled, which in turn requires Real-time protection to be enabled.
 >
@@ -411,14 +417,16 @@ net help
 > What is a firewall?
 > 
 > Per Microsoft, "Traffic flows into and out of devices via what we call ports. A firewall is what controls what is - and more importantly isn't - allowed to pass through those ports. You can think of it like a security guard standing at the door, checking the ID of everything that tries to enter or exit".
+<br>
 
 > What is the difference between the 3 (Domain, Private, and Public)?
-> 
-> Per Microsoft, "Windows Firewall offers three firewall profiles: domain, private and public".
 >
->> - Domain - The domain profile applies to networks where the host system can authenticate to a domain controller. 
+>> - Domain - The domain profile applies to networks where the host system can authenticate to a domain controller.
+>> 
 >> - Private - The private profile is a user-assigned profile and is used to designate private or home networks.
->> - Public - The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations.
+>> 
+>> - Public - The default profile is the public profile, used to designate public networks such as Wi-Fi hotspots at coffee shops, airports, and other locations
+>> 
 > Warning: Unless you are 100% confident in what you are doing, it is recommended that you leave your Windows Defender Firewall enabled.
 
 + *While we're talking about an antivirus analyzing what's on the system, the firewall manages what access is allowed and what isn't. It goes into more detail about how to configure it, but it also has other functions.*
@@ -430,14 +438,11 @@ net help
 > In this section, you can change the settings for the Microsoft Defender SmartScreen.
 > 
 > Per Microsoft, "Microsoft Defender SmartScreen protects against phishing or malware websites and applications, and the downloading of potentially malicious files".
->
->> Check apps and files
+<br>
+
+>> - Check apps and files - Windows Defender SmartScreen helps protect your device by checking for unrecognized apps and files from the web.
 >>
->> - Windows Defender SmartScreen helps protect your device by checking for unrecognized apps and files from the web.
->>
->> Exploit protection
->>
->> - Exploit protection is built into Windows 10 (and, in our case, Windows Server 2019) to help protect your device against attacks.
+>> - Exploit protection - Is built into Windows 10 (and, in our case, Windows Server 2019) to help protect your device against attacks.
 >
 > Warning: Unless you are 100% confident in what you are doing, it is recommended that you leave the default settings.
 <br>
@@ -445,17 +450,15 @@ net help
 | Device Security |
 | - |
 
-> Even though you'll probably never change any of these settings, for completion's sake, it will be covered briefly.
+> Even though you'll probably never change any of these settings, for completion's sake, it will be covered briefly:
 >
->> Core isolation
->>
->> - Memory Integrity - Prevents attacks from inserting malicious code into high-security processes.
->>
->> Security processor
->>
->> What is the Trusted Platform Module (TPM)?
->>
->> - Per Microsoft, "Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper-resistant, and malicious software is unable to tamper with the security functions of the TPM".
+>> - Core isolation
+>> - Memory Integrity 
+>> - Security processor
+
+> What is the Trusted Platform Module (TPM)?
+>
+> Per Microsoft, "Trusted Platform Module (TPM) technology is designed to provide hardware-based, security-related functions. A TPM chip is a secure crypto-processor that is designed to carry out cryptographic operations. The chip includes multiple physical security mechanisms to make it tamper-resistant, and malicious software is unable to tamper with the security functions of the TPM".
 <br>
 
 | BitLocker |
@@ -478,12 +481,12 @@ net help
 > Volume Shadow Copies are stored on the System Volume Information folder on each drive that has protection enabled.
 <br>
 
-> If VSS is enabled (System Protection turned on), you can perform the following tasks from within advanced system settings. 
+> If VSS is enabled (System Protection turned on), you can perform the following tasks from within advanced system settings:
 > 
->> - Create a restore point
->> - Perform system restore
->> - Configure restore settings
->> - Delete restore points
+>> - Create a restore point.
+>> - Perform system restore.
+>> - Configure restore settings.
+>> - Delete restore points.
 >
 > From a security perspective, malware writers know of this Windows feature and write code in their malware to look for these files and delete them. Doing so makes it impossible to recover from a ransomware attack unless you have an offline/off-site backup.
 
@@ -508,8 +511,9 @@ net help
 
 > The main advantages of having a configured Windows domain are:
 >
->> - Centralised identity management: All users across the network can be configured from Active Directory with minimum effort.
->> - Managing security policies: You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
+>> - Centralised identity management - All users across the network can be configured from Active Directory with minimum effort.
+>> 
+>> - Managing security policies - You can configure security policies directly from Active Directory and apply them to users and computers across the network as needed.
 
 + *For me, this is one of the sections that is furthest from what I know... And it's no longer because of the complexity, since again it's something you can create in your system today, but perhaps the sheer number of options is what's most paralyzing.*
 <br>
@@ -526,8 +530,9 @@ net help
 
 > Users can be used to represent two types of entities:
 > 
->> - People: users will generally represent persons in your organisation that need to access the network, like employees.
->> - Services: you can also define users to be used by services like IIS or MSSQL. Every single service requires a user to run, but service users are different from regular users as they will only have the privileges needed to run their specific service.
+>> - People - Users will generally represent persons in your organisation that need to access the network, like employees.
+>> 
+>> - Services - You can also define users to be used by services like IIS or MSSQL. Every single service requires a user to run, but service users are different from regular users as they will only have the privileges needed to run their specific service.
 <br>
 
 > \> Machines
@@ -542,7 +547,8 @@ net help
 > \> Security Groups
 > 
 > If you are familiar with Windows, you probably know that you can define user groups to assign access rights to files or other resources to entire groups instead of single users. This allows for better manageability as you can add users to an existing group, and they will automatically inherit all of the group's privileges. Security groups are also considered security principals and, therefore, can have privileges over resources on the network.
->
+<br>
+
 > Several groups are created by default in a domain that can be used to grant specific privileges to users. As an example, here are some of the most important groups in a domain:
 > 
 >> - Server Operators - Users in this group can administer Domain Controllers. They cannot change any administrative group memberships.
@@ -559,14 +565,12 @@ net help
 >>
 >> - Domain Controllers - Includes all existing DCs on the domain.
 
-+ *Wow, quite a lot of information, isn't it? So let's simplify it by groups of groups. Domain groups are the set of objects, such as users, computers, and controllers. Then there are the domain administrators, who have full permissions over the domain and all its content.*
-
-+ *Then there are the operators, from the server operators who can modify the domain controllers, to the backup operators who have access to all files ignoring permissions, and finally the account operators who can modify or create users in the domain.*
++ *If I understand correctly, we can define control over the settings of an active directory by the "physical" part, of the server, of the folders, of the users. And then there's the internal part of the software, where digital networks are configured that separate, organize, and set rules of use within the domain.*
 <br>
 
 > \> Active Directory Users and Computers
 >
-> To configure users, groups or machines in Active Directory, we need to log in to the Domain Controller and run "Active Directory Users and Computers"
+> To configure users, groups or machines in Active Directory, we need to log in to the Domain Controller and run "Active Directory Users and Computers".
 >
 > This will open up a window where you can see the hierarchy of users, computers and groups that exist in the domain. These objects are organised in Organizational Units (OUs) which are container objects that allow you to classify users and machines. OUs are mainly used to define sets of users with similar policing requirements. The people in the Sales department of your organisation are likely to have a different set of policies applied than the people in IT, for example. Keep in mind that a user can only be a part of a single OU at a time.
 <br>
@@ -574,9 +578,13 @@ net help
 > You probably noticed already that there are other default containers apart from the THM OU. These containers are created by Windows automatically and contain the following:
 >
 >> - Builtin - Contains default groups available to any Windows host.
+>> 
 >> - Computers - Any machine joining the network will be put here by default. You can move them if needed.
+>> 
 >> - Domain Controllers - Default OU that contains the DCs in your network.
+>> 
 >> - Users - Default users and groups that apply to a domain-wide context.
+>> 
 >> - Managed Service Accounts - Holds accounts used by services in your Windows domain.
 <br>
 
@@ -585,6 +593,7 @@ net help
 > You are probably wondering why we have both groups and OUs. While both are used to classify users and computers, their purposes are entirely different:
 >
 >> - OUs are handy for applying policies to users and computers, which include specific configurations that pertain to sets of users depending on their particular role in the enterprise. Remember, a user can only be a member of a single OU at a time, as it wouldn't make sense to try to apply two different sets of policies to a single user.
+>> 
 >> - Security Groups, on the other hand, are used to grant permissions over resources. For example, you will use groups if you want to allow some users to access a shared folder or network printer. A user can be a part of many groups, which is needed to grant access to multiple resources.
 
 + *Another somewhat complex topic, and one I'm still not entirely convinced I understand... The organizational units are the user configurations, the actions they can perform, the rules they have, etc...*
@@ -604,9 +613,9 @@ net help
 >
 > The first thing you should notice is that there is an additional department OU in your current AD configuration that doesn't appear in the chart. We've been told it was closed due to budget cuts and should be removed from the domain. If you try to right-click and delete the OU, you will get the following error.
 >
-> By default, OUs are protected against accidental deletion. To delete the OU, we need to enable the Advanced Features in the View menu.
+> By default, OUs are protected against accidental deletion. To delete the OU, we need to enable the `Advanced Features` in the `View menu`.
 >
-> This will show you some additional containers and enable you to disable the accidental deletion protection. To do so, right-click the OU and go to Properties. You will find a checkbox in the Object tab to disable the protection.
+> This will show you some additional containers and enable you to disable the accidental deletion protection. To do so, right-click the OU and go to `Properties`. You will find a checkbox in the `Object` tab to disable the protection.
 >
 > Be sure to uncheck the box and try deleting the OU again. You will be prompted to confirm that you want to delete the OU, and as a result, any users, groups or OUs under it will also be deleted.
 <br>
@@ -617,11 +626,11 @@ net help
 >
 > One of the most common use cases for this is granting IT support the privileges to reset other low-privilege users' passwords. According to our organisational chart, Phillip is in charge of IT support, so we'd probably want to delegate the control of resetting passwords over the Sales, Marketing and Management OUs to him.
 >
-> For this example, we will delegate control over the Sales OU to Phillip. To delegate control over an OU, you can right-click it and select Delegate Control
+> For this example, we will delegate control over the Sales OU to Phillip. To delegate control over an OU, you can right-click it and select `Delegate Control`.
 >
-> This should open a new window where you will first be asked for the users to whom you want to delegate control
+> This should open a new window where you will first be asked for the users to whom you want to delegate control.
 
-+ *With these simple steps, we see that there are several mechanisms to prevent errors / accidents. against deletion or modification of OUs, and be able to correctly assign delegations*
++ *With these simple steps, we see that there are several mechanisms to prevent errors / accidents. against deletion or modification of OUs, and be able to correctly assign delegations.*
 
 + *Now there's an interesting detail: if Phillip wanted to perform any other action within the active directory, he couldn't, at least not with the interface. Therefore, I would have to use commands...*
 <br>
@@ -650,6 +659,7 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 > By default, all the machines that join a domain (except for the DCs) will be put in the container called "Computers".
 >
 > We can see some servers, some laptops and some PCs corresponding to the users in our network. Having all of our devices there is not the best idea since it's very likely that you want different policies for your servers and the machines that regular users use on a daily basis.
+<br>
 
 > While there is no golden rule on how to organise your machines, an excellent starting point is segregating devices according to their use. In general, you'd expect to see devices divided into at least the three following categories:
 >
@@ -659,3 +669,52 @@ Set-ADUser -ChangePasswordAtLogon $true -Identity sophie -Verbose
 >>
 >> - Domain Controllers - Are the third most common device within an Active Directory domain. Domain Controllers allow you to manage the Active Directory Domain. These devices are often deemed the most sensitive devices within the network as they contain hashed passwords for all user accounts within the environment.
 
+
+
+| Authentication Methods |
+| - |
+
+> When using Windows domains, all credentials are stored in the Domain Controllers. Whenever a user tries to authenticate to a service using domain credentials, the service will need to ask the Domain Controller to verify if they are correct. Two protocols can be used for network authentication in windows domains:
+>
+>> - Kerberos - Used by any recent version of Windows. This is the default protocol in any recent domain.
+>>
+>>  - NetNTLM - Legacy authentication protocol kept for compatibility purposes.
+
+> \> Kerberos Authentication
+>
+> Kerberos authentication is the default authentication protocol for any recent version of Windows. Users who log into a service using Kerberos will be assigned tickets. Think of tickets as proof of a previous authentication. Users with tickets can present them to a service to demonstrate they have already authenticated into the network before and are therefore enabled to use it.
+
+
+
+<br>
+
+| Trees, Forests & Trusts |
+| - |
+
+> \> Trees
+>
+> Imagine, for example, that suddenly your company expands to a new country. The new country has different laws and regulations that require you to update your GPOs to comply. In addition, you now have IT people in both countries, and each IT team needs to manage the resources that correspond to each country without interfering with the other team. Whiory supports integrating multiple domains so that you can partition your network into units that can be managed independently. If you have two domains that share the same namespace (`thm.local` in our example), those domains can be joined into a `Tree`.
+>
+> If our thm.local domain was split into two subdomains for UK and US branches, you could build a tree with a root domain of thm.local and two subdomains called uk.thm.local and us.thm.local, each with its AD, computers and users.
+
+> This partitioned structure gives us better control over who can access what in the domain. The IT people from the UK will have their own DC that manages the UK resources only. For example, a UK user would not be able to manage US users. In that way, the Domain Administrators of each branch will have complete control over their respective DCs, but not other branches' DCs. Policies can also be configured independently for each domain in the tree.
+
+> A new security group needs to be introduced when talking about trees and forests. The Enterprise Admins group will grant a user administrative privileges over all of an enterprise's domains. Each domain would still have its Domain Admins with administrator privileges over their single domains and the Enterprise Admins who can control everything in the enterprise.
+<br>
+
+> \> Forests
+>
+> The domains you manage can also be configured in different namespaces. Suppose your company continues growing and eventually acquires another company called MHT Inc. When both companies merge, you will probably have different domain trees for each company, each managed by its own IT department. The union of several trees with different namespaces into the same network is known as a forest.
+<br>
+
+> \> Trust Relationships
+>
+> Having multiple domains organised in trees and forest allows you to have a nice compartmentalised network in terms of management and resources. But at a certain point, a user at THM UK might need to access a shared file in one of MHT ASIA servers. For this to happen, domains arranged in trees and forests are joined together by trust relationships.
+
+> In simple terms, having a trust relationship between domains allows you to authorise a user from domain THM UK to access resources from domain MHT EU.
+>
+> The simplest trust relationship that can be established is a one-way trust relationship. In a one-way trust, if Domain AAA trusts Domain BBB, this means that a user on BBB can be authorised to access resources on AAA
+
+> Two-way trust relationships can also be made to allow both domains to mutually authorise users from the other. By default, joining several domains under a tree or a forest will form a two-way trust relationship.
+>
+> It is important to note that having a trust relationship between domains doesn't automatically grant access to all resources on other domains. Once a trust relationship is established, you have the chance to authorise users across different domains, but it's up to you what is actually authorised or not.
